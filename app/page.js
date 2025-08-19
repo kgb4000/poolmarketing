@@ -16,7 +16,7 @@ const PoolBuilderMarketingSite = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
             WARNING: Google's AI Is Quietly Stealing Your Best Pool Leads While You Sleep
           </h1>
-          <p className="text-xl text-gray-700 italic">
+          <p className="text-xl text-gray-700 italic max-w-2xl mx-auto">
             (And Why Most Pool Contractors Will Go Out of Business in the Next 24 Months If They Don't Act Now)
           </p>
         </div>

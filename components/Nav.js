@@ -38,7 +38,7 @@ const Navigation = () => {
             <Link
               href="/"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
-                isActiveLink('home') 
+                isActiveLink('/') 
                   ? 'text-black border-b-2 border-black' 
                   : 'text-gray-600 hover:text-black'
               }`}
@@ -48,7 +48,7 @@ const Navigation = () => {
             <Link
               href="/faq"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
-                isActiveLink('faq') 
+                isActiveLink('/faq') 
                   ? 'text-black border-b-2 border-black' 
                   : 'text-gray-600 hover:text-black'
               }`}
@@ -56,7 +56,7 @@ const Navigation = () => {
               FAQ
             </Link>
             <Link
-              href="/"
+              href="/blog"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
                 isActiveLink('blog') 
                   ? 'text-black border-b-2 border-black' 
@@ -93,8 +93,8 @@ const Navigation = () => {
         {/* Mobile Navigation Menu */}
         <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-64 pb-4' : 'max-h-0'}`}>
           <div className="flex flex-col space-y-2">
-            <button
-              onClick={() => navigateTo('home')}
+            <Link
+            href="/"
               className={`px-4 py-3 text-left text-lg font-medium transition-colors ${
                 isActiveLink('home') 
                   ? 'text-black bg-gray-50 border-l-4 border-black' 
@@ -102,9 +102,9 @@ const Navigation = () => {
               }`}
             >
               Home
-            </button>
-            <button
-              onClick={() => navigateTo('faq')}
+            </Link>
+            <Link
+            href="/faq"
               className={`px-4 py-3 text-left text-lg font-medium transition-colors ${
                 isActiveLink('faq') 
                   ? 'text-black bg-gray-50 border-l-4 border-black' 
@@ -112,9 +112,9 @@ const Navigation = () => {
               }`}
             >
               FAQ
-            </button>
-            <button
-              onClick={() => navigateTo('blog')}
+            </Link>
+            <Link
+              href="/blog"
               className={`px-4 py-3 text-left text-lg font-medium transition-colors ${
                 isActiveLink('blog') 
                   ? 'text-black bg-gray-50 border-l-4 border-black' 
@@ -122,9 +122,9 @@ const Navigation = () => {
               }`}
             >
               Blog
-            </button>
-            <button
-              onClick={() => navigateTo('contact')}
+            </Link>
+            <Link
+              href="/contact"
               className={`px-4 py-3 text-left text-lg font-medium transition-colors ${
                 isActiveLink('contact') 
                   ? 'text-black bg-gray-50 border-l-4 border-black' 
@@ -132,7 +132,7 @@ const Navigation = () => {
               }`}
             >
               Contact
-            </button>
+            </Link>
           </div>
         </div>
       </div>
