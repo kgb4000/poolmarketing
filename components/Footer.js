@@ -14,10 +14,10 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Pool Builder Growth</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Helping pool contractors dominate Google's AI search results and build lasting brand authority.
+              Helping pool contractors dominate AI search results and build lasting brand authority.
             </p>
             <p className="text-gray-400 text-sm">
-              Generative Engine Optimization Specialists
+              AI and Local Search Engine Optimization Specialists for Pool Builders and Pool Service Companies
             </p>
           </div>
 
@@ -25,11 +25,11 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">AI Citation Audits</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Local SEO Optimization</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">AI SEO/SEO</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">AI SEO/SEO Audits</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Local SEO</Link></li>
               <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Content Authority Building</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Competitor Analysis</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Brand Memory Optimization</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Website Development</Link></li>
             </ul>
           </div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
             
             {/* Copyright */}
             <div className="text-gray-400 text-sm text-center md:text-left">
-              © 2025 Pool Builder Marketing. All rights reserved. Dominating AI search results for pool contractors.
+              © {new Date().getFullYear()} Pool Builder Marketing. All rights reserved. Dominating AI search results for pool contractors.
             </div>
 
             {/* Legal Links */}
@@ -89,7 +89,7 @@ const Footer = () => {
         {/* Call to Action */}
         <div className="mt-8 text-center bg-gray-900 p-6 rounded-lg">
           <h5 className="text-xl font-bold mb-2">Ready to Dominate Google's AI Results?</h5>
-          <p className="text-gray-300 mb-4">Get your free AI citation analysis and discover how to become the pool contractor Google recommends.</p>
+          <p className="text-gray-300 mb-4">Get your free SEO analysis and discover how to become the pool contractor AI recommends.</p>
           <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Claim Your Free Analysis
           </button>

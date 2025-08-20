@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ShareBtn from '@/components/ShareBtn'
+import AudioPill from "@/components/AudioPill";
 
 import { RichText } from '@graphcms/rich-text-react-renderer'
 
@@ -106,6 +107,22 @@ export default async function Page({ params }) {
             <RichText
               content={post.content.raw}
               renderers={{
+                embed: {
+                  Audio: ({ title, caption, file, durationSeconds }) => {
+                    if (!file?.url) return null;
+                    return (
+                      <div className="my-3">
+                        <AudioPill
+                          title={title || caption || "Audio"}
+                          sources={[{ src: file.url, type: file.mimeType || "audio/mpeg" }]}
+                          initialDuration={
+                            typeof durationSeconds === "number" ? durationSeconds : undefined
+                          }
+                        />
+                      </div>
+                    );
+                  },
+                },
                 h2: ({ children }) => (
                   <h2 className="text-xl lg:text-4xl leading-relaxed text-ui-fg-base font-normal lg:my-5">
                     {children}

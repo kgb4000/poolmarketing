@@ -30,15 +30,15 @@ const Navigation = () => {
             href="/"
             className="text-xl md:text-2xl font-bold text-black hover:text-gray-800 transition-colors"
           >
-            Pool Builder Growth
+            Pool Builder Marketing
           </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link
-              href="/"
+            href="/"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
-                isActiveLink('/') 
+                isActiveLink('home') 
                   ? 'text-black border-b-2 border-black' 
                   : 'text-gray-600 hover:text-black'
               }`}
@@ -46,9 +46,9 @@ const Navigation = () => {
               Home
             </Link>
             <Link
-              href="/faq"
+            href="/faq"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
-                isActiveLink('/faq') 
+                isActiveLink('faq') 
                   ? 'text-black border-b-2 border-black' 
                   : 'text-gray-600 hover:text-black'
               }`}
@@ -56,7 +56,7 @@ const Navigation = () => {
               FAQ
             </Link>
             <Link
-              href="/blog"
+            href="/blog"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
                 isActiveLink('blog') 
                   ? 'text-black border-b-2 border-black' 
@@ -66,7 +66,7 @@ const Navigation = () => {
               Blog
             </Link>
             <Link
-              href="/"
+            href="/"
               className={`px-4 py-2 text-lg font-medium transition-colors ${
                 isActiveLink('contact') 
                   ? 'text-black border-b-2 border-black' 
@@ -114,7 +114,7 @@ const Navigation = () => {
               FAQ
             </Link>
             <Link
-              href="/blog"
+            href="/blog"
               className={`px-4 py-3 text-left text-lg font-medium transition-colors ${
                 isActiveLink('blog') 
                   ? 'text-black bg-gray-50 border-l-4 border-black' 
@@ -124,7 +124,7 @@ const Navigation = () => {
               Blog
             </Link>
             <Link
-              href="/contact"
+            href="/"
               className={`px-4 py-3 text-left text-lg font-medium transition-colors ${
                 isActiveLink('contact') 
                   ? 'text-black bg-gray-50 border-l-4 border-black' 
