@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Pool Builder Growth</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Helping pool contractors dominate AI search results and build lasting brand authority.
+              Helping pool contractors dominate search results and build lasting brand authority.
             </p>
             <p className="text-gray-400 text-sm">
               AI and Local Search Engine Optimization Specialists for Pool Builders and Pool Service Companies
@@ -25,11 +25,11 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">AI SEO/SEO</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">AI SEO/SEO Audits</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Pool Bulder SEO</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">SEO Audits</Link></li>
               <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Local SEO</Link></li>
               <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Content Authority Building</Link></li>
-              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Website Development</Link></li>
+              <li><Link href="#" className="text-gray-300 hover:text-white transition-colors">Website Design & Development</Link></li>
             </ul>
           </div>
 

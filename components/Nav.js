@@ -5,12 +5,12 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const Navigation = () => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('/');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigateTo = (page) => {
     setCurrentPage(page);
-    setIsMenuOpen(false); // Close menu after navigation on mobile
+    setIsMenuOpen(true); // Close menu after navigation on mobile
   };
 
   const toggleMenu = () => {

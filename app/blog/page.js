@@ -66,7 +66,7 @@ export default async function Posts() {
   return (
     <>
       <div className="my-20 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
           Pool Builder Growth Blog
         </h1>
         <p className="my-10 text-xl">Marketing Ideas For Pool Builders and Pool Service Companies</p>

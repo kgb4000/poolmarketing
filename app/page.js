@@ -195,7 +195,7 @@ const PoolBuilderMarketingSite = () => {
             The AI Platforms That Matter Most for Pool Builders and Pool Service Companies
           </h2>
           
-          <div className="space-y-6">
+          <div className="grid grid-cols-2 gap-4">
             <div className="border border-gray-300 p-6">
               <h3 className="text-xl font-bold text-black mb-3">ChatGPT & GPT-based Tools</h3>
               <ul className="ml-4">
@@ -262,12 +262,12 @@ const PoolBuilderMarketingSite = () => {
         {/* What We Do */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-black mb-6">
-            Here's Exactly How We Dominate Google's AI for Pool Contractors
+            Here's Exactly How We Dominate SEO and AI Search for Pool Builders and Pool Service Companies
           </h2>
           
           <div className="space-y-6">
             <div className="border border-gray-300 p-6">
-              <h3 className="text-xl font-bold text-black mb-3">STEP 1: Multi-Platform AI Citation Audit</h3>
+              <h3 className="text-xl font-bold text-black mb-3">STEP 1: Multi-Platform AI/SEO Audit</h3>
               <p className="text-lg text-black leading-relaxed">
                 We analyze exactly where your company appears (or doesn't appear) in ChatGPT, Perplexity, Gemini, and Google AI results for pool-related searches in your market. Most contractors are shocked to discover they're completely invisible in AI answers, even when they rank #1 in traditional results.
               </p>
@@ -345,7 +345,7 @@ const PoolBuilderMarketingSite = () => {
           </p>
           
           <p className="text-lg mb-6 leading-relaxed">
-            This analysis normally costs $2,500, but I'm offering it FREE to the first 50 pool contractors who respond.
+            This analysis normally costs $2,500, but I'm offering it FREE to the first 25 pool contractors who respond.
           </p>
           
           <button className="bg-white text-black px-8 py-4 text-xl font-bold hover:bg-gray-100 transition-colors mb-4">
