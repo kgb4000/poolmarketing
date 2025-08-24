@@ -29,7 +29,7 @@ const getPosts = async () => {
   )
 
   if (!response.ok) {
-    console.error('[getPosts] Failed to fetch posts:', await response.text())
+    console.error('[getPosts] Failed to fetch:', await response.text())
     return []
   }
 
