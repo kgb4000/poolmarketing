@@ -48,6 +48,7 @@ async function getPost(slug) {
           slug: slug,
         },
       }),
+      next: { revalidate: 3600 },
     }
   )
   const { data } = await res.json()

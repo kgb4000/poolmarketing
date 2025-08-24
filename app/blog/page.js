@@ -12,7 +12,7 @@ const getPosts = async () => {
       },
       body: JSON.stringify({
         query: `{
-                posts (stage: PUBLISHED, orderBy: createdAt_DESC) {
+                posts (stage: PUBLISHED, orderBy: createdAt_DESC, first: 20) {
                   publishedAt
                   title
                   slug
@@ -40,7 +40,7 @@ const getPosts = async () => {
 export const metadata = {
   title:"Blog | Marketing Ideas For Pool Builders and Pool Service Companies",
   description:
-    'Wedding Services from Monica Browne Weddings include Full Service Wedding Planning, Day-of Cordination, Wedding Decor, Flowers, and Floral Design.',
+    'Marketing Ideas For Pool Builders and Pool Service Companies from Pool Builder Growth',
   alternates: {
     canonical: 'https://poolbuildergrowth.com/blog',
     openGraph: {
