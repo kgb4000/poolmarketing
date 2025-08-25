@@ -100,7 +100,7 @@ export default async function Page({ params }) {
         <div className="container max-w-2xl mx-auto my-10 px-4">
           <h1 className="text-4xl my-10">{post.title}</h1>
           {/*  */}
-          <p className="text-xl py-2">Share with your business partner:</p>
+          <p className="text-xl py-2">Share with your business partner today:</p>
           <ShareBtn
             shareLink={`https://poolbuildergrowth.com/blog/${post.slug}`}
           />
