@@ -32,7 +32,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Pool Builder Growth</h3>
             <p className="text-black mb-4 leading-relaxed">
               Expert pool marketing solutions built specifically for pool
-              contractors.
+              builders and contractors.
             </p>
           </div>
 
