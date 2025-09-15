@@ -1,79 +1,79 @@
-"use client"
+'use client'
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 function formatTime(totalSec) {
-  if (!totalSec || !isFinite(totalSec)) return "00:00";
-  const s = Math.max(0, Math.round(totalSec));
-  const m = Math.floor(s / 60);
-  const sec = s % 60;
-  return `${String(m)}:${String(sec).padStart(2, "0")}`;
+  if (!totalSec || !isFinite(totalSec)) return '00:00'
+  const s = Math.max(0, Math.round(totalSec))
+  const m = Math.floor(s / 60)
+  const sec = s % 60
+  return `${String(m)}:${String(sec).padStart(2, '0')}`
 }
 
 export default function AudioPill({
   title,
-  sources,              // string URL or [{ src, type }]
-  initialDuration,       // number (seconds), optional
-  className = "",
+  sources, // string URL or [{ src, type }]
+  initialDuration, // number (seconds), optional
+  className = '',
 }) {
   const srcs = useMemo(
-    () => (typeof sources === "string" ? [{ src: sources }] : sources || []),
+    () => (typeof sources === 'string' ? [{ src: sources }] : sources || []),
     [sources]
-  );
+  )
 
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
   const [duration, setDuration] = useState(
-    typeof initialDuration === "number" ? initialDuration : null
-  );
+    typeof initialDuration === 'number' ? initialDuration : null
+  )
 
   useEffect(() => {
-    const a = audioRef.current;
-    if (!a) return;
+    const a = audioRef.current
+    if (!a) return
 
     const onLoaded = () => {
-      if (!duration || duration <= 0) setDuration(a.duration);
-    };
-    const onEnded = () => setIsPlaying(false);
+      if (!duration || duration <= 0) setDuration(a.duration)
+    }
+    const onEnded = () => setIsPlaying(false)
 
-    a.addEventListener("loadedmetadata", onLoaded);
-    a.addEventListener("ended", onEnded);
+    a.addEventListener('loadedmetadata', onLoaded)
+    a.addEventListener('ended', onEnded)
     return () => {
-      a.removeEventListener("loadedmetadata", onLoaded);
-      a.removeEventListener("ended", onEnded);
-    };
-  }, [duration]);
+      a.removeEventListener('loadedmetadata', onLoaded)
+      a.removeEventListener('ended', onEnded)
+    }
+  }, [duration])
 
   // pause this pill if another one starts playing
   useEffect(() => {
-    const a = audioRef.current;
+    const a = audioRef.current
     const onGlobalPlay = (e) => {
-      const target = e.detail;
+      const target = e.detail
       if (a && target !== a) {
-        a.pause();
-        setIsPlaying(false);
+        a.pause()
+        setIsPlaying(false)
       }
-    };
-    window.addEventListener("audiopill:play", onGlobalPlay);
-    return () => window.removeEventListener("audiopill:play", onGlobalPlay);
-  }, []);
+    }
+    window.addEventListener('audiopill:play', onGlobalPlay)
+    return () => window.removeEventListener('audiopill:play', onGlobalPlay)
+  }, [])
 
   const toggle = async () => {
-    const a = audioRef.current;
-    if (!a) return;
+    const a = audioRef.current
+    if (!a) return
     if (!isPlaying) {
-      window.dispatchEvent(new CustomEvent("audiopill:play", { detail: a }));
+      window.dispatchEvent(new CustomEvent('audiopill:play', { detail: a }))
       try {
-        await a.play();
-        setIsPlaying(true);
+        await a.play()
+        setIsPlaying(true)
       } catch {
         // autoplay blocked or other issue
       }
     } else {
-      a.pause();
-      setIsPlaying(false);
+      a.pause()
+      setIsPlaying(false)
     }
-  };
+  }
 
   return (
     <div className={`w-full ${className}`}>
@@ -81,7 +81,7 @@ export default function AudioPill({
         onClick={toggle}
         className="group bg-black text-white w-full rounded-full px-4 py-3 transition flex items-center gap-4 hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-white/40"
         aria-pressed={isPlaying}
-        aria-label={(isPlaying ? "Pause " : "Play ") + (title || "Audio")}
+        aria-label={(isPlaying ? 'Pause ' : 'Play ') + (title || 'Audio')}
       >
         {/* Left circular play/pause button */}
         <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white shrink-0">
@@ -99,7 +99,7 @@ export default function AudioPill({
 
         {/* Title */}
         <span className="text-sm sm:text-base font-medium truncate grow text-left">
-          {title || "Audio"}
+          {title || 'Audio'}
         </span>
 
         {/* Duration */}
@@ -115,5 +115,5 @@ export default function AudioPill({
         ))}
       </audio>
     </div>
-  );
+  )
 }

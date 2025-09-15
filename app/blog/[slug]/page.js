@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import ShareBtn from '@/components/ShareBtn'
-import AudioPill from "@/components/AudioPill";
+import ShareBtn from '../../../components/ShareBtn'
+import AudioPill from '../../../components/AudioPill'
 
 import { RichText } from '@graphcms/rich-text-react-renderer'
 
@@ -100,7 +100,9 @@ export default async function Page({ params }) {
         <div className="container max-w-2xl mx-auto my-10 px-4">
           <h1 className="text-4xl my-10">{post.title}</h1>
           {/*  */}
-          <p className="text-xl py-2">Share with your business partner today:</p>
+          <p className="text-xl py-2">
+            Share with your business partner today:
+          </p>
           <ShareBtn
             shareLink={`https://poolbuildergrowth.com/blog/${post.slug}`}
           />
@@ -110,18 +112,25 @@ export default async function Page({ params }) {
               renderers={{
                 embed: {
                   Audio: ({ title, caption, file, durationSeconds }) => {
-                    if (!file?.url) return null;
+                    if (!file?.url) return null
                     return (
                       <div className="my-3">
                         <AudioPill
-                          title={title || caption || "Audio"}
-                          sources={[{ src: file.url, type: file.mimeType || "audio/mpeg" }]}
+                          title={title || caption || 'Audio'}
+                          sources={[
+                            {
+                              src: file.url,
+                              type: file.mimeType || 'audio/mpeg',
+                            },
+                          ]}
                           initialDuration={
-                            typeof durationSeconds === "number" ? durationSeconds : undefined
+                            typeof durationSeconds === 'number'
+                              ? durationSeconds
+                              : undefined
                           }
                         />
                       </div>
-                    );
+                    )
                   },
                 },
                 h2: ({ children }) => (

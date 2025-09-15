@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Button from '@/components/Button'
+// import Button from '../components/Button'
 
 const getPosts = async () => {
   const response = await fetch(
@@ -24,7 +24,7 @@ const getPosts = async () => {
                 }
               }`,
       }),
-      next: { revalidate: 3600 },
+      next: { revalidate: 60 },
     }
   )
 
@@ -38,7 +38,7 @@ const getPosts = async () => {
 }
 
 export const metadata = {
-  title:"Blog | Marketing Ideas For Pool Builders and Pool Service Companies",
+  title: 'Blog | Marketing Ideas For Pool Builders and Pool Service Companies',
   description:
     'Marketing Ideas For Pool Builders and Pool Service Companies from Pool Builder Growth',
   alternates: {
@@ -69,7 +69,9 @@ export default async function Posts() {
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
           Pool Builder Growth Blog
         </h1>
-        <p className="my-10 text-xl">Marketing Ideas For Pool Builders and Pool Service Companies</p>
+        <p className="my-10 text-xl">
+          Marketing Ideas For Pool Builders and Pool Service Companies
+        </p>
       </div>
       <div className="container max-w-4xl mx-auto px-6">
         <div className="mb-20"></div>
