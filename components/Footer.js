@@ -9,17 +9,17 @@ const Footer = () => {
   return (
     <footer className="text-black">
       {/* Call to Action */}
-      <div className="text-center bg-gray-900 p-6 py-40">
+      <div className="text-center bg-gray-900 px-6 py-10 lg:py-40">
         <h2 className="text-5xl text-white font-bold my-6">
           Ready to Build More Pools?
         </h2>
-        <p className="text-gray-300 text-2xl mx-auto max-w-xl">
+        <p className="text-gray-300 text-2xl mx-auto max-w-xl mb-6">
           Get your Pool Growth Builder Blueprint and become the pool contractor
           Google recommends
         </p>
         <Button
           buttonText="Get My Free Pool Builder Growth Blueprint Now"
-          textSize="text-2xl"
+          textSize="text-md lg:text-2xl"
           bgColor="bg-green-500"
           textColor="text-white"
           hover="hover:bg-green-600"

@@ -6,11 +6,11 @@ const Section8 = () => {
     <>
       <div
         id="#contact"
-        className='bg-slate-300 bg-[url("/images/ready-for-pool-marketing-bg.png")] bg-no-repeat bg-cover bg-center bg-blend-multiply'
+        className='bg-slate-400 bg-[url("/images/ready-for-pool-marketing-bg.png")] bg-no-repeat bg-cover bg-center bg-blend-multiply'
       >
-        <div className="container max-w-8xl mx-auto py-70 lg:grid grid-cols-2 justify-between">
+        <div className="container max-w-8xl mx-auto py-10 lg:py-80 lg:grid grid-cols-2 justify-between px-6 lg:px-0">
           <div className="max-w-2xl">
-            <h2 className="text-5xl font-bold text-white leading-tight max-w-2xl mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight text-center max-w-4xl mx-auto">
               Ready to Turn Your Pool Business Into a Lead-Generating Machine?
             </h2>
             <p className="text-xl text-white mb-6">
@@ -49,18 +49,18 @@ const Section8 = () => {
             </p>
           </div>
           <div>
-            <div className="border-1 border-white py-20 rounded-2xl px-20 w-xl mt-10">
+            <div className="border-2 border-white py-20 rounded-2xl px-6 lg:px-20 w-xl mt-10">
               <input
-                className="border-1 py-4 px-4 text-white rounded-xl mb-10 block w-full focus:outline-0"
+                className="border-1 py-4 px-4 text-white rounded-xl mb-4 lg:mb-10 block w-full focus:outline-0"
                 placeholder="Name"
               />
               <input
-                className="border-1 py-4 px-4 text-white rounded-xl mb-10 block w-full focus:outline-0"
+                className="border-1 py-4 px-4 text-white rounded-xl mb-4 lg:mb-10 block w-full focus:outline-0"
                 placeholder="Email"
               />
               <textarea
                 rows="4"
-                className="border-1 border-white block w-full rounded-xl px-4 py-4 text-white focus:outline-0"
+                className="border-2 py-4 px-4 text-white rounded-xl mb-4 lg:mb-10 block w-full focus:outline-0"
                 placeholder="What's ypur biggest hurdle?"
               ></textarea>
               <input

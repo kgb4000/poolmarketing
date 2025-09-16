@@ -5,10 +5,10 @@ import Image from 'next/image'
 const Section2 = () => {
   return (
     <>
-      <section className="bg-slate-50 py-20">
-        <div className="container max-w-8xl mx-auto px-6 my-20">
-          <h2 className="text-5xl font-bold text-black mb-4 leading-tight text-center max-w-2xl mx-auto">
-            There's a Better Way to Grow Your Pool Business
+      <section className="bg-slate-50 py-10 lg:py-20">
+        <div className="container max-w-8xl mx-auto px-6 my-10 lg:my-20">
+          <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-tight text-center max-w-xl lg:max-w-4xl mx-auto">
+            There's a Better Way to Grow Your Pool Construction Business
           </h2>
           <p className="text-xl max-w-xl mx-auto text-center mb-10">
             What if you could ...
@@ -21,7 +21,7 @@ const Section2 = () => {
                 alt="Pool marketing working."
                 title="Pool marketing working."
               />
-              <p className="text-[1.4rem] px-10 py-10">
+              <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Generate 20+ qualified leads per month without chasing referrals
                 or paying for expensive ads.
               </p>
@@ -33,7 +33,7 @@ const Section2 = () => {
                 alt="Pool proposal system working."
                 title="Pool proposal system working."
               />
-              <p className="text-[1.4rem] px-10 py-10">
+              <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Cut proposal estimation time by 75% with automated proposal
                 systems that win more bids.
               </p>
@@ -45,7 +45,7 @@ const Section2 = () => {
                 alt="Happy couple waiting to get quote on pool service."
                 title="Happy couple waiting to get quote on pool service."
               />
-              <p className="text-[1.4rem] px-10 py-10">
+              <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Attract homeowners who value quality work and craftsmanship over
                 the lowest price.
               </p>
@@ -57,7 +57,7 @@ const Section2 = () => {
                 alt="Pool project management."
                 title="Pool project management."
               />
-              <p className="text-[1.4rem] px-10 py-10">
+              <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Keep every project on track with automated communication that
                 impresses clients
               </p>
@@ -69,7 +69,7 @@ const Section2 = () => {
                 alt="New swimming pooll being built."
                 title="New swimming pooll being built."
               />
-              <p className="text-[1.4rem] px-10 py-10">
+              <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Focus on building pools while we handle your entire online
                 marketing machine.
               </p>
@@ -97,7 +97,7 @@ const Section2 = () => {
           </div>
           <Button
             buttonText="Get My Free Pool Builder Growth Blueprint Now"
-            textSize="text-2xl"
+            textSize="text-md lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
             hover="hover:bg-green-600"
