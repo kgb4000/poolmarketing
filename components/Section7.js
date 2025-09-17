@@ -10,47 +10,51 @@ import Button from './Button'
 const Section7 = () => {
   return (
     <>
-      <section className="bg-slate-50 py-20">
-        <div className="container max-w-8xl mx-auto px-6 my-20">
-          <h2 className="text-5xl font-bold text-black mb-4 leading-tight text-center max-w-2xl mx-auto">
+      <section className="bg-slate-50 py-4 lg:py-20">
+        <div className="container max-w-8xl mx-auto px-6 my-10 lg:my-20">
+          <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-normal text-center max-w-4xl mx-auto">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl max-w-xl mx-auto text-center mb-10">
+          <p className="text-md px-6 lg:px-10 lg:text-xl max-w-xl mx-auto text-center mb-4 lg:mb-10">
             Every strategy I recommend is backed by research. No guesswork, no
             generic solutions, always innovating.
           </p>
           <div className="max-w-5xl mx-auto">
             <Disclosure>
               <DisclosureButton>
-                <p className="py-2 text-3xl mb-4 text-left">
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left">
                   I've been burned by marketing companies before. How is this
                   different?
                 </p>
               </DisclosureButton>
-              <DisclosurePanel className="text-gray-500 text-xl mb-6">
-                <p className="text-xl leading-normal mb-4">
-                  You’re not alone, many pool builders I talk to have had the
-                  same experience.
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  You’re not alone, many pool builders have had the same
+                  experience.
                 </p>
-                <p className="text-xl leading-normal mb-4">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   The difference with my approach is transparency,
                   specialization, and results that actually matter to your
                   business.
                 </p>
-                <p className="text-xl leading-normal mb-4">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   I don’t take a one-size-fits-all approach. Every strategy is
                   designed for the unique challenges of selling high-ticket pool
-                  projects. You won’t just get clicks, impressions, or “traffic
-                  reports.”{' '}
+                  projects.
                 </p>
-                <p className="text-xl leading-normal mb-4">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  You won’t just get clicks, impressions, or “traffic reports.”
+                </p>
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   You’ll see real inquiries from homeowners who are serious
                   about building a pool. You’ll always know what’s being done,
-                  why it matters, and how it’s performing. No black-box
-                  campaigns, no hidden fees.
+                  why it matters, and how it’s performing.
                 </p>
-                <p className="text-xl leading-normal mb-6">
-                  systems that keep generating leads, even when you’re not
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  No black-box campaigns, no hidden fees.
+                </p>
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  Systems that keep generating leads, even when you’re not
                   running paid campaigns. My goal isn’t just to “do marketing”
                   for you, it’s to be a partner in growing your pool business
                   profitably and sustainably.
@@ -59,22 +63,22 @@ const Section7 = () => {
             </Disclosure>
             <Disclosure>
               <DisclosureButton>
-                <p className="py-2 text-3xl mb-4 text-left">
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
                   How long before I see results from SEO and digital marketing?
                 </p>
               </DisclosureButton>
-              <DisclosurePanel className="text-gray-500 text-xl">
-                <p className="text-xl leading-normal mb-6">
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   I’ll keep it real with you. SEO isn’t overnight.
                 </p>
-                <p className="text-xl leading-normal mb-6">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   Most pool builders start to see traction in about 3–6 months,
                   depending on your market, your present website, landing pages,
                   and competition. That said, the work we put in today (like
                   optimizing your website and content) builds momentum that
                   keeps paying off for years.
                 </p>
-                <p className="text-xl leading-normal mb-6">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   The good news is, while SEO compounds over time, other parts
                   of your marketing can start delivering faster. A
                   conversion-focused website, smart automation, and even
@@ -82,7 +86,7 @@ const Section7 = () => {
                   while SEO steadily positions you as the #1 pool builder
                   homeowners find first.
                 </p>
-                <p className="text-xl leading-normal mb-6">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
                   My approach combines quick wins with long-term growth, so
                   you’re not stuck waiting months before seeing results—you get
                   a pipeline that builds now and scales later.
@@ -90,26 +94,43 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                Do I really need a new website? Mine looks fine.
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  Do I really need a new website? Mine looks fine.
+                </p>
               </DisclosureButton>
-              <DisclosurePanel className="text-gray-500 text-xl">
-                It depends. A website can “look fine” but still cost you leads
-                every single day. The real question isn’t how your site looks,
-                it’s how it performs. Does it show up when homeowners search for
-                pool builders in your city? Does it guide visitors to call, fill
-                out a form, or request a quote? Does it load fast and look great
-                on mobile devices? Does it filter out tire-kickers so you spend
-                time only on serious buyers? If the answer to any of those is
-                “no,” then your website is more like a pretty brochure than a
-                lead-generating tool. I build sites that don’t just look
-                professional, they’re designed to rank higher, convert visitors,
-                and turn more of your traffic into real projects.
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  It depends. A website can “look fine” but still cost you leads
+                  every single day. The real question isn’t how your site looks,
+                  it’s how it performs.
+                </p>
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  Does it show up when homeowners search for pool builders in
+                  your city? Does it guide visitors to call, fill out a form, or
+                  request a quote?
+                </p>
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  Does it load fast and look great on mobile devices? Does it
+                  filter out tire-kickers so you spend time only on serious
+                  buyers?
+                </p>
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  If the answer to any of those is “no,” then your website is
+                  more like a pretty brochure than a lead-generating tool.
+                </p>
+                <p className="text-lg lg:text-xl leading-normal mb-4">
+                  I build sites that don’t just look professional, they’re
+                  designed to rank higher, convert visitors, and turn more of
+                  your traffic into real projects.
+                </p>
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                What if I already have someone doing my marketing?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  What if I already have someone doing my marketing?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 <p className="text-xl leading-normal mb-6">
@@ -137,9 +158,11 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                What makes marketing for pool builders different from other
-                industries?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  What makes marketing for pool builders different from other
+                  industries?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Pool building is a high-ticket, highly personal purchase.
@@ -150,34 +173,53 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                I don't have time for another project. How much of my time does
-                this require?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  I don't have time for another project. How much of my time
+                  does this require?
+                </p>
               </DisclosureButton>
-              <DisclosurePanel className="text-gray-500 text-xl">
-                That's exactly why you need this. My goal is to save you time,
-                not create more work. Initial setup requires about 2 hours of
-                your time (photos, content review, goal-setting). After that,
-                you'll spend maybe 30 minutes per month reviewing reports. The
-                automated systems I build actually give you back 10-15 hours per
-                week by handling follow-ups and administrative tasks.
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-xl leading-normal mb-6">
+                  That's exactly why you need this. My goal is to save you time,
+                  not create more work.
+                </p>
+                <p className="text-xl leading-normal mb-6">
+                  Initial setup requires about 2 hours of your time (photos,
+                  content review, goal-setting).
+                </p>
+                <p className="text-xl leading-normal mb-6">
+                  After that, you'll spend maybe 30 minutes per month reviewing
+                  reports. The automated systems I build actually give you back
+                  10-15 hours per week by handling follow-ups and administrative
+                  tasks.
+                </p>
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                Isn’t SEO just about keywords?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left">
+                  Isn’t SEO just about keywords?
+                </p>
               </DisclosureButton>
-              <DisclosurePanel className="text-gray-500 text-xl">
-                Not anymore. Today’s SEO is about authority, trust, and
-                visibility across Google, maps, and even AI-driven search. It’s
-                not just stuffing pages with keywords—it’s building a digital
-                footprint that ensures homeowners see you as the top choice.
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-xl leading-normal mb-6">
+                  Not anymore. Today’s SEO is about authority, trust, and
+                  visibility across Google, maps, and even AI-driven search.
+                </p>
+                <p className="text-xl leading-normal mb-6">
+                  It’s not just stuffing pages with keywords—it’s building a
+                  digital footprint that ensures homeowners see you as the top
+                  choice.
+                </p>
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                My business is seasonal. Does digital marketing work for pool
-                builders?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  My business is seasonal. Does digital marketing work for pool
+                  builders?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Absolutely - in fact, it's even more important for seasonal
@@ -189,8 +231,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                I get most of my work from referrals. Why do I need marketing?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  I get most of my work from referrals. Why do I need marketing?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Referrals are great, but they're not scalable or predictable.
@@ -202,8 +246,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                Can I just do social media instead of SEO?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  Can I just do social media instead of SEO?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Social media is great for showing off your work, but it’s not
@@ -214,8 +260,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                Do I need to keep marketing once I’m ranking on Google?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  Do I need to keep marketing once I’m ranking on Google?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Yes. Because your competitors won’t stop. SEO is like a pool: if
@@ -225,8 +273,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                What happens if I stop marketing?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  What happens if I stop marketing?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Most businesses see leads slow down within weeks, and rankings
@@ -236,8 +286,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                What if I'm already booked solid? Why would I need more leads?
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  What if I'm already booked solid? Why would I need more leads?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 Being busy and being profitable are different things. More leads
@@ -249,8 +301,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                <p>How much should I expect to invest in digital marketing?</p>
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  How much should I expect to invest in digital marketing?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 <p className="text-md">
@@ -264,8 +318,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                <p>Can you guarantee results?</p>
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  Can you guarantee results?
+                </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
                 I guarantee the work will be done correctly and on time, but no
@@ -277,10 +333,10 @@ const Section7 = () => {
               </DisclosurePanel>
             </Disclosure>
             <Disclosure>
-              <DisclosureButton className="py-2 text-3xl mb-4 text-left">
-                <p>
-                  I tried Google Ads and Facebook ads before and lost money.{' '}
-                  <span className="block py-2">Will this be different?</span>
+              <DisclosureButton>
+                <p className="text-2xl lg:text-3xl py-2 mb-4 text-left font-semibold">
+                  I tried Google Ads and Facebook ads before and lost money.
+                  Will this be different?
                 </p>
               </DisclosureButton>
               <DisclosurePanel className="text-gray-500 text-xl">
@@ -295,8 +351,8 @@ const Section7 = () => {
             </Disclosure>
           </div>
           <Button
-            buttonText="Get My Free Pool Builder Growth Blueprint Now"
-            textSize="text-md lg:text-2xl"
+            buttonText="Get My Free Pool Builder Growth Blueprint"
+            textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
             hover="hover:bg-green-600"

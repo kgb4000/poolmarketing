@@ -18,8 +18,8 @@ const Footer = () => {
           Google recommends
         </p>
         <Button
-          buttonText="Get My Free Pool Builder Growth Blueprint Now"
-          textSize="text-md lg:text-2xl"
+          buttonText="Get My Free Pool Builder Growth Blueprint"
+          textSize="text-sm lg:text-2xl"
           bgColor="bg-green-500"
           textColor="text-white"
           hover="hover:bg-green-600"

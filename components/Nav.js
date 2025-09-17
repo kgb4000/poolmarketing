@@ -24,11 +24,11 @@ const Navigation = () => {
   return (
     <nav className="border-b border-gray-300 bg-white">
       <div className="container max-w-8xl mx-auto px-6">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2 lg:py-4">
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl md:text-2xl font-bold text-black hover:text-gray-800 transition-colors"
+            className="lg:text-xl md:text-2xl font-bold text-black hover:text-gray-800 transition-colors"
           >
             Pool Builder Growth
           </Link>
@@ -80,7 +80,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden flex items-center justify-center w-10 h-10 bg-black rounded hover:bg-gray-800 transition-colors focus:outline-none"
+            className="md:hidden flex items-center justify-center w-8 h-8 bg-black rounded hover:bg-gray-800 transition-colors focus:outline-none"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6 text-white" />

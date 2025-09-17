@@ -17,42 +17,44 @@ const PoolBuilderMarketingSite = () => {
       <main>
         <div className='bg-slate-400 bg-blend-multiply bg-[url("/images/pool-builder-marketing.jpg")] bg-no-repeat bg-cover bg-center'>
           <div className="container max-w-8xl mx-auto px-6">
-            <div className="max-w-4xl py-8">
+            <div className="max-w-4xl py-4 md:py-8">
               <div className="lg:my-20">
-                <h1 className="text-md text-white mb-4 leading-tight font-light">
+                <h1 className="text-sm md:text-lg text-white mb-2 md:mb-4 leading-tight font-light">
                   #1 Pool Marketing Agency for Pool Builders in DC, Maryland, &
                   Northern Virginia
                 </h1>
-                <h2 className="text-3xl lg:text-7xl max-w-4xl mx-auto font-extrabold text-white">
+                <h2 className="text-4xl lg:text-7xl max-w-4xl mx-auto font-extrabold text-white">
                   Don’t Stay Invisible.
                   <span className="block">
                     Get Found by Homeowners Ready to Build Pools in Your City.
                   </span>
                 </h2>
-                <p className="text-md max-w-2xl my-6 text-white">
+                <p className="text-sm md:text-2xl max-w-2xl my-2 md:my-4 text-white">
                   Stop being invisible and losing jobs to competitors. With the
                   right marketing, you’ll attract serious homeowners who value
                   quality craftsmanship and are ready to build. I help pool
                   builders:
                 </p>
-                <ul className="text-white mb-8">
+                <ul className="text-white mb-4 lg:mb-8">
                   <li className="mb-4 flex items-start">
-                    <CheckCircle className="w-10 h-10 text-green-400 mr-4" />
-                    <p className="text-sm">
+                    <CheckCircle className="w-[30px] h-[30px] md:w-8 md:h-8 text-green-400 mr-4" />
+                    <p className="text-sm lg:text-xl">
                       Get more qualified leads without wasting money on dead
                       ends
                     </p>
                   </li>
                   <li className="mb-4 flex items-start">
-                    <CheckCircle className="w-10 h-10 text-green-400 mr-4" />
-                    <p className="text-sm">
-                      Book more projects with marketing designed to convert
+                    <CheckCircle className="w-[30px] h-[30px] md:w-8 md:h-8 text-green-400 mr-4" />
+                    <p className="text-sm lg:text-xl">
+                      Book more projects with digital marketing designed for
+                      pool builders
                     </p>
                   </li>
                   <li className="mb-4 flex items-start">
-                    <CheckCircle className="w-10 h-10 text-green-400 mr-4" />
-                    <p className="text-sm">
-                      Save time with automated follow-up and email campaigns
+                    <CheckCircle className="w-[30px] h-[30px] md:w-8 md:h-8 text-green-400 mr-4" />
+                    <p className="text-sm lg:text-xl">
+                      Never miss a lead with automated follow-up and email
+                      campaigns
                     </p>
                   </li>
                 </ul>

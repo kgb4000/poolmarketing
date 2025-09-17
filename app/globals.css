@@ -28,7 +28,9 @@ h4 {
 }
 
 p,
-li {
+li,
+button,
+a {
   font-family: var(--font-poppins);
   font-weight: 400;
 }

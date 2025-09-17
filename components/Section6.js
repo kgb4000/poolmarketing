@@ -6,10 +6,10 @@ const Section6 = () => {
   return (
     <>
       <div className="container max-w-8xl mx-auto px-6 my-20">
-        <h2 className="text-5xl font-bold text-black mb-4 leading-tight text-center">
+        <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-tight text-center max-w-xl lg:max-w-4xl mx-auto">
           Why Work With Me?
         </h2>
-        <p className="text-xl max-w-xl mx-auto text-center mb-10">
+        <p className="text-md lg:text-lg mx-10 lg:max-w-2xl mx-auto text-center px-6 mb-4 lg:mb-10">
           I’ve noticed the same thing for 10 years. Pool builders were always
           underserved by generic marketing agencies who didn’t understand their
           unique challenges.
@@ -147,7 +147,7 @@ const Section6 = () => {
           </div>
 
           {/* Mobile Cards */}
-          <div className="lg:hidden space-y-6">
+          <div className="lg:hidden space-y-6 mb-6">
             {[
               {
                 category: 'Research Foundation',
@@ -233,8 +233,8 @@ const Section6 = () => {
           </div>
         </div>
         <Button
-          buttonText="Get My Free Pool Builder Growth Blueprint Now"
-          textSize="text-md lg:text-2xl"
+          buttonText="Get My Free Pool Builder Growth Blueprint"
+          textSize="text-sm lg:text-2xl"
           bgColor="bg-green-500"
           textColor="text-white"
           hover="hover:bg-green-600"

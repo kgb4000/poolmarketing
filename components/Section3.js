@@ -85,8 +85,8 @@ const Section2 = () => {
               </p>
             </div> */}
           </div>
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-xl px-10 py-10">
+          <div className="lg:max-w-2xl mx-auto text-center">
+            <p className="text-md lg:text-xl py-6 px-10 lg:px-10 lg:py-10">
               If you're nodding your head thinking{' '}
               <span className="italic font-bold">
                 "That's exactly what I need for my company,"
@@ -96,8 +96,8 @@ const Section2 = () => {
             </p>
           </div>
           <Button
-            buttonText="Get My Free Pool Builder Growth Blueprint Now"
-            textSize="text-md lg:text-2xl"
+            buttonText="Get My Free Pool Builder Growth Blueprint"
+            textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
             hover="hover:bg-green-600"
