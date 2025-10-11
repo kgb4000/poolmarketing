@@ -3,6 +3,7 @@ import './globals.css'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import Script from 'next/script'
+import Analytics from '../components/Analytics'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -12,21 +13,43 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title:
-    '#1 Pool Marketing Agency for Pool Builders in DC, Maryland, & Northern Virginia',
+  title: 'Pool Builder Marketing Agency | DC, MD & VA | Pool Builder Growth',
   description:
-    'Pool Builder Growth helps pool builders attract more customers with expert local SEO, content marketing, email campaigns, web design & development.',
+    'Pool builder marketing agency serving DC, MD & VA. Generate 20+ qualified leads per month with specialized marketing for pool construction companies.',
   alternates: {
     canonical: 'https://poolbuildergrowth.com',
   },
 }
 
 export default function RootLayout({ children }) {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
       <body>
         <Nav />
         {children}
+        <Analytics />
+        {/* Load GA library */}
+        {GA_ID ? (
+          <>
+            {/* GA library */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            {/* Init GA */}
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = window.gtag || function(){dataLayer.push(arguments);}
+
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { send_page_view: false });
+              `}
+            </Script>
+          </>
+        ) : null}
         <Footer />
         <Script
           id="mcjs"

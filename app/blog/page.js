@@ -40,7 +40,7 @@ const getPosts = async () => {
 export const metadata = {
   title: 'Blog | Marketing Ideas For Pool Builders and Pool Service Companies',
   description:
-    'Marketing Ideas For Pool Builders and Pool Service Companies from Pool Builder Growth',
+    'Marketing Ideas For Pool Builders and Contractors from Pool Builder Growth',
   alternates: {
     canonical: 'https://poolbuildergrowth.com/blog',
     openGraph: {
@@ -48,14 +48,6 @@ export const metadata = {
       locale: 'en_US',
       url: 'https://poolbuildergrowth.com/blog',
       site_name: 'Pool Builder Growth',
-      images: [
-        {
-          url: 'https://res.cloudinary.com/browne-company/image/upload/q_auto/v1631495887/walking-down-aisle_o4wklu.webp',
-          width: 3961,
-          height: 2641,
-          alt: 'Couple just married, walking down the aisle.',
-        },
-      ],
     },
   },
 }
@@ -65,56 +57,46 @@ export default async function Posts() {
 
   return (
     <>
-      <div className="my-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
-          Pool Builder Growth Blog
-        </h1>
-        <p className="my-10 text-xl">
-          Marketing Ideas For Pool Builders and Pool Service Companies
-        </p>
-      </div>
-      <div className="container max-w-4xl mx-auto px-6">
-        <div className="mb-20"></div>
-        <div className="lg:grid grid-cols-1 gap-x-8 justify-between w-full">
-          <ul className="col-span-2">
-            {posts.map((post) => (
-              <div key={post.slug}>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-black no-underline"
-                >
-                  <div className="grid lg:grid-cols-2 lg:gap-8 items-center mb-8">
-                    <img
-                      className="mb-6"
-                      src={post.coverImage.url}
-                      alt={post.title}
-                      title={post.title}
-                      loading="lazy"
-                      width={post.coverImage.width}
-                      height={post.coverImage.height}
-                    />
-                    <div className="">
-                      <h3 className="text-3xl mb-6">{post.title}</h3>
-                      <p>Read more</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </ul>
+      <main>
+        <div className="my-6 lg:my-20 text-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
+            Pool Builder Growth Blog
+          </h1>
+          <p className="my-4 lg:my-10 text-xl">
+            Marketing Ideas For Pool Builders and Pool Contractors
+          </p>
         </div>
-        {/* <div className="center">
-          <a href={calendly} target="_blank">
-            <Button
-              buttonText="Book a Call With Monica Today!"
-              bgColor="bg-purple-500"
-              borderWidth="border-0"
-              textColor="text-white"
-              textSize="md:text-xl"
-            />
-          </a>
-        </div> */}
-      </div>
+        <div className="container max-w-4xl mx-auto px-6">
+          <div className="lg:grid grid-cols-1 gap-x-8 justify-between w-full">
+            <ul className="col-span-2">
+              {posts.map((post) => (
+                <div key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-black no-underline"
+                  >
+                    <div className="grid lg:grid-cols-2 lg:gap-8 items-center mb-8">
+                      <img
+                        className="mb-6 w-full"
+                        src={post.coverImage.url}
+                        alt={post.title}
+                        title={post.title}
+                        loading="lazy"
+                        width={post.coverImage.width}
+                        height={post.coverImage.height}
+                      />
+                      <div className="">
+                        <h3 className="text-3xl mb-6">{post.title}</h3>
+                        <p>Read more</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </main>
     </>
   )
 }

@@ -14,12 +14,12 @@ const PoolBuilderFAQ = () => {
   }
 
   const QuestionItem = ({ id, question, children }) => (
-    <div className="border border-gray-200 rounded-lg mb-4 bg-white">
+    <div className=" rounded-lg mb-4 bg-white">
       <button
         onClick={() => toggleQuestion(id)}
         className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors"
       >
-        <h3 className="text-lg font-semibold text-black pr-4">{question}</h3>
+        <h3 className="text-xl font-semibold text-black pr-4">{question}</h3>
         {openQuestions[id] ? (
           <ChevronUp className="w-5 h-5 text-gray-600 flex-shrink-0" />
         ) : (
@@ -53,7 +53,7 @@ const PoolBuilderFAQ = () => {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* General Pool Marketing Strategy */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-black mb-6 pb-2 border-b-2 border-black">
+          <h2 className="text-2xl font-bold text-black mb-6 pb-2">
             General Pool Marketing Strategy
           </h2>
 

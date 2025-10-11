@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import Button from './Button'
-import { event } from '../lib/eventHelper'
 import BlueprintModal from './BlueprintModal'
 
-const Section2 = () => {
+const WhyPollBuildersNeedSpecialist = () => {
   const [open, setOpen] = useState(false)
   const handleClick = () => {
     event({
@@ -18,7 +17,7 @@ const Section2 = () => {
     <>
       <div className="container max-w-8xl mx-auto px-4 my-10 lg:my-20">
         <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-4xl mx-auto">
-          Struggling With Pool Builder Marketing for Your Company?
+          Why Pool Builder Marketing Requires a Specialized Approach
         </h2>
         <p className="text-md lg:text-lg lg:max-w-2xl lg:mx-auto text-center px-6 mb-4 lg:mb-10">
           If you're struggling with any of these issues, you’re not alone. But
@@ -27,29 +26,29 @@ const Section2 = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              Your phone isn't ringing enough
+              Long Sales Cycles
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
-              You know you do great work, but homeowners can't find you online
-              when they're ready to build.
+              Homeowners take 6-18 months from first contact to signed contract.
+              Generic agencies expect 30-day sales cycles and give up too early.
             </p>
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              You’re competing on price, not quality
+              High ticket Sales
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
-              Every lead wants the cheapest option, even though your
-              craftsmanship is worth premium pricing.
+              $40,000-$150,000+ purchases require extensive trust-building that
+              most home service marketing doesn't account for.
             </p>
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              You have no time for marketing
+              Seasonal Business Patterns
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
-              You know you need a better website and online presence, but when
-              would you find the time.
+              Pool construction marketing must account for planning season
+              (fall/winter) versus building season (spring/summer).
             </p>
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
@@ -63,31 +62,36 @@ const Section2 = () => {
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              You're wasting time with tire-kickers
+              Visual-heavy Sales Process
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
-              Hours spent on estimates for people who were never serious about
-              building a pool.
+              Homeowners buy with their eyes. Your swimming pool marketing must
+              showcase stunning visuals and project galleries.
             </p>
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              You depend on Google & Facebook ads
+              Complex Buyer Journey
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
-              Spending thousands on Google, Facebook, and Instagram ads without
-              knowing what's working.
+              Zoning, permitting, financing, and design decisions create a
+              unique path to purchase.
             </p>
           </div>
         </div>
-        <div className="lg:max-w-xl mx-auto text-center">
-          <p className="text-md lg:text-xl py-6 px-10 lg:px-10 lg:py-10">
-            If you're nodding your head thinking{' '}
-            <span className="italic font-bold">
-              "That's exactly my situation,"{' '}
-            </span>{' '}
-            you're not alone and I want to partner with you to fix it.
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
+            That's why I built Pool Builder Growth specifically around how
+            homeowners research and buy pools. Every strategy—from SEO to email
+            automation to content marketing—is designed for the pool
+            construction industry's unique challenges, not adapted from generic
+            templates.
           </p>
+          {/* <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
+            Pool builders who work with specialized pool contractor marketing
+            agencies see 3x more qualified leads than those using generic home
+            service agencies.
+          </p> */}
         </div>
         <>
           <Button
@@ -106,4 +110,4 @@ const Section2 = () => {
   )
 }
 
-export default Section2
+export default WhyPollBuildersNeedSpecialist

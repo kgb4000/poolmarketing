@@ -1,27 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react'
-import Button from './Button'
-import { event } from '../lib/eventHelper'
-import BlueprintModal from './BlueprintModal'
+import WebDesignCTA from '@/components/WebDesignCTA'
 
-const FAQ = () => {
-  const [open, setOpen] = useState(false)
-  const handleClick = () => {
-    event({
-      action: 'get_growth_blueprint_click',
-      category: 'engagement',
-      label: 'FAQ_cta',
-      value: 1,
-    })
-  }
+const WebsiteDesignFAQ = () => {
   return (
     <>
       <section className="bg-slate-50 py-4 lg:py-20">
-        <div className="container max-w-9xl mx-auto px-6 my-10 lg:my-20">
+        <div className="container max-w-8xl mx-auto px-6 my-10 lg:my-20">
           <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-normal text-center max-w-4xl mx-auto">
             Frequently Asked Questions
           </h2>
@@ -427,22 +416,11 @@ const FAQ = () => {
               </DisclosurePanel>
             </Disclosure>
           </div>
-          <>
-            <Button
-              onClick={() => setOpen(true)}
-              align="text-center"
-              buttonText="Get My Free Pool Builder Growth Blueprint"
-              textSize="text-sm lg:text-2xl"
-              bgColor="bg-green-500"
-              textColor="text-white"
-              hover="hover:bg-green-600"
-            />
-            <BlueprintModal open={open} setOpen={setOpen} />
-          </>
+          <WebDesignCTA label="web_design_faq-section" />
         </div>
       </section>
     </>
   )
 }
 
-export default FAQ
+export default WebsiteDesignFAQ

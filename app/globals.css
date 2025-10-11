@@ -25,6 +25,8 @@ h2,
 h3,
 h4 {
   font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p,
@@ -36,4 +38,10 @@ input,
 textarea {
   font-family: var(--font-poppins);
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: blue;
 }

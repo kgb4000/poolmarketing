@@ -1,32 +1,21 @@
 import React from 'react'
-import { useState } from 'react'
 import Button from './Button'
 import { CheckCircle, XCircle } from 'lucide-react'
-import { event } from '../lib/eventHelper'
-import BlueprintModal from './BlueprintModal'
+import WeakDesignCTA from '@/components/WebDesignCTA'
 
 const Section6 = () => {
-  const [open, setOpen] = useState(false)
-  const handleClick = () => {
-    event({
-      action: 'get_growth_blueprint_click',
-      category: 'engagement',
-      label: 'section5_cta',
-      value: 1,
-    })
-  }
   return (
     <>
       <div className="container max-w-8xl mx-auto px-6 my-20">
-        <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-tight text-center max-w-xl lg:max-w-4xl mx-auto">
-          Why Work With Me?
+        <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-tight text-center max-w-xl lg:max-w-3xl mx-auto">
+          Why Why Hire Me as Your Pool Company Web Designer?
         </h2>
         <p className="text-md lg:text-lg lg:max-w-2xl mx-auto text-center px-6 mb-4 lg:mb-10">
           I’ve noticed the same thing for 10 years. Pool builders were always
-          underserved by generic marketing agencies who didn’t understand your
-          unique needs and challenges.
+          underserved by generic marketing agencies who didn’t understand their
+          unique challenges.
         </p>
-        <div>
+        <div className="pb-10">
           {/* Desktop Table */}
           <div className="hidden lg:block overflow-x-auto">
             <table className="w-full text-left table-auto">
@@ -34,7 +23,7 @@ const Section6 = () => {
                 <tr className="text-slate-900 border-b border-slate-300 bg-slate-50">
                   <th className="text-2xl p-10 text-left">What matters most</th>
                   <th className="text-2xl p-10 text-left">
-                    Pool Bulder Growth (Me)
+                    Pool Bulder Growth
                   </th>
                   <th className="text-2xl p-10 text-left">
                     Other pool marketing companies
@@ -42,40 +31,6 @@ const Section6 = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="align-top">
-                  <td className="text-xl p-10 font-bold items-start">
-                    Relationship Model
-                  </td>
-                  <td className="text-lg p-10 flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 shrink-0 relative top-[2px]" />
-                    True Partnership - Your success is my reputation. We share
-                    risk, make decisions together, and grow together
-                  </td>
-                  <td className="text-lg p-10">
-                    <div className="flex">
-                      <XCircle className="w-6 h-6 text-red-400 mr-3 shrink-0 relative top-[2px]" />
-                      Vendor Relationship - They deliver services, you pay
-                      bills. If it doesn't work, they blame your
-                      industry/market/timing
-                    </div>
-                  </td>
-                </tr>
-                <tr className="align-top">
-                  <td className="text-xl p-10 font-bold items-start">
-                    Expertise
-                  </td>
-                  <td className="text-lg p-10 flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 shrink-0 relative top-[2px]" />
-                    Pool builder marketing specialist - 100% pool industry focus
-                  </td>
-                  <td className="text-lg p-10">
-                    <div className="flex">
-                      <XCircle className="w-6 h-6 text-red-400 mr-3 shrink-0 relative top-[2px]" />
-                      Multi-industry agency treating pools like any other
-                      service
-                    </div>
-                  </td>
-                </tr>
                 <tr className="align-top">
                   <td className="text-xl p-10 font-bold items-start">
                     Research Foundation
@@ -125,8 +80,8 @@ const Section6 = () => {
                   <td className="text-xl p-10 font-bold">Results Guarantee</td>
                   <td className="text-lg p-10 flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 shrink-0 relative top-[2px]" />
-                    A full marketing stystem in 90 days to start generating
-                    qualified leads, follow-up, and client retention
+                    10 qualified leads in 90 days after system is built or I
+                    work for free
                   </td>
                   <td className="text-lg p-10">
                     <div className="flex">
@@ -179,12 +134,12 @@ const Section6 = () => {
                   <td className="text-xl p-10 font-bold">Approach</td>
                   <td className="text-lg p-10 flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 shrink-0 relative top-[2px]" />
-                    Done-with-you
+                    Done-with-you - you own your growth
                   </td>
                   <td className="text-lg p-10">
                     <div className="flex">
                       <XCircle className="w-6 h-6 text-red-400 mr-3 shrink-0 relative top-[2px]" />
-                      Done-for-you - when they stop, that's it
+                      Done-for-you - you rent their traffic
                     </div>
                   </td>
                 </tr>
@@ -278,18 +233,7 @@ const Section6 = () => {
             ))}
           </div>
         </div>
-        <>
-          <Button
-            onClick={() => setOpen(true)}
-            align="text-center"
-            buttonText="Get My Free Pool Builder Growth Blueprint"
-            textSize="text-sm lg:text-2xl"
-            bgColor="bg-green-500"
-            textColor="text-white"
-            hover="hover:bg-green-600"
-          />
-          <BlueprintModal open={open} setOpen={setOpen} />
-        </>
+        <WeakDesignCTA label="why_hire_section" />
       </div>
     </>
   )

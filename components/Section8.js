@@ -11,13 +11,13 @@ const Section8 = () => {
         <div className="container max-w-8xl mx-auto py-10 lg:py-40 lg:grid grid-cols-2 justify-between px-6 lg:px-0">
           <div className="max-w-2xl">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight text-center lg:text-left max-w-4xl mx-auto">
-              Ready to Partner With Me To Turn Your Pool Business Into a
-              Lead-Generating Machine?
+              Ready to Partner With Me To Transform Your Pool Business With
+              Proven Pool Builder Marketing?
             </h2>
-            <p className="text-md lg:text-xl text-white mb-6 text-center">
-              A website is just the start. To win in today’s market, you need a
-              complete marketing system that attracts serious homeowners, builds
-              trust, and closes projects on autopilot.
+            <p className="text-md lg:text-xl text-white mb-6">
+              A website is just the start. To win in today's market, you need a
+              complete pool builder marketing system that attracts serious
+              homeowners, builds trust, and closes projects on autopilot.
             </p>
             <ul className="text-white mb-8">
               <li className="text-md lg:text-xl pb-4 flex items-start">

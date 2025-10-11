@@ -1,20 +1,32 @@
 import React from 'react'
+import { useState } from 'react'
 import Button from './Button'
 import { CheckCircle } from 'lucide-react'
+import { event } from '../lib/eventHelper'
+import BlueprintModal from './BlueprintModal'
 
 const Section2 = () => {
+  const [open, setOpen] = useState(false)
+  const handleClick = () => {
+    event({
+      action: 'get_growth_blueprint_click',
+      category: 'engagement',
+      label: 'section4_cta',
+      value: 1,
+    })
+  }
   return (
     <>
       <div className=' bg-slate-400 bg-[url("/images/pool-builder-smiling-in-front-of-pool.jpg")] bg-blend-multiply bg-no-repeat bg-cover bg-fixed'>
         <div className="container max-w-7xl mx-auto px-6 py-16 lg:py-40">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight text-center max-w-xl lg:max-w-4xl mx-auto">
-            Pool Marketing That Takes Your Business To The Next Level
+            Pool Builder Marketing Services That Transform Your Business
           </h2>
-          <p className="text-md lg:text-lg mx-10 lg:max-w-2xl mx-auto text-center mb-4 lg:mb-10 text-white">
+          <p className="text-md lg:text-lg lg:max-w-3xl mx-auto text-center mb-4 lg:mb-10 text-white">
             What if every time a homeowner searched for a pool builder, they
-            found you first, and they couldn’t wait to work with you? That’s
-            what I help pool builders achieve: trust, more visibility, and more
-            leads
+            found you first, and they couldn't wait to work with you? That's
+            what my pool contractor marketing strategies help you achieve:
+            trust, more visibility, and more leads
           </p>
           <div className=" flex flex-col md:gap-10 max-w-3xl text-white">
             <div className="pb-2 lg:pb-10 rounded-3xl">
@@ -22,7 +34,7 @@ const Section2 = () => {
                 Showcase Your Best Work. Convert Visitors Into Clients.
               </p>
               <p className="text-xl lg:text-2xl lg:px-10 py-6 font-extrabold max-w-xl text-orange-600">
-                Professional Web Design That Works as Hard as You Do
+                Pool Builder Web Designs That Works as Hard as You Do
               </p>
               <p className="text-md lg:text-xl lg:px-10 font-light max-w-2xl mb-4">
                 Think of your website as your best salesperson—one that works
@@ -168,7 +180,7 @@ const Section2 = () => {
               </ul>
             </div>
           </div>
-          <div className="lg:max-w-2xl mx-auto text-center">
+          <div className="lg:max-w-3xl mx-auto text-center">
             <p className="text-md lg:text-xl py-4 px-10 lg:px-10 lg:py-10 text-white">
               If you’re nodding along thinking,{' '}
               <span className="italic font-bold">
@@ -179,13 +191,18 @@ const Section2 = () => {
               company into a more profitable, in-demand business.
             </p>
           </div>
-          <Button
-            buttonText="Get My Free Pool Builder Growth Blueprint"
-            textSize="text-sm lg:text-2xl"
-            bgColor="bg-green-500"
-            textColor="text-white"
-            hover="hover:bg-green-600"
-          />
+          <>
+            <Button
+              onClick={() => setOpen(true)}
+              align="text-center"
+              buttonText="Get My Free Pool Builder Growth Blueprint"
+              textSize="text-sm lg:text-2xl"
+              bgColor="bg-green-500"
+              textColor="text-white"
+              hover="hover:bg-green-600"
+            />
+            <BlueprintModal open={open} setOpen={setOpen} />
+          </>
         </div>
       </div>
     </>
