@@ -7,12 +7,16 @@ import BlueprintModal from './BlueprintModal'
 const Section2 = () => {
   const [open, setOpen] = useState(false)
   const handleClick = () => {
+    console.log('Section2: Button clicked!')
+    console.log('About to call event function')
     event({
       action: 'get_growth_blueprint_click',
       category: 'engagement',
       label: 'section2_cta',
       value: 1,
     })
+    console.log('Event function called, now opening modal')
+    setOpen(true)
   }
   return (
     <>
@@ -91,7 +95,7 @@ const Section2 = () => {
         </div>
         <>
           <Button
-            onClick={() => setOpen(true)}
+            onClick={handleClick}
             align="text-center"
             buttonText="Get My Free Pool Builder Growth Blueprint"
             textSize="text-sm lg:text-2xl"

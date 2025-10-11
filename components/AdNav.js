@@ -22,7 +22,7 @@ const Navigation = () => {
   }
 
   return (
-    <nav className="border-b border-gray-300 bg-white">
+    <nav className="ad-nav border-b border-gray-300 bg-white">
       <div className="container max-w-8xl mx-auto px-6">
         <div className="flex justify-between items-center py-2 lg:py-4">
           {/* Logo */}

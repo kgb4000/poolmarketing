@@ -7,7 +7,7 @@ import Button from './Button'
 
 const Footer = () => {
   return (
-    <footer className="text-black border-t border-gray-700 mt-20 ">
+    <footer className="ad-footer text-black border-t border-gray-700 mt-20 ">
       <div className=" py-10 container max-w-8xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}

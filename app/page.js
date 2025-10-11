@@ -11,7 +11,7 @@ import Section6 from '../components/Section6'
 import Section7 from '../components/Section7'
 import Section8 from '@/components/Section8'
 import { CheckCircle } from 'lucide-react'
-import { event } from '../lib/gtag'
+import { event } from '../lib/eventHelper'
 import BlueprintModal from '@/components/BlueprintModal'
 
 const Home = () => {
@@ -23,6 +23,7 @@ const Home = () => {
       label: 'hero_cta',
       value: 1,
     })
+    setOpen(true)
   }
 
   return (

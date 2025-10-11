@@ -1,5 +1,6 @@
 import { Poppins } from 'next/font/google'
 import '../globals.css'
+import './content-audit.css'
 import AdNav from '../../components/AdNav'
 import AdFooter from '../../components/AdFooter'
 
@@ -22,12 +23,10 @@ export const metadata = {
 
 export default function AdLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} font-sans`}>
-      <body>
-        <AdNav />
-        {children}
-        <AdFooter />
-      </body>
-    </html>
+    <div className="content-audit-page">
+      <AdNav />
+      {children}
+      <AdFooter />
+    </div>
   )
 }

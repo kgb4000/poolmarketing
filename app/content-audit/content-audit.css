@@ -1,0 +1,8 @@
+/* Hide root layout nav and footer when content-audit page is active */
+body:has(.content-audit-page) footer:not(.ad-footer) {
+  display: none !important;
+}
+
+body:has(.content-audit-page) nav:not(.ad-nav) {
+  display: none !important;
+}

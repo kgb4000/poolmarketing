@@ -59,10 +59,10 @@ export default function BlueprintModal({ open, setOpen }) {
           >
             <DialogPanel className="w-full max-w-2xl rounded-xl bg-white p-10 shadow-xl">
               <DialogTitle className="text-3xl lg:text-5xl font-bold text-slate-900">
-                Most Pool Builders Have No Idea What's About to Hit Them
+                Most Pool Builders Have No Idea What's Coming!
               </DialogTitle>
               <Description className="mt-2 text-md text-slate-600">
-                While you're building pools, your competitors are capturing
+                {/* While you're building pools, your competitors are capturing
                 premium leads with AI-enhanced marketing you've never heard of.
                 <span className="font-bold">
                   And most pool builders are completely unprepared.
@@ -72,7 +72,7 @@ export default function BlueprintModal({ open, setOpen }) {
                   <span className="font-bold underline">
                     Pool Builder Growth Blueprint.
                   </span>
-                </p>
+                </p> */}
                 <p className="py-2 text-md">This blueprint reveals:</p>
                 <ul className="ml-6 list-inside list-disc">
                   <li className="text-lg">
