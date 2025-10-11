@@ -4,6 +4,7 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import Script from 'next/script'
 import Analytics from '../components/Analytics'
+import { Suspense } from 'react'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
       <body>
         <Nav />
         {children}
-        <Analytics />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
         {/* Load GA library */}
         {GA_ID ? (
           <>

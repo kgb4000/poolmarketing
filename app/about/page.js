@@ -252,14 +252,14 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="bg-slate-100 py-10">
+        <section className="bg-slate-100 py-20">
           <div className="container max-w-8xl mx-auto px-6">
-            <div className="mt-10 lg:mt-20 max-w-8xl mx-auto">
-              <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
+            <div className="max-w-8xl mx-auto">
+              <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 max-w-3xl">
                 The Difference Between Working With a Marketing Agency and
                 Working With Me
               </h2>
-              <div className="max-w-xl mx-auto py-10">
+              <div className="py-10">
                 <p className="text-md lg:text-xl font-bold mb-4">
                   MARKETING AGENCY THINKS:
                 </p>
@@ -299,7 +299,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        {/* <div className="container max-w-8xl mx-auto px-6">
+        <div className="container max-w-8xl mx-auto px-6">
           <div className="max-w-8xl mx-auto py-10 lg:py-20">
             <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
               The Mathematics Other Agencies Ignore
@@ -393,8 +393,8 @@ const About = () => {
             </div>
             <hr className="border-2 w-1/2 mx-auto mt-10" />
           </div>
-        </div> */}
-        <div className="container max-w-8xl mx-auto px-6 mb-10 lg:mb-20">
+        </div>
+        <div className="container max-w-8xl mx-auto px-6 mb-10 lg:my-20">
           <div className="max-w-8xl mx-auto py-10">
             <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
               What Our Business Partnership Can Actually Look Like
@@ -526,26 +526,26 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="container max-w-8xl mx-auto px-6 mb-10 lg:mb-20">
+        <div className="container max-w-8xl mx-auto px-6 mb-10 lg:py-20">
           <div className="max-w-5xl mx-auto py-10">
             <h2 className="text-3xl lg:text-5xl font-bold text-black mb-10 leading-1 text-center max-w-3xl mx-auto">
-              Our Long-term Vision
+              Long-term Vision
             </h2>
             <p className="text-xl lg:text-2xl mb-4 font-light">
-              We're not building an agency with 100 clients.
+              I'm not building an agency with 100 clients.
             </p>
-            <p className="text-xl lg:text-2xl mb-4 font-light">
-              We're building a portfolio of 10-20 elite pool building partners
-              who we help scale to $10M-$50M+ in revenue.
+            <p className="text-xl lg:text-2xl mb-4 font-bold">
+              I'm building partnerships 10-20 elite pool building partners who I
+              can help scale to $10M-$50M+ in revenue.
             </p>
             <p className="text-xl lg:text-2xl mb-4 font-light">
               Some of those partnerships will evolve into equity ownership.
             </p>
             <p className="text-xl lg:text-2xl mb-4 font-light">Why?</p>
             <p className="text-xl lg:text-2xl mb-4 font-light">
-              Because we believe in building long-term wealth together.
+              Because I believe in building long-term wealth together.
             </p>
-            <p className="text-xl lg:text-2xl mb-4 font-light">
+            <p className="text-xl lg:text-2xl mb-4 font-bold">
               When you hit $15M in revenue and start thinking about:
             </p>
             <ul>
@@ -567,15 +567,15 @@ const About = () => {
               </li>
             </ul>
             <p className="text-xl lg:text-2xl mb-4 font-light">
-              I want to be at the table with you.
+              I want to be at the table.
             </p>
             <p className="text-xl lg:text-2xl mb-4 font-light">
               Not as your marketing agency.
             </p>
             <p className="text-xl lg:text-2xl mb-4 font-light">
-              As your growth partner and co-owner.
+              As your growth partner.
             </p>
-            <p className="text-xl lg:text-2xl mb-4 font-light">
+            <p className="text-xl lg:text-2xl mb-4 font-bold">
               That's the difference between transactional and transformational.
             </p>
           </div>
