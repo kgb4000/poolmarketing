@@ -64,8 +64,6 @@ export default function BlueprintModal({ open, setOpen }) {
               <Description className="mt-2 text-md text-slate-600">
                 While you're building pools, your competitors are capturing
                 premium leads with AI-enhanced marketing you've never heard of.
-                Customers now ask ChatGPT for contractor advice before they
-                Google.{' '}
                 <span className="font-bold">
                   And most pool builders are completely unprepared.
                 </span>

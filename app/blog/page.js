@@ -1,6 +1,8 @@
 import Link from 'next/link'
 // import Button from '../components/Button'
 
+export const dynamic = 'force-dynamic'
+
 const getPosts = async () => {
   const response = await fetch(
     'https://us-east-1-shared-usea1-02.cdn.hygraph.com/content/clkpyzgow1kqa01ucbn48192p/master',
@@ -24,7 +26,7 @@ const getPosts = async () => {
                 }
               }`,
       }),
-      next: { revalidate: 60 },
+      next: { revalidate: 0 },
     }
   )
 

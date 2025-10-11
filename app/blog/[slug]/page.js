@@ -4,6 +4,8 @@ import AudioPill from '../../../components/AudioPill'
 
 import { RichText } from '@graphcms/rich-text-react-renderer'
 
+export const dynamic = 'force-dynamic'
+
 async function getPost(slug) {
   const res = await fetch(
     'https://us-east-1-shared-usea1-02.cdn.hygraph.com/content/clkpyzgow1kqa01ucbn48192p/master',
@@ -48,7 +50,7 @@ async function getPost(slug) {
           slug: slug,
         },
       }),
-      next: { revalidate: 3600 },
+      next: { revalidate: 0 },
     }
   )
   const { data } = await res.json()
