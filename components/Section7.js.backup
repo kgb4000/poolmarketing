@@ -1,0 +1,633 @@
+import React, { useState } from 'react'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react'
+import { Plus, Minus } from 'lucide-react'
+import Button from './Button'
+import { event } from '../lib/eventHelper'
+import BlueprintModal from './BlueprintModal'
+
+const FAQ = () => {
+  const [open, setOpen] = useState(false)
+  const handleClick = () => {
+    event({
+      action: 'get_growth_blueprint_click',
+      category: 'engagement',
+      label: 'FAQ_cta',
+      value: 1,
+    })
+  }
+  return (
+    <>
+      <section className="bg-slate-50 py-4 lg:py-20">
+        <div className="container max-w-9xl mx-auto px-6 my-10 lg:my-20">
+          <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-normal text-center max-w-4xl mx-auto">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-md px-6 lg:px-10 lg:text-xl max-w-xl mx-auto text-center mb-4 lg:mb-10">
+            Answers to questions to put you mind at ease.
+          </p>
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-6">
+              <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      I've been burned by marketing companies before. How is this
+                      different?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+                  <DisclosurePanel className="text-gray-500">
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      You're not alone, many pool builders have had the same
+                      experience.
+                    </p>
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      The difference with my approach is transparency,
+                      specialization, and results that actually matter to your
+                      business.
+                    </p>
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      I don't take a one-size-fits-all approach. Every strategy is
+                      designed for the unique challenges of selling high-ticket pool
+                      projects.
+                    </p>
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      You won't just get clicks, impressions, or "traffic reports."
+                    </p>
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      You'll see real inquiries from homeowners who are serious
+                      about building a pool. You'll always know what's being done,
+                      why it matters, and how it's performing.
+                    </p>
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      No black-box campaigns, no hidden fees.
+                    </p>
+                    <p className="text-md lg:text-xl leading-normal mb-4">
+                      Systems that keep generating leads, even when you're not
+                      running paid campaigns. My goal isn't just to "do marketing"
+                      for you, it's to be a partner in growing your pool business
+                      profitably and sustainably.
+                    </p>
+                  </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            </div>
+            <div className="mb-6">
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <DisclosureButton className="flex justify-between items-start w-full">
+                      <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                        How long before I see results from SEO and digital marketing?
+                      </p>
+                      <div className="flex py-1 ml-4">
+                        {open ? (
+                          <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                        ) : (
+                          <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                        )}
+                      </div>
+                    </DisclosureButton>
+                    <DisclosurePanel className="text-gray-500">
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        I'll keep it real with you. SEO isn't overnight.
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        Most pool builders start to see traction in about 3–6 months,
+                        depending on your market, your present website, landing pages,
+                        and competition. That said, the work we put in today (like
+                        optimizing your website and content) builds momentum that
+                        keeps paying off for years.
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        The good news is, while SEO compounds over time, other parts
+                        of your marketing can start delivering faster. A
+                        conversion-focused website, smart automation, and even
+                        well-optimized ad campaigns can generate leads right away,
+                        while SEO steadily positions you as the #1 pool builder
+                        homeowners find first.
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        My approach combines quick wins with long-term growth, so
+                        you're not stuck waiting months before seeing results—you get
+                        a pipeline that builds now and scales later.
+                      </p>
+                    </DisclosurePanel>
+                  </>
+                )}
+              </Disclosure>
+            </div>
+            <div className="mb-6">
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <DisclosureButton className="flex justify-between items-start w-full">
+                      <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                        Do I really need a new website? Mine looks fine.
+                      </p>
+                      <div className="flex py-1 ml-4">
+                        {open ? (
+                          <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                        ) : (
+                          <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                        )}
+                      </div>
+                    </DisclosureButton>
+                    <DisclosurePanel className="text-gray-500">
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        It depends. A website can "look fine" but still cost you leads
+                        every single day. The real question isn't how your site looks,
+                        it's how it performs.
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        Does it show up when homeowners search for pool builders in
+                        your city? Does it guide visitors to call, fill out a form, or
+                        request a quote?
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        Does it load fast and look great on mobile devices? Does it
+                        filter out tire-kickers so you spend time only on serious
+                        buyers?
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        If the answer to any of those is "no," then your website is
+                        more like a pretty brochure than a lead-generating tool.
+                      </p>
+                      <p className="text-md lg:text-xl leading-normal mb-4">
+                        I build sites that don't just look professional, they're
+                        designed to rank higher, convert visitors, and turn more of
+                        your traffic into real projects.
+                      </p>
+                    </DisclosurePanel>
+                  </>
+                )}
+              </Disclosure>
+            </div>
+            <div className="mb-6">
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <DisclosureButton className="flex justify-between items-start w-full">
+                      <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                        What if I already have someone doing my marketing?
+                      </p>
+                      <div className="flex py-1 ml-4">
+                        {open ? (
+                          <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                        ) : (
+                          <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                        )}
+                      </div>
+                    </DisclosureButton>
+                <DisclosurePanel className="text-gray-500 text-xl">
+                  <p className="text-md lg:text-xl leading-normal mb-4">
+                    Fantastic. You're already ahead of most builders. But here's
+                    the truth: not all marketing is created equal.
+                  </p>
+                  <p className="text-md lg:text-xl leading-normal mb-4">
+                    Many agencies take a "one-size-fits-all" approach, and pool
+                    builders end up wasting money on strategies that don't bring
+                    in serious homeowners. That's where I come in.
+                  </p>
+                  <p className="text-md lg:text-xl leading-normal mb-4">
+                    I specialize exclusively in pool marketing, so I know the
+                    seasonality, the competition, and the unique challenges of
+                    selling high-ticket pool projects.
+                  </p>
+                  <p className="text-md lg:text-xl leading-normal mb-4">
+                    Even if you're already working with someone, I can provide a
+                    deep audit to show what's working, what's wasting money, and
+                    what's missing.
+                  </p>
+                  <p className="text-md lg:text-xl leading-normal mb-4">
+                    Strategies tailored to pool builders only, not generic
+                    campaigns. Systems that make sure your leads don't just click,
+                    but actually convert into contracts. Think of it as a second
+                    set of expert eyes.
+                  </p>
+                  <p className="text-md lg:text-xl leading-normal mb-4">
+                    Even if you keep your current provider, you'll walk away with
+                    a clearer roadmap for getting better results.
+                  </p>
+                </DisclosurePanel>
+                  </>
+                )}
+              </Disclosure>
+            </div>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      What makes marketing for pool builders different from other
+                      industries?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Pool building is a high-ticket, highly personal purchase.
+                  Homeowners aren’t buying an impulse item—they’re investing in
+                  their dream backyard.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  That means your marketing must do more than generate clicks,
+                  it must build trust, showcase craftsmanship, and position you
+                  as the go-to expert.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      I don't have time for another project. How much of my time
+                      does this require?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  That's exactly why you need this. My goal is to save you time,
+                  not create more work.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Initial setup requires about 2 hours of your time (photos,
+                  content review, goal-setting).
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  After that, you'll spend maybe 30 minutes per month reviewing
+                  reports. The automated systems I build actually give you back
+                  10-15 hours per week by handling follow-ups and administrative
+                  tasks.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      Isn't SEO just about keywords?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Not anymore. Today’s SEO is about authority, trust, and
+                  visibility across Google, maps, and even AI-driven search.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  It's not just stuffing pages with keywords—it's building a
+                  digital footprint that ensures homeowners see you as the top
+                  choice.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      My business is seasonal. Does digital marketing work for pool
+                      builders?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Absolutely - in fact, it's even more important for seasonal
+                  businesses.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  During your off-season, homeowners are researching and
+                  planning their pool projects for next year. SEO and content
+                  marketing keep you top-of-mind during this crucial research
+                  phase.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Many of my clients book 60% of their next year's projects
+                  during the winter months from leads generated online.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      I get most of my work from referrals. Why do I need marketing?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Referrals are great, but they're not scalable or predictable.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  What happens when you want to grow beyond your current
+                  capacity? Or when the economy slows down?
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Digital marketing gives you control over your lead flow and
+                  helps you attract premium clients who are actively searching
+                  for quality pool builders, not just asking neighbors for "the
+                  cheapest guy."
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      Can I just do social media instead of SEO?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Social media is great for showing off your work, but it’s not
+                  where most homeowners start their buying journey.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  When they’re serious, they search Google for pool builders in
+                  their area.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  That's where SEO and local marketing win the jobs. Social
+                  media supports it, but it can't replace it.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      Do I need to keep marketing once I'm ranking on Google?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Yes. Because your competitors won’t stop. SEO is like a pool:
+                  if you don’t maintain it, it falls apart.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  The good news is that once you're established, it's easier and
+                  cheaper to stay ahead than to start from scratch.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      What happens if I stop marketing?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Most businesses see leads slow down within weeks, and rankings
+                  decline within months.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Homeowners have short attention spans, and competitors are
+                  always fighting for visibility. Consistency is what keeps your
+                  pipeline healthy year after year.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      What if I'm already booked solid? Why would I need more leads?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Being busy and being profitable are different things. More
+                  leads give you the luxury of being selective - you can choose
+                  the best projects, increase your prices, and stop competing on
+                  cost.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Plus, you'll need a pipeline for next season. Most successful
+                  pool builders I work with maintain a 6-12 month waiting list
+                  of qualified prospects.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      How much should I expect to invest in digital marketing?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Most pool builders invest between $2,000-$5,000 per month on
+                  marketing (including my services).
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Consider this: if my marketing generates just ONE additional
+                  $75,000 pool project per year, you've made back your entire
+                  annual investment.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Most clients see 3-5x return on their marketing spend within
+                  the first year.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      Can you guarantee results?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  I guarantee the work will be done correctly and on time, but
+                  no ethical marketer can guarantee specific results because
+                  there are too many variables (your market, competition,
+                  seasonality, etc.).
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  What I can promise is complete transparency with detailed
+                  reporting, proven strategies that work for pool builders, and
+                  my commitment to continuously optimize until we hit your
+                  goals.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <DisclosureButton className="flex justify-between items-start w-full">
+                    <p className="text-xl lg:text-3xl py-2 mb-4 text-left">
+                      I tried Google Ads and Facebook ads before and lost money.
+                      Will this be different?
+                    </p>
+                    <div className="flex py-1 ml-4">
+                      {open ? (
+                        <Minus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      ) : (
+                        <Plus className="w-6 h-6 lg:w-8 lg:h-8 text-gray-600" />
+                      )}
+                    </div>
+                  </DisclosureButton>
+              <DisclosurePanel className="text-gray-500">
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Google Ads for pool builders require specific expertise - most
+                  agencies waste money on broad keywords that attract
+                  tire-kickers.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  I focus on high-intent local keywords and create systems that
+                  pre-qualify prospects.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  Plus, I optimize your entire funnel (landing pages, follow-up
+                  sequences) so leads don't just click and disappear.
+                </p>
+                <p className="text-md lg:text-xl leading-normal mb-4">
+                  The difference is targeting quality over quantity.
+                </p>
+              </DisclosurePanel>
+                </>
+              )}
+            </Disclosure>
+          </div>
+          <>
+            <Button
+              onClick={() => setOpen(true)}
+              align="text-center"
+              buttonText="Get My Free Pool Builder Growth Blueprint"
+              textSize="text-sm lg:text-2xl"
+              bgColor="bg-green-500"
+              textColor="text-white"
+              hover="hover:bg-green-600"
+            />
+            <BlueprintModal open={open} setOpen={setOpen} />
+          </>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default FAQ

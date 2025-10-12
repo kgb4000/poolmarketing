@@ -1,7 +1,15 @@
+'use client'
+
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
 
 const Section8 = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log('Form submitted')
+  }
+
   return (
     <>
       <div
@@ -16,7 +24,7 @@ const Section8 = () => {
             </h2>
             <p className="text-md lg:text-xl text-white mb-6">
               A website is just the start. To win in today's market, you need a
-              complete pool builder marketing system that attracts serious
+              complete pool builder marketing solution that attracts serious
               homeowners, builds trust, and closes projects on autopilot.
             </p>
             <ul className="text-white mb-8">
@@ -50,7 +58,7 @@ const Section8 = () => {
             </p>
           </div>
           <div>
-            <form className="border-2 border-white py-10 lg:py-20 rounded-2xl px-6 lg:px-20 max-w-xl mt-10">
+            <form onSubmit={handleSubmit} className="border-2 border-white py-10 lg:py-20 rounded-2xl px-6 lg:px-20 max-w-xl mt-10">
               <input
                 className="border-1 py-4 px-4 rounded-xl mb-4 lg:mb-10 block w-full focus:outline-0"
                 placeholder="Name"

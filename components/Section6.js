@@ -1,9 +1,12 @@
+'use client'
+
 import React from 'react'
 import { useState } from 'react'
 import Button from './Button'
 import { CheckCircle, XCircle } from 'lucide-react'
 import { event } from '../lib/eventHelper'
 import BlueprintModal from './BlueprintModal'
+import Link from 'next/link'
 
 const Section6 = () => {
   const [open, setOpen] = useState(false)
@@ -11,9 +14,10 @@ const Section6 = () => {
     event({
       action: 'get_growth_blueprint_click',
       category: 'engagement',
-      label: 'section5_cta',
+      label: 'section6_cta',
       value: 1,
     })
+    setOpen(true)
   }
   return (
     <>
@@ -277,10 +281,14 @@ const Section6 = () => {
               </div>
             ))}
           </div>
+          <p className="text-xl text-center my-10">
+            <Link href="/about">Learn more about me</Link> and how we can work
+            together.
+          </p>
         </div>
         <>
           <Button
-            onClick={() => setOpen(true)}
+            onClick={handleClick}
             align="text-center"
             buttonText="Get My Free Pool Builder Growth Blueprint"
             textSize="text-sm lg:text-2xl"

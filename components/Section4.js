@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { useState } from 'react'
 import Button from './Button'
@@ -5,7 +7,7 @@ import { CheckCircle } from 'lucide-react'
 import { event } from '../lib/eventHelper'
 import BlueprintModal from './BlueprintModal'
 
-const Section2 = () => {
+const Section4 = () => {
   const [open, setOpen] = useState(false)
   const handleClick = () => {
     event({
@@ -14,6 +16,7 @@ const Section2 = () => {
       label: 'section4_cta',
       value: 1,
     })
+    setOpen(true)
   }
   return (
     <>
@@ -193,7 +196,7 @@ const Section2 = () => {
           </div>
           <>
             <Button
-              onClick={() => setOpen(true)}
+              onClick={handleClick}
               align="text-center"
               buttonText="Get My Free Pool Builder Growth Blueprint"
               textSize="text-sm lg:text-2xl"
@@ -209,4 +212,4 @@ const Section2 = () => {
   )
 }
 
-export default Section2
+export default Section4

@@ -1,7 +1,6 @@
 'use client'
 
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Section2 from '../components/Section2'
 import Section3 from '../components/Section3'
 import WhyPollBuildersNeedSpecialist from '@/components/WhyPollBuildersNeedSpecialist'
@@ -16,6 +15,8 @@ import BlueprintModal from '@/components/BlueprintModal'
 
 const Home = () => {
   const [open, setOpen] = useState(false)
+  
+  
   const handleClick = () => {
     event({
       action: 'get_started_click',

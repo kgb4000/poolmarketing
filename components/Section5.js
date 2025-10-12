@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { useState } from 'react'
 import Button from './Button'
@@ -13,6 +15,7 @@ const Section5 = () => {
       label: 'section5_cta',
       value: 1,
     })
+    setOpen(true)
   }
   return (
     <>
@@ -78,7 +81,7 @@ const Section5 = () => {
         </div>
         <>
           <Button
-            onClick={() => setOpen(true)}
+            onClick={handleClick}
             align="text-center"
             buttonText="Get My Free Pool Builder Growth Blueprint"
             textSize="text-sm lg:text-2xl"

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Button from './Button'
 import { event } from '../lib/eventHelper'
 import BlueprintModal from './BlueprintModal'
+import DynamicYear from './DynamicYear'
 
 const Footer = () => {
   const [open, setOpen] = useState(false)
@@ -140,8 +141,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-black text-sm text-center md:text-left">
-              Pool Builder Marketing. All rights reserved &copy;{' '}
-              {new Date().getFullYear()}
+              Pool Builder Marketing. All rights reserved &copy; <DynamicYear />
             </div>
 
             {/* Legal Links */}

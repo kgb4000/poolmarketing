@@ -122,7 +122,7 @@ export default async function Page({ params }) {
             <ShareBtn
               shareLink={`https://poolbuildergrowth.com/blog/${post.slug}`}
             />
-            <article className=" py-4">
+            <article className="py-4 blog-content">
               <RichText
                 content={post.content.raw}
                 renderers={{
@@ -150,17 +150,22 @@ export default async function Page({ params }) {
                     },
                   },
                   h2: ({ children }) => (
-                    <h2 className="text-xl lg:text-4xl leading-relaxed text-ui-fg-base font-normal lg:my-5">
+                    <h2 className="!text-2xl lg:!text-4xl !font-bold !text-gray-900 !my-6 lg:!my-8 !leading-tight !block">
+                      {children}
+                    </h2>
+                  ),
+                  heading_two: ({ children }) => (
+                    <h2 className="!text-2xl lg:!text-4xl !font-bold !text-gray-900 !my-6 lg:!my-8 !leading-tight !block">
                       {children}
                     </h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-xl lg:text-3xl leading-relaxed text-ui-fg-base font-normal lg:my-5">
+                    <h3 className="!text-xl lg:!text-3xl !font-semibold !text-gray-800 !my-5 lg:!my-6 !leading-tight !block">
                       {children}
                     </h3>
                   ),
                   h4: ({ children }) => (
-                    <h4 className="text-xl lg:text-3xl leading-relaxed text-ui-fg-base font-normal lg:my-5">
+                    <h4 className="!text-lg lg:!text-2xl !font-semibold !text-gray-700 !my-4 lg:!my-5 !leading-tight !block">
                       {children}
                     </h4>
                   ),
@@ -175,41 +180,39 @@ export default async function Page({ params }) {
                     </Link>
                   ),
                   p: ({ children }) => (
-                    <p className="md:text-xl leading text-ui-fg-base font-normal my-6 mb-4 leading-8">
+                    <p className="text-base lg:text-lg text-gray-700 font-normal my-4 lg:my-6 leading-relaxed">
                       {children}
                     </p>
                   ),
                   ul: ({ children }) => (
-                    <ul className="leading-relaxed text-ui-fg-base font-normal lg:my-5 list-disc ml-8 mb-2 lg:mx-10 lg:mb-10">
+                    <ul className="text-gray-700 my-4 lg:my-6 list-disc ml-6 lg:ml-8 space-y-2">
                       {children}
                     </ul>
                   ),
                   li: ({ children }) => (
-                    <li className="md:text-xl leading text-ui-fg-base font-normal my-2 lg:my-6 leading-8">
+                    <li className="text-base lg:text-lg text-gray-700 leading-relaxed">
                       {children}
                     </li>
                   ),
                   table: ({ children }) => (
-                    <table className="border border-gray-800 border-collapse w-full my-6">
-                      {children}
-                    </table>
+                    <div className="table-container">
+                      <table>
+                        {children}
+                      </table>
+                    </div>
                   ),
                   table_head: ({ children }) => (
-                    <thead className="bg-gray-800">{children}</thead>
+                    <thead>{children}</thead>
                   ),
                   table_body: ({ children }) => <tbody>{children}</tbody>,
                   table_row: ({ children }) => (
-                    <tr className="border-b border-gray-300">{children}</tr>
+                    <tr>{children}</tr>
                   ),
                   table_header_cell: ({ children }) => (
-                    <th className="border border-gray-300 px-4 py-2 text-left font-semibold bg-gray-50">
-                      {children}
-                    </th>
+                    <th>{children}</th>
                   ),
                   table_cell: ({ children }) => (
-                    <td className="border border-gray-800 px-4 py-2">
-                      {children}
-                    </td>
+                    <td>{children}</td>
                   ),
                 }}
               />

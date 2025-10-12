@@ -4,6 +4,7 @@ import React from 'react'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import Button from './Button'
+import DynamicYear from './DynamicYear'
 
 const Footer = () => {
   return (
@@ -12,8 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
           <div className="text-black text-sm text-center md:text-left">
-            Pool Builder Marketing. All rights reserved &copy;{' '}
-            {new Date().getFullYear()}
+            Pool Builder Marketing. All rights reserved &copy; <DynamicYear />
           </div>
 
           {/* Legal Links */}

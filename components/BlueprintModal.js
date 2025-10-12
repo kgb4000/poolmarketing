@@ -7,11 +7,20 @@ import {
   DialogTitle,
   Description,
 } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 
 export default function BlueprintModal({ open, setOpen }) {
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  // Prevent hydration mismatch by only rendering on client
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Don't render until mounted on client
+  if (!mounted) return null
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -21,7 +30,6 @@ export default function BlueprintModal({ open, setOpen }) {
     const name = fd.get('name')
     const email = fd.get('email')
 
-    // TODO: send to API
     console.log('Submitting', { name, email })
 
     setTimeout(() => {
@@ -30,10 +38,17 @@ export default function BlueprintModal({ open, setOpen }) {
     }, 1000)
   }
 
+  if (!open) {
+    return null
+  }
+
   return (
     <Transition show={open} as={Fragment}>
-      <Dialog open={open} onClose={setOpen} className="relative z-50">
-        {/* Background overlay */}
+      <Dialog
+        open={open}
+        onClose={() => setOpen(false)}
+        className="relative z-50"
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-200"
@@ -46,8 +61,7 @@ export default function BlueprintModal({ open, setOpen }) {
           <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
         </Transition.Child>
 
-        {/* Centering container */}
-        <div className="fixed inset-0 flex items-center justify-center p-4">
+        <div className="fixed inset-0 flex items-center justify-center p-6">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-200"
@@ -57,22 +71,11 @@ export default function BlueprintModal({ open, setOpen }) {
             leaveFrom="opacity-100 scale-100 translate-y-0"
             leaveTo="opacity-0 scale-95 translate-y-2"
           >
-            <DialogPanel className="w-full max-w-2xl rounded-xl bg-white p-10 shadow-xl">
+            <DialogPanel className="w-full max-w-2xl rounded-xl bg-white p-8 shadow-xl">
               <DialogTitle className="text-3xl lg:text-5xl font-bold text-slate-900">
                 Most Pool Builders Have No Idea What's Coming!
               </DialogTitle>
               <Description className="mt-2 text-md text-slate-600">
-                {/* While you're building pools, your competitors are capturing
-                premium leads with AI-enhanced marketing you've never heard of.
-                <span className="font-bold">
-                  And most pool builders are completely unprepared.
-                </span>
-                <p className="py-2 text-md">
-                  That's why I created the{' '}
-                  <span className="font-bold underline">
-                    Pool Builder Growth Blueprint.
-                  </span>
-                </p> */}
                 <p className="py-2 text-md">This blueprint reveals:</p>
                 <ul className="ml-6 list-inside list-disc">
                   <li className="text-lg">

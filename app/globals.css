@@ -45,3 +45,145 @@ textarea {
 a {
   color: blue;
 }
+
+/* Standardized Blog Post Table Styles - More Specific Targeting */
+/* .blog-content table,
+.blog-content .table-container table,
+article table,
+[class*='blog'] table,
+[class*='content'] table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background-color: white !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  font-family: inherit !important;
+} */
+
+/* .blog-content table thead,
+.blog-content .table-container table thead,
+article table thead,
+[class*='blog'] table thead,
+[class*='content'] table thead {
+  background-color: #f9fafb !important;
+} */
+
+/* .blog-content table thead th,
+.blog-content .table-container table thead th,
+article table thead th,
+[class*='blog'] table thead th,
+[class*='content'] table thead th,
+.blog-content th,
+article th {
+  padding: 12px 16px !important;
+  text-align: left !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  white-space: nowrap !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  background-color: #f9fafb !important;
+} */
+
+.blog-content table tbody tr,
+.blog-content .table-container table tbody tr,
+article table tbody tr,
+[class*='blog'] table tbody tr,
+[class*='content'] table tbody tr,
+.blog-content tr,
+article tr {
+  border-bottom: 1px solid #f3f4f6 !important;
+}
+
+/* .blog-content table tbody tr:hover,
+.blog-content .table-container table tbody tr:hover,
+article table tbody tr:hover,
+[class*='blog'] table tbody tr:hover,
+[class*='content'] table tbody tr:hover,
+.blog-content tr:hover,
+article tr:hover {
+  background-color: #f9fafb !important;
+} */
+
+.blog-content table tbody tr:last-child,
+.blog-content .table-container table tbody tr:last-child,
+article table tbody tr:last-child,
+[class*='blog'] table tbody tr:last-child,
+[class*='content'] table tbody tr:last-child {
+  border-bottom: none !important;
+}
+
+/* .blog-content table tbody td,
+.blog-content .table-container table tbody td,
+article table tbody td,
+[class*='blog'] table tbody td,
+[class*='content'] table tbody td,
+.blog-content td,
+article td {
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  color: #374151 !important;
+  white-space: nowrap !important;
+  border: none !important;
+} */
+
+/* Table container for responsive scrolling */
+.blog-content .table-container,
+.table-container,
+article .table-container,
+[class*='blog'] .table-container,
+[class*='content'] .table-container {
+  overflow-x: auto !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Reset any existing table styles */
+.blog-content table *,
+article table *,
+[class*='blog'] table *,
+[class*='content'] table * {
+  border: none !important;
+  background: inherit !important;
+  margin: 0 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .blog-content table,
+  .blog-content .table-container table,
+  article table,
+  [class*='blog'] table,
+  [class*='content'] table {
+    min-width: 600px !important;
+  }
+
+  .blog-content table th,
+  .blog-content table td,
+  .blog-content th,
+  .blog-content td,
+  article th,
+  article td {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* article th {
+  padding: 12px 16px !important;
+  text-align: left !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  white-space: nowrap !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  background-color: #f9fafb !important;
+} */

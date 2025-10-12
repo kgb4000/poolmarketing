@@ -1,7 +1,10 @@
+'use client'
+
 import React from 'react'
 import { useState } from 'react'
 import Button from './Button'
 import BlueprintModal from './BlueprintModal'
+import { event } from '../lib/eventHelper'
 
 const WhyPollBuildersNeedSpecialist = () => {
   const [open, setOpen] = useState(false)
@@ -9,9 +12,10 @@ const WhyPollBuildersNeedSpecialist = () => {
     event({
       action: 'get_growth_blueprint_click',
       category: 'engagement',
-      label: 'section2_cta',
+      label: 'why_specialist_cta',
       value: 1,
     })
+    setOpen(true)
   }
   return (
     <>
@@ -80,7 +84,7 @@ const WhyPollBuildersNeedSpecialist = () => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
+          <p className="text-sm lg:text-xl py-6 px-10 lg:px-10 lg:py-10">
             That's why I built Pool Builder Growth specifically around how
             homeowners research and buy pools. Every strategy—from SEO to email
             automation to content marketing—is designed for the pool
@@ -95,7 +99,7 @@ const WhyPollBuildersNeedSpecialist = () => {
         </div>
         <>
           <Button
-            onClick={() => setOpen(true)}
+            onClick={handleClick}
             align="text-center"
             buttonText="Get My Free Pool Builder Growth Blueprint"
             textSize="text-sm lg:text-2xl"

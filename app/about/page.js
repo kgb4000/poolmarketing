@@ -197,7 +197,7 @@ const About = () => {
             <div className="grid lg:grid-cols-2 lg:mt-20 items-center gap-10">
               <div className="">
                 <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
-                  Why I Build Partnerships
+                  Why Partnerships Are Better
                 </h2>
                 <p className="text-md lg:text-xl font-light mb-4">
                   Most marketing agencies will get you leads and call it
@@ -252,7 +252,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="bg-slate-100 py-20">
+        <section className="bg-slate-100 py-40">
           <div className="container max-w-8xl mx-auto px-6">
             <div className="max-w-8xl mx-auto">
               <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 max-w-3xl">
@@ -535,7 +535,7 @@ const About = () => {
               I'm not building an agency with 100 clients.
             </p>
             <p className="text-xl lg:text-2xl mb-4 font-bold">
-              I'm building partnerships 10-20 elite pool building partners who I
+              I'm building partnerships with elite pool building partners who I
               can help scale to $10M-$50M+ in revenue.
             </p>
             <p className="text-xl lg:text-2xl mb-4 font-light">
@@ -578,6 +578,14 @@ const About = () => {
             <p className="text-xl lg:text-2xl mb-4 font-bold">
               That's the difference between transactional and transformational.
             </p>
+          </div>
+          <div className="text-center mt-14">
+            <button
+              className="text-sm lg:text-2xl font-bold bg-green-500
+                text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
+            >
+              Book Your Free Strategy Call
+            </button>
           </div>
         </div>
       </main>
