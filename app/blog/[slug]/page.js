@@ -116,7 +116,7 @@ export default async function Page({ params }) {
           <div className="container max-w-2xl mx-auto my-10 px-4">
             <h1 className="text-3xl lg:text-4xl my-4 lg:my-10">{post.title}</h1>
             {/*  */}
-            <p className="text-xl py-2">
+            <p className="text-md py-2">
               Share with your business partner today:
             </p>
             <ShareBtn
@@ -196,28 +196,19 @@ export default async function Page({ params }) {
                   ),
                   table: ({ children }) => (
                     <div className="table-container">
-                      <table>
-                        {children}
-                      </table>
+                      <table>{children}</table>
                     </div>
                   ),
-                  table_head: ({ children }) => (
-                    <thead>{children}</thead>
-                  ),
+                  table_head: ({ children }) => <thead>{children}</thead>,
                   table_body: ({ children }) => <tbody>{children}</tbody>,
-                  table_row: ({ children }) => (
-                    <tr>{children}</tr>
-                  ),
-                  table_header_cell: ({ children }) => (
-                    <th>{children}</th>
-                  ),
-                  table_cell: ({ children }) => (
-                    <td>{children}</td>
-                  ),
+                  table_row: ({ children }) => <tr>{children}</tr>,
+                  table_header_cell: ({ children }) => <th>{children}</th>,
+                  table_cell: ({ children }) => <td>{children}</td>,
                 }}
               />
             </article>
-            <div className="my-4 border-4 border-solid border-slate-50 p-8 rounded-2xl">
+            <hr className="w-1/2 mx-auto my-10" />
+            <div className="my-4 border-slate-50 p-2 rounded-2xl">
               <img
                 src={post.author.photo.url}
                 className="w-[5rem] my-6"
@@ -226,7 +217,7 @@ export default async function Page({ params }) {
                 width={post.author.photo.width}
                 height={post.author.photo.height}
               />
-              <p className="text-xl leading-normal">{post.author.bio}</p>
+              <p className="text-md leading-normal">{post.author.bio}</p>
             </div>
             <div className="text-center mt-10">
               <Link href="/blog" className="md:text-xl">

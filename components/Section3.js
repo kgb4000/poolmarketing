@@ -91,12 +91,12 @@ const Section3 = () => {
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
               <img
-                src="/images/partnership.png"
+                src="/images/we-form-a-partnership.png"
                 className="rounded-t-3xl"
                 alt="We become partners."
                 title="We become partners."
               />
-              <p className="text-[1.4rem] px-10 py-10">
+              <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Work with a partner that handles the digital marketing, while
                 you handle building pools.
               </p>

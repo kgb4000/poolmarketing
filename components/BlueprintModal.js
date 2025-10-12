@@ -71,7 +71,7 @@ export default function BlueprintModal({ open, setOpen }) {
             leaveFrom="opacity-100 scale-100 translate-y-0"
             leaveTo="opacity-0 scale-95 translate-y-2"
           >
-            <DialogPanel className="w-full max-w-2xl rounded-xl bg-white p-8 shadow-xl">
+            <DialogPanel className="w-full max-w-2xl rounded-xl bg-white p-4 lg:p-14 shadow-xl">
               <DialogTitle className="text-3xl lg:text-5xl font-bold text-slate-900">
                 Most Pool Builders Have No Idea What's Coming!
               </DialogTitle>
@@ -79,19 +79,19 @@ export default function BlueprintModal({ open, setOpen }) {
                 <p className="py-2 text-md">This blueprint reveals:</p>
                 <ul className="ml-6 list-inside list-disc">
                   <li className="text-lg">
-                    <span className="font-bold">
+                    <span className="font-bold text-black">
                       Google's new AI Overview strategy
                     </span>{' '}
                     that puts you above competitors
                   </li>
                   <li className="text-lg">
-                    <span className="font-bold">
+                    <span className="font-bold text-black">
                       The automated follow-up sequence
                     </span>{' '}
                     that converts leads over 6-12 months
                   </li>
                   <li className="text-lg">
-                    <span className="font-bold">
+                    <span className="font-bold text-black">
                       Why 73% of pool builder websites
                     </span>{' '}
                     are basically invisible online
@@ -100,7 +100,7 @@ export default function BlueprintModal({ open, setOpen }) {
               </Description>
               <p className="py-2 font-bold">
                 Stop losing high-value projects to builders with inferior work
-                but superior marketing knowledge.
+                but a superior marketing team behind them.
               </p>
               {success ? (
                 <p className="mt-6 rounded-lg bg-green-50 p-3 text-green-800">
@@ -150,7 +150,7 @@ export default function BlueprintModal({ open, setOpen }) {
                       disabled={submitting}
                       className="rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600 disabled:opacity-70"
                     >
-                      {submitting ? 'Sending…' : 'Email Me the Blueprint'}
+                      {submitting ? 'Sending…' : 'I Want the Blueprint'}
                     </button>
                   </div>
                 </form>

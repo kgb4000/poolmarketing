@@ -17,7 +17,7 @@ const About = () => {
       <main>
         <div className="container max-w-8xl mx-auto px-6">
           <div className="lg:grid grid-cols-2 mb-10 lg:my-20 items-center gap-6">
-            <div className="max-w-4xl py-4 md:py-2 sm:mb-10">
+            <div className="max-w-4xl py-4 md:py-2 :mb-10">
               <h1 className="text-sm md:text-lg text-black mb-2 md:mb-4 leading-tight font-light">
                 About Pool Builder Growth
               </h1>
@@ -41,13 +41,13 @@ const About = () => {
             />
           </div>
         </div>
-        <section className="py-20">
+        <section className="lg:py-20">
           <div className="container max-w-8xl mx-auto px-6">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-14 leading-1 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-5xl font-bold text-black my-6 lg:mb-14 leading-1 text-center max-w-3xl mx-auto">
               How I Actually Help To Grow Your Pool Business With You
             </h2>
-            <div className="grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
-              <div className="lg:border-[1px] border-slate-100 p-6 lg:py-10 rounded-3xl lg:shadow-xl bg-white">
+            <div className="grid md:grid-cols-2 2xl:grid-cols-3 lg:gap-6">
+              <div className="lg:border-[1px] border-slate-100 p-6 rounded-3xl lg:shadow-xl bg-white">
                 <p className="text-3xl lg:text-4xl lg:px-10 lg:py-10 font-light max-w-md">
                   ACQUISITION (Getting Qualified Leads)
                 </p>
@@ -193,8 +193,8 @@ const About = () => {
           </div>
         </section>
         <section>
-          <div className="container max-w-8xl mx-auto px-6 py-20">
-            <div className="grid lg:grid-cols-2 lg:mt-20 items-center gap-10">
+          <div className="container max-w-8xl mx-auto px-6 lg:py-20">
+            <div className="grid lg:grid-cols-2 lg:my-20 items-center gap-10">
               <div className="">
                 <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
                   Why Partnerships Are Better
@@ -252,7 +252,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="bg-slate-100 py-40">
+        <section className="bg-slate-100 py-10 lg:py-40">
           <div className="container max-w-8xl mx-auto px-6">
             <div className="max-w-8xl mx-auto">
               <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 max-w-3xl">
@@ -300,7 +300,7 @@ const About = () => {
           </div>
         </section>
         <div className="container max-w-8xl mx-auto px-6">
-          <div className="max-w-8xl mx-auto py-10 lg:py-20">
+          <div className="max-w-8xl mx-auto py-10 lg:pt-40">
             <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
               The Mathematics Other Agencies Ignore
             </h2>
@@ -394,7 +394,7 @@ const About = () => {
             <hr className="border-2 w-1/2 mx-auto mt-10" />
           </div>
         </div>
-        <div className="container max-w-8xl mx-auto px-6 mb-10 lg:my-20">
+        <div className="container max-w-8xl mx-auto px-6 pb-10 lg:py-20">
           <div className="max-w-8xl mx-auto py-10">
             <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
               What Our Business Partnership Can Actually Look Like
@@ -578,14 +578,14 @@ const About = () => {
             <p className="text-xl lg:text-2xl mb-4 font-bold">
               That's the difference between transactional and transformational.
             </p>
-          </div>
-          <div className="text-center mt-14">
-            <button
-              className="text-sm lg:text-2xl font-bold bg-green-500
+            <div className="text-center mt-10 lg:mt-14">
+              <button
+                className="text-sm lg:text-2xl font-bold bg-green-500
                 text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
-            >
-              Book Your Free Strategy Call
-            </button>
+              >
+                Book Your Free Strategy Call
+              </button>
+            </div>
           </div>
         </div>
       </main>

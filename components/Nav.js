@@ -121,7 +121,7 @@ export default function Example() {
                 {/* Mobile Nav Items */}
                 <div className="space-y-2 py-6">
                   {/* Services with sub-links */}
-                  <div>
+                  {/* <div>
                     <p className="px-3 py-2 text-base font-semibold text-gray-900">
                       Services
                     </p>
@@ -136,7 +136,7 @@ export default function Example() {
                         </a>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Other nav links */}
                   {navigation
