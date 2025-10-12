@@ -36,8 +36,9 @@ const About = () => {
               </button>
             </div>
             <img
-              src="/images/SEO-specialist.png"
+              src="/images/SEO-specialist.jpg"
               className="sm:w-full h-auto rounded-3xl"
+              alt="SEO specialist at Pool Builder Growth."
             />
           </div>
         </div>
