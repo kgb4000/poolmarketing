@@ -1,0 +1,348 @@
+'use client'
+
+import React, { useState } from 'react'
+import { CheckCircle } from 'lucide-react'
+
+const blogContentPlanner = () => {
+  const [submitting, setSubmitting] = useState(false)
+  const [success, setSuccess] = useState(false)
+
+  // Prevent hydration mismatch by only rendering on client
+
+  // Don't render until mounted on client
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setSubmitting(true)
+
+    const fd = new FormData(e.currentTarget)
+    const name = fd.get('name')
+    const email = fd.get('email')
+
+    console.log('Submitting', { name, email })
+
+    setTimeout(() => {
+      setSubmitting(false)
+      setSuccess(true)
+    }, 1000)
+  }
+
+  return (
+    <div className="container max-w-4xl mx-auto px-6 my-10 lg:my-20">
+      <h1 className="text-4xl lg:text-7xl font-bold text-black mb-4 leading-normal">
+        Most Pool Builder Have No ideas What's Coming
+      </h1>
+      <section>
+        <h2 className="my-10 text-4xl font-bold">
+          Turn Your Website Into a 24/7 Lead-Generating Machine
+        </h2>
+        <p className="text-2xl mb-4">Stop competing on price.</p>
+        <p className="text-2xl mb-4">Start competing on expertise.</p>
+        <hr />
+        <h2 className="my-10 text-4xl font-bold">
+          You're Tired of Chasing Leads When You Should Be Building Pools
+        </h2>
+        <p className="text-2xl mb-14">
+          You became a pool builder to create amazing backyards, not to become a
+          marketing expert.
+        </p>
+        <p className="text-2xl mb-4 font-normal">
+          But here's the reality: while you're perfecting your craft, homeowners
+          are spending hours online researching pool builders before they ever
+          pick up the phone. If you're not showing up in those searches with
+          helpful, trustworthy content, you're invisible.
+        </p>
+        <p className="text-2xl mb-4 font-light">
+          <span className="font-bold">The problem?</span> Most pool builders
+          either:
+        </p>
+        <ul className="list-disc ml-10 my-6">
+          <li className="text-2xl mb-4">
+            Have no blog at all (letting competitors capture all the search
+            traffic)
+          </li>
+          <li className="text-2xl mb-4">
+            Post random updates that don't attract serious buyers
+          </li>
+          <li className="text-2xl mb-4">
+            Write content without any strategy or conversion plan
+          </li>
+          <li className="text-2xl mb-4">
+            Give up after a few posts because they don't see immediate results
+          </li>
+          <li className="text-2xl mb-4">"Does a pool increase home value?"</li>
+        </ul>
+        <p className="text-2xl mb-4 font-light">
+          <span className="font-bold">
+            Meanwhile, smart pool builders are using strategic content to:
+          </span>{' '}
+        </p>
+        <ul className="list-disc ml-10 my-6">
+          <li className="text-2xl mb-4">
+            Attract 50+ qualified leads per month from their website
+          </li>
+          <li className="text-2xl mb-4">
+            Get found when homeowners search "pool builder near me"
+          </li>
+          <li className="text-2xl mb-4">
+            Build trust before the first conversation even happens
+          </li>
+          <li className="text-2xl mb-4">
+            Book consultations with educated, pre-sold prospects
+          </li>
+        </ul>
+      </section>
+      <hr className="border-2 my-16" />
+      <section>
+        <h2 className="my-6 text-4xl font-bold">
+          Introducing the Complete 90-Day Blog Content System
+        </h2>
+        <p className="text-2xl mb-10 font-bold">
+          Everything you need to transform your website from a digital business
+          card into a lead-generating powerhouse.
+        </p>
+        <p className="text-2xl mb-10 font-normal">
+          This isn't just a list of blog post ideas. It's the exact 90-day
+          implementation roadmap that's helped pool builders across the country
+          generate consistent, qualified leads through strategic content.
+        </p>
+        <p className="text-3xl mb-10 font-bold">
+          What's Inside the 90-Day Planner:
+        </p>
+        <ul className="list-disc my-6">
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Strategic Publishing Schedule -</span>{' '}
+              Which posts to publish when (and why the order matters)
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">10 Proven Blog Post Templates -</span>{' '}
+              The exact posts that convert browsers into buyers
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Complete Keyword Research -</span>{' '}
+              Target the searches homeowners are actually making
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Lead Magnet Creation Guide -</span>{' '}
+              Turn readers into email subscribers with valuable downloads
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Content Promotion Strategy -</span>{' '}
+              Maximize each post's reach across social media and email
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Performance Tracking System -</span>{' '}
+              Know which content is generating real leads and revenue
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">12-Month Content Calendar -</span>{' '}
+              Never run out of content ideas again
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">SEO Optimization Checklists -</span>{' '}
+              Rank higher in Google searches without being an SEO expert
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Local Marketing Integration -</span>{' '}
+              Connect your content to your Google Business Profile and local SEO
+            </div>
+          </li>
+          <li className="text-2xl mb-4 flex">
+            <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
+            <div>
+              <span className="font-bold">Seasonal Content Planning -</span>{' '}
+              Match your content to when homeowners are actually planning pool
+              projects
+            </div>
+          </li>
+        </ul>
+      </section>
+      <hr className="border-2 my-16" />
+      <section>
+        <h2 className="my-6 text-4xl font-bold">
+          Why This Works (When Other Marketing Doesn't)
+        </h2>
+        <p className="text-3xl mb-10 font-bold">
+          ❌ Traditional Marketing Problems:
+        </p>
+        <ul className="list-disc my-6 ml-10">
+          <li className="text-2xl mb-4">
+            Expensive Google Ads that drain your budget
+          </li>
+          <li className="text-2xl mb-4">
+            Facebook ads that attract tire-kickers, not serious buyers
+          </li>
+          <li className="text-2xl mb-4">
+            Word-of-mouth referrals that are inconsistent
+          </li>
+          <li className="text-2xl mb-4">
+            Competing purely on price with every other builder
+          </li>
+        </ul>
+        <p className="text-3xl mb-4 font-bold">
+          ✅ Content Marketing Advantages:
+        </p>
+        <ul className="list-disc my-6 ml-10">
+          <li className="text-2xl mb-4">
+            Works 24/7, even when you're not actively marketing
+          </li>
+          <li className="text-2xl mb-4">
+            Builds trust and authority before prospects contact you
+          </li>
+          <li className="text-2xl mb-4">
+            Attracts higher-quality leads who are ready to invest
+          </li>
+          <li className="text-2xl mb-4">
+            Costs less than paid advertising with longer-lasting results
+          </li>
+          <li className="text-2xl mb-4">
+            Positions you as the expert, not just another contractor
+          </li>
+        </ul>
+      </section>
+      <hr className="border-2 my-16" />
+      <section>
+        <h2 className="my-6 text-4xl font-bold">
+          Perfect for Pool Builders Who
+        </h2>
+        <ul className="list-disc my-6 ml-10">
+          <li className="text-2xl mb-4">
+            Want more qualified leads without increasing ad spend
+          </li>
+          <li className="text-2xl mb-4">
+            Are you tired of competing solely on price
+          </li>
+          <li className="text-2xl mb-4">
+            Want to be seen as the trusted expert in their market
+          </li>
+          <li className="text-2xl mb-4">
+            Have limited time for marketing but want maximum impact
+          </li>
+          <li className="text-2xl mb-4">
+            Understand that homeowners research extensively before hiring
+          </li>
+          <li className="text-2xl mb-4">
+            Want a systematic approach (not random content posting)
+          </li>
+        </ul>
+      </section>
+      <hr className="border-2 my-16" />
+      <section>
+        <h2 className="my-6 text-4xl font-bold">
+          Get Your Free 90-Day Content Planner
+        </h2>
+        <p className="text-2xl mb-4 font-bold">Download includes:</p>
+        <ul className="list-disc my-6 ml-10">
+          <li className="text-2xl mb-4">
+            Complete 90-day blog publishing schedule
+          </li>
+          <li className="text-2xl mb-4">
+            10 proven blog post templates with examples
+          </li>
+          <li className="text-2xl mb-4">
+            Keyword research worksheet for your local market
+          </li>
+          <li className="text-2xl mb-4">Content promotion checklists</li>
+          <li className="text-2xl mb-4">Performance tracking templates</li>
+          <li className="text-2xl mb-4">Seasonal content calendar</li>
+          <li className="text-2xl mb-4">SEO optimization guides</li>
+        </ul>
+      </section>
+      <hr className="border-2 my-16" />
+      <section>
+        <div className="bg-slate-200 rounded-2xl shadow-lg">
+          {success ? (
+            <div className="max-w-2xl py-20 px-6 mx-auto my-14 text-center">
+              <p className="text-3xl mb-4 font-bold text-green-700">
+                🎉 Success! Check your inbox.
+              </p>
+              <p className="text-lg text-gray-600">
+                Your free 90-day blog content planner is on its way!
+              </p>
+            </div>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="max-w-2xl py-20 px-6 mx-auto my-14"
+            >
+              <p className="text-3xl mb-10">
+                Just enter your information below and I'll send the complete
+                planner to your email immediately.
+              </p>
+              <input
+                name="name"
+                placeholder="Name"
+                required
+                className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
+              />
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+                className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
+              />
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center"
+              >
+                {submitting
+                  ? 'Sending…'
+                  : 'Get My Free 90-Day Blog Content System'}
+              </button>
+            </form>
+          )}
+        </div>
+
+        <p className="text-3xl mb-4 font-bold">
+          100% Free. No Strings Attached.
+        </p>
+        <p className="text-2xl mb-4">
+          This isn't a "free" trial that requires a credit card. It's not a
+          watered-down version of a paid product. This is the complete 90-day
+          system we use with our clients, and you're getting it free because we
+          believe every pool builder deserves to compete effectively online.
+        </p>
+        <p className="text-2xl mb-4">
+          <span className="font-bold">Why am I giving this away?</span>
+        </p>
+        <p className="text-2xl mb-4">Simple.</p>
+        <p className="text-2xl mb-4">
+          When pool builders succeed with smart marketing, it elevates the
+          entire industry. Plus, once you see the results from implementing this
+          system, you'll want our help with the more advanced stuff.
+        </p>
+      </section>
+    </div>
+  )
+}
+
+export default blogContentPlanner

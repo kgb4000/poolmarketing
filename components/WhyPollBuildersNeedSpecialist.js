@@ -7,15 +7,18 @@ import BlueprintModal from './BlueprintModal'
 import { event } from '../lib/eventHelper'
 
 const WhyPollBuildersNeedSpecialist = () => {
-  const [open, setOpen] = useState(false)
   const handleClick = () => {
-    event({
-      action: 'get_growth_blueprint_click',
-      category: 'engagement',
-      label: 'why_specialist_cta',
-      value: 1,
-    })
-    setOpen(true)
+    try {
+      event({
+        action: 'get_growth_blueprint_click',
+        category: 'engagement',
+        label: 'why_specialist_cta',
+        value: 1,
+      })
+      window.location.href = '/growth-blueprint'
+    } catch (error) {
+      console.error('Error in handleClick:', error)
+    }
   }
   return (
     <>
@@ -107,7 +110,6 @@ const WhyPollBuildersNeedSpecialist = () => {
             textColor="text-white"
             hover="hover:bg-green-600"
           />
-          <BlueprintModal open={open} setOpen={setOpen} />
         </>
       </div>
     </>

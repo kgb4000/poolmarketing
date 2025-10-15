@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import ShareBtn from '../../../components/ShareBtn'
-import AudioPill from '../../../components/AudioPill'
+import ShareBtn from '@/components/ShareBtn'
+import AudioPill from '@/components/AudioPill'
 
 import { RichText } from '@graphcms/rich-text-react-renderer'
 

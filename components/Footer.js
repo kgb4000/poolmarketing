@@ -10,14 +10,18 @@ import BlueprintModal from './BlueprintModal'
 import DynamicYear from './DynamicYear'
 
 const Footer = () => {
-  const [open, setOpen] = useState(false)
   const handleClick = () => {
-    event({
-      action: 'get_growth_blueprint_click',
-      category: 'engagement',
-      label: 'footer_cta',
-      value: 1,
-    })
+    try {
+      event({
+        action: 'get_growth_blueprint_click',
+        category: 'engagement',
+        label: 'footer_cta',
+        value: 1,
+      })
+      window.location.href = '/growth-blueprint'
+    } catch (error) {
+      console.error('Error in handleClick:', error)
+    }
   }
   return (
     <footer className="text-black">
@@ -32,14 +36,13 @@ const Footer = () => {
         </p>
         <>
           <Button
-            onClick={() => setOpen(true)}
+            onClick={handleClick}
             buttonText="Get My Free Pool Builder Growth Blueprint"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
             hover="hover:bg-green-600"
           />
-          <BlueprintModal open={open} setOpen={setOpen} />
         </>
       </div>
       <div className="max-w-6xl mx-auto px-4 py-20">

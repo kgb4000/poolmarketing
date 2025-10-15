@@ -8,15 +8,18 @@ import { event } from '../lib/eventHelper'
 import BlueprintModal from './BlueprintModal'
 
 const Section3 = () => {
-  const [open, setOpen] = useState(false)
   const handleClick = () => {
-    event({
-      action: 'get_growth_blueprint_click',
-      category: 'engagement',
-      label: 'section3_cta',
-      value: 1,
-    })
-    setOpen(true)
+    try {
+      event({
+        action: 'get_growth_blueprint_click',
+        category: 'engagement',
+        label: 'section3_cta',
+        value: 1,
+      })
+      window.location.href = '/growth-blueprint'
+    } catch (error) {
+      console.error('Error in handleClick:', error)
+    }
   }
   return (
     <>
@@ -122,7 +125,6 @@ const Section3 = () => {
               textColor="text-white"
               hover="hover:bg-green-600"
             />
-            <BlueprintModal open={open} setOpen={setOpen} />
           </>
         </div>
       </section>
