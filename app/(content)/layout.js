@@ -2,6 +2,7 @@ import { Poppins } from 'next/font/google'
 import '../(home)/globals.css'
 import ContentAuditNav from '@/components/ContentAuditNav'
 import AdFooter from '../../components/AdFooter'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export const metadata = {
 export default function ContentLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="AW-17704226239" />
       <body className={poppins.variable}>
         <ContentAuditNav />
         {children}
