@@ -12,14 +12,19 @@ import BlueprintModal from './BlueprintModal'
 
 const FAQ = () => {
   const [open, setOpen] = useState(false)
+
   const handleClick = () => {
-    event({
-      action: 'get_growth_blueprint_click',
-      category: 'engagement',
-      label: 'FAQ_cta',
-      value: 1,
-    })
-    setOpen(true)
+    try {
+      event({
+        action: 'ai_marketing_guide_click',
+        category: 'engagement',
+        label: 'FAQ_cta',
+        value: 1,
+      })
+      window.location.href = '/7-day-ai-marketing-guide'
+    } catch (error) {
+      console.error('Error in handleClick:', error)
+    }
   }
   return (
     <>
@@ -655,13 +660,12 @@ const FAQ = () => {
             <Button
               onClick={handleClick}
               align="text-center"
-              buttonText="Get My Free Pool Builder Growth Blueprint"
+              buttonText="Get My 7-Day AI Marketing Guide"
               textSize="text-sm lg:text-2xl"
               bgColor="bg-green-500"
               textColor="text-white"
               hover="hover:bg-green-600"
             />
-            <BlueprintModal open={open} setOpen={setOpen} />
           </div>
         </div>
       </section>

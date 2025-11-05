@@ -60,8 +60,8 @@ export default async function Posts() {
   return (
     <>
       <main>
-        <div className="my-6 lg:my-20 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">
+        <div className="my-6 lg:my-20 text-center px-6 md:px-0">
+          <h1 className="text-2xl md:text-5xl font-bold text-black mb-4 leading-tight">
             Pool Builder Growth Blog
           </h1>
           <p className="my-4 lg:my-10 text-xl">
@@ -88,7 +88,9 @@ export default async function Posts() {
                         height={post.coverImage.height}
                       />
                       <div className="">
-                        <h3 className="text-3xl mb-6">{post.title}</h3>
+                        <h3 className="text-xl md:text-3xl mb-6">
+                          {post.title}
+                        </h3>
                         <p>Read more</p>
                       </div>
                     </div>

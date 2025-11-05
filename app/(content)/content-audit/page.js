@@ -1,13 +1,27 @@
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
+'use client'
 
-const contentAudit = () => {
+import { useState } from 'react'
+import { CheckCircle, MoveRight } from 'lucide-react'
+
+export default function ContentAudit() {
+  const [submitting, setSubmitting] = useState(false)
   return (
     <div className="container max-w-4xl mx-auto px-4 my-10 lg:my-20">
       <h1 className="text-4xl lg:text-7xl font-bold text-black mb-4 leading-normal">
         Your Pool Company Is Invisible Online (And It's Costing You $100K+
         Projects)
       </h1>
+      <div className="mb-10 grid lg:grid-cols-2 items-center">
+        <p className="text-xl font-bold mb-4 lg:mb-0 flex self-center">
+          Listen Here
+          <MoveRight className="ml-4" />
+        </p>
+        <audio controls>
+          <source src="content-audit.mp3" type="audio/ogg" />
+          <source src="content-audit.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
       <div>
         <h2 className="my-10 text-4xl font-light">
           Here's what's happening right now in your city:
@@ -18,6 +32,10 @@ const contentAudit = () => {
         <p className="text-2xl mb-4">
           <span className="font-bold">Google</span> showed them answers from
           your competitors.
+        </p>
+        <p className="text-2xl mb-4">
+          <span className="font-bold">ChatGPT</span> explained to them the steps
+          in building a pool.
         </p>
         <p className="text-2xl mb-4">
           <span className="font-bold">Perplexity AI</span> recommended a pool
@@ -138,75 +156,7 @@ const contentAudit = () => {
           your professionalism and expertise
         </p>
       </div>
-      <hr className="border-2 my-10" />
       <div>
-        <h2 className="my-6 text-4xl font-light">
-          See What You're Getting: Real Examples of My Work
-        </h2>
-        <p className="text-2xl mb-4 font-bold">
-          I don't just talk about great content — I create it. Here are complete
-          blog posts I've written for pool builders:
-        </p>
-        <div>
-          <p className="text-2xl mb-4 font-semibold">
-            #1. ["The Real Cost of Building a Pool in Austin, Texas (2025
-            Complete Guide)"]
-          </p>
-          <p className="text-2xl mb-4">
-            A comprehensive 3,100-word guide targeting "pool cost Austin" and 15
-            other secondary related keywords. Includes local permit costs,
-            contractor rates, and seasonal pricing factors.
-          </p>
-          <p className="text-2xl mb-4">
-            <span className="font-bold">[Read the Full Article →]</span> (Sample
-            work - opens in new tab)
-          </p>
-        </div>
-        <div className="mt-10">
-          <p className="text-2xl mb-4 font-bold">
-            #2. ["Saltwater vs. Chlorine Pools: An Honest Comparison from Miami
-            Pool Experts"]
-          </p>
-          <p className="text-2xl mb-4">
-            This 1,800-word comparison piece positions the builder as
-            trustworthy by covering the pros and cons of both options. Perfect
-            for decision-stage homeowners.
-          </p>
-          <p className="text-2xl mb-4">
-            <span className="font-bold">[Read the Full Article →]</span> (Sample
-            work - opens in new tab)
-          </p>
-        </div>
-        <div className="mt-10">
-          <p className="text-2xl mb-4 font-bold">
-            #3. ["5 Questions Every Phoenix Homeowner Should Ask Pool Builders"]
-          </p>
-          <p className="text-2xl mb-4">
-            A trust-building piece that actually helps homeowners choose better
-            contractors while subtly positioning the client as the expert
-            choice.
-          </p>
-          <p className="text-2xl mb-4">
-            <span className="font-bold">[Read the Full Article →]</span> (Sample
-            work - opens in new tab)
-          </p>
-        </div>
-        <div className="mt-10">
-          <p className="text-2xl mb-4 font-bold">
-            #4. ["Why Pool Projects Get Delayed in Denver (And How to Avoid
-            It)"]
-          </p>
-          <p className="text-2xl mb-4">
-            Addresses a common pain point while showcasing project management
-            expertise. Great for converting leads who've had bad experiences
-            with other builders.
-          </p>
-          <p className="text-2xl mb-4">
-            <span className="font-bold">[Read the Full Article →]</span> (Sample
-            work - opens in new tab)
-          </p>
-        </div>
-        <hr className="border-2 my-10" />
         <h2 className="my-6 text-4xl font-bold">
           Picture Two Different Scenarios:
         </h2>
@@ -236,8 +186,8 @@ const contentAudit = () => {
         </div>
       </div>
       <hr className="border-2 my-10" />
-      <h2 className="my-6 text-4xl font-light">
-        I'm Taking On Just 5 Pool Companies This Quarter
+      <h2 className="my-6 text-4xl font-bold">
+        I'm Taking On Just 9 Pool Construction Companies This Quarter
       </h2>
       <p className="text-2xl mb-4 font-semibold">
         Here's why I'm keeping it small:
@@ -295,11 +245,11 @@ const contentAudit = () => {
       </div>
       <hr className="border-2 my-10" />
       <div>
-        <h2 className="my-6 text-4xl font-bold">
+        <h2 className="my-6 text-4xl font-bold" id="form">
           Ready to Become the Pool Expert Homeowners Find First?
         </h2>
         <p className="text-2xl mb-4">
-          The audit spots are filling up fast (I can only handle three
+          The audit spots are filling up fast (I can only handle two
           comprehensive audits per week), and pool season planning starts now.
         </p>
         <p className="text-2xl mb-4">
@@ -307,33 +257,77 @@ const contentAudit = () => {
           should be yours.
         </p>
         <div className="bg-slate-200 rounded-2xl shadow-lg">
-          <form className="max-w-2xl py-20 px-6 mx-auto  my-14">
-            <p className="text-3xl mb-10">
-              Fill out the form below to get your free content audit.
-            </p>
-            <input
-              placeholder="Name"
-              className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
-            />
-            <input
-              placeholder="Email"
-              className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
-            />
-            <input
-              placeholder="Website"
-              className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
-            />
-            <input
-              value="Get My Free Content Audit"
-              type="submit"
-              placeholder="Website"
-              className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center"
-            />
+          <form
+            action="https://poolbuildergrowth.us4.list-manage.com/subscribe/post?u=9709f951450aedeb01b57d0ed&amp;id=6e4c434319&amp;f_id=008d95e3f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            className="max-w-2xl py-20 px-6 mx-auto my-14 validate"
+            target="_blank"
+          >
+            <div id="mc_embed_signup_scroll">
+              <p className="text-3xl mb-10 ">
+                Just enter your information below and I'll send the complete
+                blog system to your email immediately.
+              </p>
+              <div class="mc-field-group">
+                <label for="mce-FNAME">Email</label>
+                <input
+                  type="email"
+                  name="EMAIL"
+                  id="mce-EMAIL"
+                  required
+                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl text"
+                />
+              </div>
+              <div className="mc-field-group">
+                <label for="mce-EMAIL">
+                  Website <span class="asterisk">*</span>
+                </label>
+                <input
+                  type="url"
+                  name="MMERGE7"
+                  id="mce-MMERGE7"
+                  required
+                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl required email"
+                />
+              </div>
+              <div hidden="">
+                <input type="hidden" name="tags" value="4531410" />
+              </div>
+              <div id="mce-responses" className="clear">
+                <div className="response" id="mce-error-response"></div>
+                <div className="response" id="mce-success-response"></div>
+              </div>
+              <div aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_9709f951450aedeb01b57d0ed_6e4c434319"
+                  tabIndex="-1"
+                  className="hidden"
+                />
+              </div>
+              <div className="clear">
+                <button
+                  type="submit"
+                  id="mc-embedded-subscribe"
+                  disabled={submitting}
+                  className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center button mt-2"
+                >
+                  {submitting ? 'Sending…' : 'Get My Free Content Audit Now'}
+                </button>
+                <p className="text-center mt-4 text-lg">
+                  (and start turning your pool builder blog into a 24/7 sales
+                  machine)
+                </p>
+              </div>
+            </div>
           </form>
         </div>
         <p className="text-2xl mb-4 font-bold">
-          P.S. Even if we don't work together, you'll walk away with a clear
-          roadmap for dominating local search.
+          <span className="font-bold">P.S.</span> Even if we don't work
+          together, you'll walk away with a clear roadmap for dominating local
+          search.
         </p>
         <p className="text-2xl mb-4">
           But based on what I've seen with other pool builders, once you see the
@@ -343,5 +337,3 @@ const contentAudit = () => {
     </div>
   )
 }
-
-export default contentAudit

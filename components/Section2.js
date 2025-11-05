@@ -11,12 +11,12 @@ const Section2 = () => {
   const handleClick = () => {
     try {
       event({
-        action: 'get_growth_blueprint_click',
+        action: 'ai_marketing_guide_click',
         category: 'engagement',
         label: 'section2_cta',
         value: 1,
       })
-      window.location.href = '/growth-blueprint'
+      window.location.href = '/7-day-ai-marketing-guide'
     } catch (error) {
       console.error('Error in handleClick:', error)
     }
@@ -100,13 +100,12 @@ const Section2 = () => {
           <Button
             onClick={handleClick}
             align="text-center"
-            buttonText="Get My Free Pool Builder Growth Blueprint"
+            buttonText="Get My 7-Day AI Marketing Guide"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
             hover="hover:bg-green-600"
           />
-          <BlueprintModal open={open} setOpen={setOpen} />
         </>
       </div>
     </>

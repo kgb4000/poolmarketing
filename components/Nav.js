@@ -29,10 +29,10 @@ export default function Example() {
 
   return (
     <div className="bg-white">
-      <header className="container max-w-8xl mx-auto">
+      <header className="container max-w-8xl mx-auto px-6">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between py-6 lg:px-0"
         >
           {/* Logo */}
           <div className="flex lg:flex-1">

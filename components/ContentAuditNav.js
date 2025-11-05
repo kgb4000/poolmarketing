@@ -9,7 +9,7 @@ import {
   ChevronDownIcon,
 } from '@heroicons/react/24/outline'
 
-export default function AdMenu() {
+export default function ContentAuditNav() {
   return (
     <div className="bg-white">
       <header className="container max-w-8xl mx-auto px-6">
@@ -26,7 +26,7 @@ export default function AdMenu() {
           <div className="flex lg:hidden">
             <Link href="#form">
               <div className="-m-2.5 inline-flex items-center justify-center rounded-md px-6 py-2 bg-green-500 text-white font-bold">
-                Free Download
+                Free Content Audit
               </div>
             </Link>
           </div>
@@ -35,7 +35,7 @@ export default function AdMenu() {
           <div className="hidden lg:flex lg:gap-x-12">
             <Link href="#form">
               <div className="-m-2.5 inline-flex items-center justify-center rounded-md px-8 py-4 bg-green-500 text-white font-bold">
-                Free Download
+                Free Content Audit
               </div>
             </Link>
           </div>

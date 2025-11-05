@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google'
 import '../(home)/globals.css'
-import AdNav from '../../components/AdNav'
+import ContentAuditNav from '@/components/ContentAuditNav'
 import AdFooter from '../../components/AdFooter'
 
 const poppins = Poppins({
@@ -11,7 +11,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Get your free content audit.',
+  title: 'Get your free content audit | Pool Builder Growth.',
   description:
     'Pool builder marketing agency  helping pool builders attract more cleints with expert local SEO, content marketing, email campaigns and web design.',
   alternates: {
@@ -23,7 +23,7 @@ export default function ContentLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.variable}>
-        <AdNav />
+        <ContentAuditNav />
         {children}
         <AdFooter />
       </body>

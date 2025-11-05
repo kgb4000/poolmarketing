@@ -4,6 +4,7 @@ import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
 import GoogleAnalytics from '../../components/GoogleAnalytics'
 import Script from 'next/script'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
+      <GoogleTagManager gtmId="	G-ZBENENS920" />
       <body>
         <Nav />
         {children}

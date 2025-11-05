@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import ShareBtn from '@/components/ShareBtn'
-import AudioPill from '@/components/AudioPill'
+import BlogAudioPlayer from '@/components/BlogAudioPlayer'
 
 import { RichText } from '@graphcms/rich-text-react-renderer'
 
@@ -44,6 +44,12 @@ async function getPost(slug) {
                     }
                     bio
                   }
+                  audio {
+                    url
+                    fileName
+                    mimeType
+                    size
+                  }
                 }
             }`,
         variables: {
@@ -54,12 +60,20 @@ async function getPost(slug) {
     }
   )
   const { data } = await res.json()
-  return data.post
+  return data?.post || null
 }
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug
   const post = await getPost(slug)
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.',
+    }
+  }
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -73,14 +87,25 @@ export default async function Page({ params }) {
   const slug = (await params).slug
   const post = await getPost(slug)
 
+  if (!post) {
+    return (
+      <main>
+        <div className="container max-w-2xl mx-auto my-10 px-4">
+          <h1 className="text-2xl lg:text-4xl my-4 lg:my-10">Post Not Found</h1>
+          <p>The requested blog post could not be found.</p>
+        </div>
+      </main>
+    )
+  }
+
   const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
     author: {
-      '@type': 'Person',
-      name: post.author.name,
+      '@type': 'Organization',
+      name: 'Pool Builder Growth',
     },
     publisher: {
       '@type': 'Organization',
@@ -122,33 +147,11 @@ export default async function Page({ params }) {
             <ShareBtn
               shareLink={`https://poolbuildergrowth.com/blog/${post.slug}`}
             />
+            <BlogAudioPlayer audioUrl={post.audio?.url} />
             <article className="py-4 blog-content">
               <RichText
                 content={post.content.raw}
                 renderers={{
-                  embed: {
-                    Audio: ({ title, caption, file, durationSeconds }) => {
-                      if (!file?.url) return null
-                      return (
-                        <div className="my-3">
-                          <AudioPill
-                            title={title || caption || 'Audio'}
-                            sources={[
-                              {
-                                src: file.url,
-                                type: file.mimeType || 'audio/mpeg',
-                              },
-                            ]}
-                            initialDuration={
-                              typeof durationSeconds === 'number'
-                                ? durationSeconds
-                                : undefined
-                            }
-                          />
-                        </div>
-                      )
-                    },
-                  },
                   h2: ({ children }) => (
                     <h2 className="!text-2xl lg:!text-4xl !font-bold !text-gray-900 !my-6 lg:!my-8 !leading-tight !block">
                       {children}

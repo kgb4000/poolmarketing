@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, MoveRight } from 'lucide-react'
 
-const blogContentPlanner = () => {
+export default function BlogContentPlanner() {
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
 
@@ -15,9 +15,9 @@ const blogContentPlanner = () => {
     e.preventDefault()
     setSubmitting(true)
 
-    const fd = new FormData(e.currentTarget)
-    const name = fd.get('name')
-    const email = fd.get('email')
+    // const fd = new FormData(e.currentTarget)
+    // const name = fd.get('name')
+    // const email = fd.get('email')
 
     console.log('Submitting', { name, email })
 
@@ -32,25 +32,56 @@ const blogContentPlanner = () => {
       <h1 className="text-4xl lg:text-7xl font-bold text-black mb-4 leading-normal">
         Free 90-Day Blog Content Planner for Pool Builders
       </h1>
+      <div className="mb-10 grid lg:grid-cols-2 items-center">
+        <p className="text-xl font-bold mb-4 lg:mb-0 flex self-center">
+          Listen Here
+          <MoveRight className="ml-4" />
+        </p>
+        {/* <AudioPlayer
+              src="blog-system.mp3"
+              minimal={true}
+              width={300}
+              trackHeight={40}
+              barWidth={3}
+              gap={1}
+              visualise={true}
+              backgroundColor="#FFF8DE"
+              barColor="#C1D0B5"
+              barPlayedColor="#99A98F"
+              skipDuration={2}
+              showLoopOption={true}
+              showVolumeControl={true}
+              hideSeekBar={true}
+              hideSeekKnobWhenPlaying={true}
+              playbackRate={1.2}
+            /> */}
+        <audio controls>
+          <source src="90-day-blog-content-planner.mp3" type="audio/ogg" />
+          <source src="90-day-blog-content-planner.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
       <section>
-        <h2 className="my-10 text-4xl font-bold">
+        <h2 className="my-10 text-4xl">
           Turn Your Website Into a 24/7 Lead-Generating Machine
         </h2>
+
         <p className="text-2xl mb-4">Stop competing on price.</p>
         <p className="text-2xl mb-4">Start competing on expertise.</p>
         <hr />
         <h2 className="my-10 text-4xl font-bold">
           You're Tired of Chasing Leads When You Should Be Building Pools
         </h2>
-        <p className="text-2xl mb-14">
+        <p className="text-2xl mb-4">
           You became a pool builder to create amazing backyards, not to become a
           marketing expert.
         </p>
+        <p className="text-2xl mb-4 font-normal">But here's the reality:</p>
         <p className="text-2xl mb-4 font-normal">
-          But here's the reality: while you're perfecting your craft, homeowners
-          are spending hours online researching pool builders before they ever
-          pick up the phone. If you're not showing up in those searches with
-          helpful, trustworthy content, you're invisible.
+          While you're a master at your craft, homeowners are spending hours
+          online researching pool builders before they ever pick up the phone.
+          If you're not showing up in those searches with helpful, trustworthy
+          content, you're invisible.
         </p>
         <p className="text-2xl mb-4 font-light">
           <span className="font-bold">The problem?</span> Most pool builders
@@ -70,7 +101,6 @@ const blogContentPlanner = () => {
           <li className="text-2xl mb-4">
             Give up after a few posts because they don't see immediate results
           </li>
-          <li className="text-2xl mb-4">"Does a pool increase home value?"</li>
         </ul>
         <p className="text-2xl mb-4 font-light">
           <span className="font-bold">
@@ -92,7 +122,6 @@ const blogContentPlanner = () => {
           </li>
         </ul>
       </section>
-      <hr className="border-2 my-16" />
       <section>
         <h2 className="my-6 text-4xl font-bold">
           Introducing the Complete 90-Day Blog Content System
@@ -183,7 +212,6 @@ const blogContentPlanner = () => {
           </li>
         </ul>
       </section>
-      <hr className="border-2 my-16" />
       <section>
         <h2 className="my-6 text-4xl font-bold">
           Why This Works (When Other Marketing Doesn't)
@@ -253,7 +281,7 @@ const blogContentPlanner = () => {
         </ul>
       </section>
       <hr className="border-2 my-16" />
-      <section>
+      <section id="form">
         <h2 className="my-6 text-4xl font-bold">
           Get Your Free 90-Day Content Planner
         </h2>
@@ -277,51 +305,75 @@ const blogContentPlanner = () => {
       <hr className="border-2 my-16" />
       <section>
         <div className="bg-slate-200 rounded-2xl shadow-lg">
-          {success ? (
-            <div className="max-w-2xl py-20 px-6 mx-auto my-14 text-center">
-              <p className="text-3xl mb-4 font-bold text-green-700">
-                🎉 Success! Check your inbox.
+          <form
+            form
+            action="https://poolbuildergrowth.us4.list-manage.com/subscribe/post?u=9709f951450aedeb01b57d0ed&amp;id=6e4c434319&amp;f_id=008f95e3f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            className="max-w-2xl py-20 px-6 mx-auto my-14 validate"
+            target="_blank"
+          >
+            <div id="mc_embed_signup_scroll">
+              <p className="text-3xl mb-10 ">
+                Just enter your information below and I'll send your FREE 90-Day
+                Blog Content Planner.
               </p>
-              <p className="text-lg text-gray-600">
-                Your free 90-day blog content planner is on its way!
-              </p>
+              <div className="mc-field-group">
+                <label htmlFor="mce-FNAME">First Name </label>
+                <input
+                  type="text"
+                  name="FNAME"
+                  id="mce-FNAME"
+                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl text"
+                />
+              </div>
+              <div className="mc-field-group">
+                <label htmlFor="mce-EMAIL">
+                  Email Address <span className="asterisk">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="EMAIL"
+                  id="mce-EMAIL"
+                  required
+                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl required email"
+                />
+              </div>
+              <div hidden="">
+                <input type="hidden" name="tags" value="4531411" />
+              </div>
+              <div id="mce-responses" className="clear">
+                <div className="response" id="mce-error-response"></div>
+                <div className="response" id="mce-success-response"></div>
+              </div>
+              <div aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_9709f951450aedeb01b57d0ed_6e4c434319"
+                  tabIndex="-1"
+                  className="hidden"
+                />
+              </div>
+              <div className="clear">
+                <button
+                  type="submit"
+                  id="mc-embedded-subscribe"
+                  disabled={submitting}
+                  className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center button mt-2"
+                >
+                  {submitting
+                    ? 'Sending…'
+                    : 'Get My FREE 90-Day Blog Content Planner'}
+                </button>
+                <p className="text-center mt-4 text-lg">
+                  (and start turning your pool builder blog into a 24/7 sales
+                  machine)
+                </p>
+              </div>
             </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="max-w-2xl py-20 px-6 mx-auto my-14"
-            >
-              <p className="text-3xl mb-10">
-                Just enter your information below and I'll send the complete
-                planner to your email immediately.
-              </p>
-              <input
-                name="name"
-                placeholder="Name"
-                required
-                className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
-              />
-              <input
-                name="email"
-                type="email"
-                placeholder="Email"
-                required
-                className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl"
-              />
-
-              <button
-                type="submit"
-                disabled={submitting}
-                className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center"
-              >
-                {submitting
-                  ? 'Sending…'
-                  : 'Get My Free 90-Day Blog Content System'}
-              </button>
-            </form>
-          )}
+          </form>
         </div>
-
         <p className="text-3xl mb-4 font-bold">
           100% Free. No Strings Attached.
         </p>
@@ -344,5 +396,3 @@ const blogContentPlanner = () => {
     </div>
   )
 }
-
-export default blogContentPlanner

@@ -10,7 +10,7 @@ const WhyPollBuildersNeedSpecialist = () => {
   const handleClick = () => {
     try {
       event({
-        action: 'get_growth_blueprint_click',
+        action: 'ai_marketing_guide_click',
         category: 'engagement',
         label: 'why_specialist_cta',
         value: 1,
@@ -104,7 +104,7 @@ const WhyPollBuildersNeedSpecialist = () => {
           <Button
             onClick={handleClick}
             align="text-center"
-            buttonText="Get My Free Pool Builder Growth Blueprint"
+            buttonText="Get My 7-Day AI Marketing Guide"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"

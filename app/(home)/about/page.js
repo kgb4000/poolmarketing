@@ -11,7 +11,7 @@ export const metadata = {
   },
 }
 
-const About = () => {
+export default function About() {
   return (
     <>
       <main>
@@ -44,7 +44,7 @@ const About = () => {
         </div>
         <section className="lg:py-20">
           <div className="container max-w-8xl mx-auto px-6">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black my-6 lg:mb-14 leading-1 text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
               How I Actually Help To Grow Your Pool Business With You
             </h2>
             <div className="grid md:grid-cols-2 2xl:grid-cols-3 lg:gap-6">
@@ -197,7 +197,7 @@ const About = () => {
           <div className="container max-w-8xl mx-auto px-6 lg:py-20">
             <div className="grid lg:grid-cols-2 lg:my-20 items-center gap-10">
               <div className="">
-                <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
+                <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
                   Why Partnerships Are Better
                 </h2>
                 <p className="text-md lg:text-xl font-light mb-4">
@@ -246,7 +246,7 @@ const About = () => {
               </div>
               <img
                 src="/images/partnership.jpeg"
-                className="rounded-2xl"
+                className="rounded-2xl mb-10 lg:mb-0"
                 alt="About Pool Builder Growth"
                 loading="lazy"
               />
@@ -256,7 +256,7 @@ const About = () => {
         <section className="bg-slate-100 py-10 lg:py-40">
           <div className="container max-w-8xl mx-auto px-6">
             <div className="max-w-8xl mx-auto">
-              <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 max-w-3xl">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
                 The Difference Between Working With a Marketing Agency and
                 Working With Me
               </h2>
@@ -302,7 +302,7 @@ const About = () => {
         </section>
         <div className="container max-w-8xl mx-auto px-6">
           <div className="max-w-8xl mx-auto py-10 lg:pt-40">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
               The Mathematics Other Agencies Ignore
             </h2>
             <p className="text-center text-xl">
@@ -397,7 +397,7 @@ const About = () => {
         </div>
         <div className="container max-w-8xl mx-auto px-6 pb-10 lg:py-20">
           <div className="max-w-8xl mx-auto py-10">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
               What Our Business Partnership Can Actually Look Like
             </h2>
             <p className="text-center text-xl">
@@ -529,7 +529,7 @@ const About = () => {
         </div>
         <div className="container max-w-8xl mx-auto px-6 mb-10 lg:py-20">
           <div className="max-w-5xl mx-auto py-10">
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-10 leading-1 text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
               Long-term Vision
             </h2>
             <p className="text-xl lg:text-2xl mb-4 font-light">
@@ -593,5 +593,3 @@ const About = () => {
     </>
   )
 }
-
-export default About

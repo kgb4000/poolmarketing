@@ -1,6 +1,6 @@
 import '../(home)/globals.css'
 import { Poppins } from 'next/font/google'
-import AdNav from '../../components/AdNav'
+import BookCall from '@/components/BookCallNav'
 import AdFooter from '../../components/AdFooter'
 
 const poppins = Poppins({
@@ -11,11 +11,11 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: '7 Day AI Marketing Guide for Pool Builders | Pool Builder Growth',
+  title: 'Free Blog System Template | Pool Builder Growth',
   description:
     'Pool builder marketing agency  helping pool builders attract more cleints with expert local SEO, content marketing, email campaigns and web design.',
   alternates: {
-    canonical: 'https://poolbuildergrowth.com/7-day-ai-marketing-guide',
+    canonical: 'https://poolbuildergrowth.com/blog-system',
   },
 }
 
@@ -23,7 +23,7 @@ export default function AdLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.variable}>
-        <AdNav />
+        <BookCall />
         {children}
         <AdFooter />
       </body>

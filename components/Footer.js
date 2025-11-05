@@ -13,12 +13,12 @@ const Footer = () => {
   const handleClick = () => {
     try {
       event({
-        action: 'get_growth_blueprint_click',
+        action: 'ai_marketing_guide_click',
         category: 'engagement',
         label: 'footer_cta',
         value: 1,
       })
-      window.location.href = '/growth-blueprint'
+      window.location.href = '/7-day-ai-marketing-guide'
     } catch (error) {
       console.error('Error in handleClick:', error)
     }
@@ -37,7 +37,7 @@ const Footer = () => {
         <>
           <Button
             onClick={handleClick}
-            buttonText="Get My Free Pool Builder Growth Blueprint"
+            buttonText="Get My 7-Day AI Marketing Guide"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
@@ -106,10 +106,10 @@ const Footer = () => {
               </li> */}
               <li>
                 <Link
-                  href="#"
+                  href="/content-audit"
                   className="text-black hover:text-orange-400 hover:underline transition-colors transition-underline"
                 >
-                  Free Analysis
+                  Free Content Audit
                 </Link>
               </li>
             </ul>

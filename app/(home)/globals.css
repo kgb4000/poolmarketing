@@ -46,8 +46,26 @@ a {
   color: blue;
 }
 
+.blog-button {
+  margin: 4rem 0;
+  background-color: rgb(63, 175, 63);
+  color: white;
+  font-weight: 600;
+
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 20px;
+
+  p {
+    color: white;
+    font-weight: 900;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+}
+
 /* Standardized Blog Post Table Styles - More Specific Targeting */
-/* .blog-content table,
+.blog-content table,
 .blog-content .table-container table,
 article table,
 [class*='blog'] table,
@@ -62,17 +80,26 @@ article table,
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
     0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
   font-family: inherit !important;
-} */
+}
 
-/* .blog-content table thead,
+.blog-content table p {
+  margin: 0;
+  font-size: 16px;
+
+  th {
+    font-size: 18px;
+  }
+}
+
+.blog-content table thead,
 .blog-content .table-container table thead,
 article table thead,
 [class*='blog'] table thead,
 [class*='content'] table thead {
-  background-color: #f9fafb !important;
-} */
+  background-color: #ddd !important;
+}
 
-/* .blog-content table thead th,
+.blog-content table thead th,
 .blog-content .table-container table thead th,
 article table thead th,
 [class*='blog'] table thead th,
@@ -81,13 +108,10 @@ article table thead th,
 article th {
   padding: 12px 16px !important;
   text-align: left !important;
-  font-weight: 600 !important;
-  font-size: 14px !important;
-  color: #111827 !important;
-  white-space: nowrap !important;
-  border-bottom: 1px solid #e5e7eb !important;
-  background-color: #f9fafb !important;
-} */
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #374151 !important;
+}
 
 .blog-content table tbody tr,
 .blog-content .table-container table tbody tr,
@@ -96,7 +120,7 @@ article table tbody tr,
 [class*='content'] table tbody tr,
 .blog-content tr,
 article tr {
-  border-bottom: 1px solid #f3f4f6 !important;
+  border-bottom: 2px solid #f3f4f6 !important;
 }
 
 /* .blog-content table tbody tr:hover,
@@ -115,6 +139,7 @@ article table tbody tr:last-child,
 [class*='blog'] table tbody tr:last-child,
 [class*='content'] table tbody tr:last-child {
   border-bottom: none !important;
+  min-width: 800px !important;
 }
 
 .blog-content table tbody td,
@@ -124,11 +149,9 @@ article table tbody td,
 [class*='content'] table tbody td,
 .blog-content td,
 article td {
-  padding: 12px 16px !important;
-  font-size: 14px !important;
+  padding: 10px 10px !important;
+  font-size: 16px !important;
   color: #374151 !important;
-  white-space: nowrap !important;
-  border: none !important;
 }
 
 /* Table container for responsive scrolling */
@@ -140,30 +163,37 @@ article .table-container,
   overflow-x: auto !important;
   margin: 1.5rem 0 !important;
   border-radius: 8px !important;
-  border: 1px solid #d1d5db !important;
   box-shadow:
-    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 3px 0 rgba(0, 0, 0, 0.3),
     0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
 }
 
 /* Reset any existing table styles */
-/* .blog-content table *,
-article table *,
-[class*='blog'] table *,
-[class*='content'] table * {
-  border: none !important;
+.blog-content table td,
+.blog-content table tbody,
+.blog-content table tbody tr,
+article table td,
+article table tbody,
+article table tbody tr,
+[class*='blog'] table td,
+[class*='blog'] table tbody,
+[class*='blog'] table tbody tr,
+[class*='content'] table td,
+[class*='content'] table tbody,
+[class*='content'] table tbody tr {
+  border: 1px solid #eee !important;
   background: inherit !important;
   margin: 0 !important;
-} */
+}
 
 /* Mobile responsiveness */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .blog-content table,
   .blog-content .table-container table,
   article table,
   [class*='blog'] table,
   [class*='content'] table {
-    min-width: 600px !important;
+    min-width: 700px !important;
   }
 
   .blog-content table th,
@@ -172,18 +202,7 @@ article table *,
   .blog-content td,
   article th,
   article td {
-    padding: 12px 16px !important;
-    font-size: 14px !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
   }
-} */
-
-/* article th {
-  padding: 12px 16px !important;
-  text-align: left !important;
-  font-weight: 600 !important;
-  font-size: 14px !important;
-  color: #111827 !important;
-  white-space: nowrap !important;
-  border-bottom: 1px solid #e5e7eb !important;
-  background-color: #f9fafb !important;
-} */
+}

@@ -4,12 +4,6 @@ import React from 'react'
 import { CheckCircle } from 'lucide-react'
 
 const Section8 = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted')
-  }
-
   return (
     <>
       <div
@@ -58,7 +52,7 @@ const Section8 = () => {
             </p>
           </div>
           <div>
-            <form onSubmit={handleSubmit} className="border-2 border-white py-10 lg:py-20 rounded-2xl px-6 lg:px-20 max-w-xl mt-10">
+            <form className="border-2 border-white py-10 lg:py-20 rounded-2xl px-6 lg:px-20 max-w-xl mt-10">
               <input
                 className="border-1 py-4 px-4 rounded-xl mb-4 lg:mb-10 block w-full focus:outline-0"
                 placeholder="Name"
@@ -68,6 +62,7 @@ const Section8 = () => {
                 placeholder="Email"
               />
               <textarea
+                id="mc:420"
                 rows="4"
                 className="border-2 py-4 px-4 rounded-xl mb-4 lg:mb-10 block w-full focus:outline-0"
                 placeholder="What's your biggest hurdle?"
