@@ -147,7 +147,17 @@ export default async function Page({ params }) {
             <ShareBtn
               shareLink={`https://poolbuildergrowth.com/blog/${post.slug}`}
             />
-            <BlogAudioPlayer audioUrl={post.audio?.url} />
+            {/* <BlogAudioPlayer audioUrl={post.audio?.url} /> */}
+            {post.audio?.url && (
+              <>
+                <p className="text-xl font-bold my-4">Listen here</p>
+                <audio controls>
+                  <source src={post.audio?.url} type="audio/ogg" />
+                  <source src={post.audio?.url} type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </>
+            )}
             <article className="py-4 blog-content">
               <RichText
                 content={post.content.raw}
