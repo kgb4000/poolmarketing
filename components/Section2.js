@@ -1,13 +1,10 @@
 'use client'
 
 import React from 'react'
-import { useState } from 'react'
 import Button from './Button'
 import { event } from '../lib/eventHelper'
-import BlueprintModal from './BlueprintModal'
 
 const Section2 = () => {
-  const [open, setOpen] = useState(false)
   const handleClick = () => {
     try {
       event({

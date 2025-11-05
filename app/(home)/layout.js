@@ -25,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
-      <GoogleTagManager gtmId="AW-17704226239" />
+      <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body>
         <Nav />
         {children}

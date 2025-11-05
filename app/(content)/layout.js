@@ -23,7 +23,7 @@ export const metadata = {
 export default function ContentLayout({ children }) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="AW-17704226239" />
+      <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body className={poppins.variable}>
         <ContentAuditNav />
         {children}

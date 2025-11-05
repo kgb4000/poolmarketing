@@ -2,6 +2,7 @@ import '../(home)/globals.css'
 import { Poppins } from 'next/font/google'
 import AdNav from '../../components/AdNav'
 import AdFooter from '../../components/AdFooter'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export const metadata = {
 export default function AdLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body className={poppins.variable}>
         <AdNav />
         {children}
