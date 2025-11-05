@@ -1,7 +1,6 @@
 'use client'
 
 import { MoveRight } from 'lucide-react'
-import { AudioPlayer } from 'react-audio-player-component'
 
 export default function BlogContentPlanner() {
   return (
@@ -17,21 +16,7 @@ export default function BlogContentPlanner() {
               Listen Here
               <MoveRight className="ml-4" />
             </p>
-            {/* <AudioPlayer
-            src="7-day-ai-marketing-guide.mp3"
-            minimal={true}
-            width={300}
-            trackHeight={40}
-            barWidth={3}
-            gap={1}
-            visualise={true}
-            backgroundColor="#FFF8DE"
-            barColor="#C1D0B5"
-            barPlayedColor="#99A98F"
-            hideSeekBar={true}
-            hideSeekKnobWhenPlaying={true}
-            playbackRate={1}
-          /> */}
+            s{' '}
             <audio controls>
               <source src="7-day-ai-marketing-guide.mp3" type="audio/ogg" />
               <source src="7-day-ai-marketing-guide.mp3" type="audio/mpeg" />
