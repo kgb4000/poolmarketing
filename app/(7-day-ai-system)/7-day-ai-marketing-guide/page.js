@@ -19,8 +19,8 @@ export default function BlogContentPlanner() {
             <MoveRight className="ml-4" />
           </p>
           <audio controls>
-            <source src="7-day-ai-marketing-guide.mp3" type="audio/ogg" />
-            <source src="7-day-ai-marketing-guide.mp3" type="audio/mpeg" />
+            <source src="/7-day-ai-marketing-guide.mp3" type="audio/ogg" />
+            <source src="/7-day-ai-marketing-guide.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -350,7 +350,6 @@ export default function BlogContentPlanner() {
       <section>
         <div className="bg-slate-200 rounded-2xl shadow-lg">
           <form
-            form
             action="https://poolbuildergrowth.us4.list-manage.com/subscribe/post?u=9709f951450aedeb01b57d0ed&amp;id=6e4c434319&amp;f_id=008f95e3f0"
             method="post"
             id="mc-embedded-subscribe-form"
@@ -363,8 +362,8 @@ export default function BlogContentPlanner() {
                 Just enter your information below and I'll send the complete
                 7-Day AI Marketing Guide.
               </p>
-              <div class="mc-field-group">
-                <label for="mce-FNAME">First Name </label>
+              <div className="mc-field-group">
+                <label htmlFor="mce-FNAME">First Name </label>
                 <input
                   type="text"
                   name="FNAME"
@@ -372,9 +371,9 @@ export default function BlogContentPlanner() {
                   className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl text"
                 />
               </div>
-              <div class="mc-field-group">
-                <label for="mce-EMAIL">
-                  Email Address <span class="asterisk">*</span>
+              <div className="mc-field-group">
+                <label htmlFor="mce-EMAIL">
+                  Email Address <span className="asterisk">*</span>
                 </label>
                 <input
                   type="email"
@@ -395,11 +394,11 @@ export default function BlogContentPlanner() {
                 <input
                   type="text"
                   name="b_9709f951450aedeb01b57d0ed_6e4c434319"
-                  tabindex="-1"
+                  tabIndex="-1"
                   className="hidden"
                 />
               </div>
-              <div class="clear">
+              <div className="clear">
                 <button
                   type="submit"
                   id="mc-embedded-subscribe"

@@ -21,8 +21,8 @@ export default function BlogContentPlanner() {
               <MoveRight className="ml-4" />
             </p>
             <audio controls>
-              <source src="blog-system.mp3" type="audio/ogg" />
-              <source src="blog-system.mp3" type="audio/mpeg" />
+              <source src="/blog-system.mp3" type="audio/ogg" />
+              <source src="/blog-system.mp3" type="audio/mpeg" />
               Your browser does not support the audio element.
             </audio>
           </div>

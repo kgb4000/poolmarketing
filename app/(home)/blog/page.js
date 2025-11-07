@@ -73,28 +73,30 @@ export default async function Posts() {
             <ul className="col-span-2">
               {posts.map((post) => (
                 <div key={post.slug}>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-black no-underline"
-                  >
-                    <div className="grid lg:grid-cols-2 lg:gap-8 items-center mb-8">
-                      <img
-                        className="mb-6 w-full"
-                        src={post.coverImage.url}
-                        alt={post.title}
-                        title={post.title}
-                        loading="lazy"
-                        width={post.coverImage.width}
-                        height={post.coverImage.height}
-                      />
-                      <div className="">
-                        <h3 className="text-xl md:text-3xl mb-6">
-                          {post.title}
-                        </h3>
-                        <p>Read more</p>
+                  <li>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-black no-underline"
+                    >
+                      <div className="grid lg:grid-cols-2 lg:gap-8 items-center mb-8">
+                        <img
+                          className="mb-6 w-full"
+                          src={post.coverImage.url}
+                          alt={post.title}
+                          title={post.title}
+                          loading="lazy"
+                          width={post.coverImage.width}
+                          height={post.coverImage.height}
+                        />
+                        <div className="">
+                          <h2 className="text-xl md:text-3xl mb-6">
+                            {post.title}
+                          </h2>
+                          <p>Read more</p>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </li>
                 </div>
               ))}
             </ul>

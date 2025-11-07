@@ -255,7 +255,7 @@ export default function About() {
         </section>
         <section className="bg-slate-100 py-10 lg:py-40">
           <div className="container max-w-8xl mx-auto px-6">
-            <div className="max-w-8xl mx-auto">
+            <div className="max-w-4xl">
               <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
                 The Difference Between Working With a Marketing Agency and
                 Working With Me
@@ -301,8 +301,8 @@ export default function About() {
           </div>
         </section>
         <div className="container max-w-8xl mx-auto px-6">
-          <div className="max-w-8xl mx-auto py-10 lg:pt-40">
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
+          <div className="py-10 lg:pt-40">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1 text-center mx-w-xl">
               The Mathematics Other Agencies Ignore
             </h2>
             <p className="text-center text-xl">
@@ -396,7 +396,7 @@ export default function About() {
           </div>
         </div>
         <div className="container max-w-8xl mx-auto px-6 pb-10 lg:py-20">
-          <div className="max-w-8xl mx-auto py-10">
+          <div className="max-w-4xl mx-auto py-10 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 leading-1">
               What Our Business Partnership Can Actually Look Like
             </h2>

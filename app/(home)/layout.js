@@ -2,7 +2,6 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
-import GoogleAnalytics from '../../components/GoogleAnalytics'
 import Script from 'next/script'
 import { GoogleTagManager } from '@next/third-parties/google'
 
