@@ -13,12 +13,12 @@ const Footer = () => {
   const handleClick = () => {
     try {
       event({
-        action: 'ai_marketing_guide_click',
+        action: 'ai_seo_checklist_click',
         category: 'engagement',
         label: 'footer_cta',
         value: 1,
       })
-      window.location.href = '/7-day-ai-marketing-guide'
+      window.location.href = '/ai-seo-checklist'
     } catch (error) {
       console.error('Error in handleClick:', error)
     }
@@ -31,13 +31,14 @@ const Footer = () => {
           Ready to Build More Pools?
         </h2>
         <p className="text-gray-300 text-xl lg:text-2xl mx-auto max-w-xl mb-6">
-          Get your Pool Growth Builder Blueprint and become the pool contractor
-          Google recommends
+          Get your FREE AI SEO Checklist and see if your website meets the
+          criteria to rank on the first page, rank in the map pack, show up on
+          Google Overviews, and AI searches
         </p>
         <>
           <Button
             onClick={handleClick}
-            buttonText="Get My 7-Day AI Marketing Guide"
+            buttonText="Download My FREE AI SEO Checklist"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"
@@ -51,8 +52,8 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Pool Builder Growth</h3>
             <p className="text-black mb-4 leading-relaxed">
-              Expert pool marketing solutions built specifically for pool
-              builders and contractors.
+              Expert pool builder marketing solutions built specifically for
+              pool contstrcution companies.
             </p>
           </div>
 
@@ -96,14 +97,14 @@ const Footer = () => {
                   AI Marketing Guide
                 </Link>
               </li> */}
-              {/* <li>
+              <li>
                 <Link
-                  href="#"
+                  href="/ai-seo-checklist"
                   className="text-black hover:text-orange-400 hover:underline transition-colors transition-underline"
                 >
-                  Case Studies
+                  Free AI SEO Checklist
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link
                   href="/content-audit"

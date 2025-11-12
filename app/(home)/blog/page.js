@@ -67,6 +67,13 @@ export default async function Posts() {
           <p className="my-4 lg:my-10 text-xl">
             Marketing Ideas For Pool Builders and Pool Contractors
           </p>
+          <div className="text-center my-5">
+            <Link href="ai-seo-checklist">
+              <button className="border-2 px-6 py-8 rounded-3xl font-bold bg-green-500 text-white text-2xl mb-6">
+                Download Your FREE AI SEO Checklist
+              </button>
+            </Link>
+          </div>
         </div>
         <div className="container max-w-4xl mx-auto px-6">
           <div className="lg:grid grid-cols-1 gap-x-8 justify-between w-full">

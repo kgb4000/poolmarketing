@@ -25,7 +25,7 @@ export default function AdLayout({ children }) {
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-MJPH8V54" />
-      <body className={poppins.variable}>
+      <body className={poppins.variable} suppressHydrationWarning={true}>
         <AdNav />
         {children}
         <AdFooter />

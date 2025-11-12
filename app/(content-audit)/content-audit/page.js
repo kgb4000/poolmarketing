@@ -5,10 +5,64 @@ import { CheckCircle, MoveRight } from 'lucide-react'
 
 export default function ContentAudit() {
   const [submitting, setSubmitting] = useState(false)
+  const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('https://')
+
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+  const isEmailValid =
+    email.trim().length > 0 &&
+    emailRegex.test(email.trim()) &&
+    email.includes('.') &&
+    email.split('@')[1]?.includes('.')
+  
+  const urlRegex = /^https?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/.*)?$/
+  const isWebsiteValid = 
+    website.trim().length > 8 && 
+    urlRegex.test(website.trim()) &&
+    website.trim() !== 'https://' &&
+    website.trim() !== 'http://'
+  
+  const isFormValid = isEmailValid && isWebsiteValid
+
+  const handleSubmit = async () => {
+    if (!isFormValid) {
+      return
+    }
+
+    setSubmitting(true)
+
+    // Submit to ActiveCampaign
+    const formData = new FormData()
+    formData.append('u', '3')
+    formData.append('f', '3')
+    formData.append('s', '')
+    formData.append('c', '0')
+    formData.append('m', '0')
+    formData.append('act', 'sub')
+    formData.append('v', '2')
+    formData.append('or', 'd3c7b7ce-081f-4c5c-b94a-c69dfe540dde')
+    formData.append('email', email)
+    formData.append('field[3]', website)
+
+    try {
+      await fetch('https://poolbuildergrowth.activehosted.com/proc.php', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors',
+      })
+    } catch (error) {
+      console.log('ActiveCampaign submission error:', error)
+    }
+
+    // Redirect to thank you page
+    setTimeout(() => {
+      window.location.href = '/content-audit/thank-you'
+    }, 1500)
+  }
   return (
     <div className="container max-w-4xl mx-auto px-4 my-10 lg:my-20">
       <h1 className="text-4xl lg:text-7xl font-bold text-black mb-4 leading-normal">
-        Your Pool Company Is Invisible Online (And It's Costing You $100K+
+        Your Pool Company Is Invisible Online (And It's Costing You $100K
         Projects)
       </h1>
       <div className="mb-10 grid lg:grid-cols-2 items-center">
@@ -258,70 +312,68 @@ export default function ContentAudit() {
         </p>
         <div className="bg-slate-200 rounded-2xl shadow-lg">
           <form
-            action="https://poolbuildergrowth.us4.list-manage.com/subscribe/post?u=9709f951450aedeb01b57d0ed&amp;id=6e4c434319&amp;f_id=008d95e3f0"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
             className="max-w-2xl py-20 px-6 mx-auto my-14 validate"
-            target="_blank"
+            noValidate
           >
-            <div id="mc_embed_signup_scroll">
-              <p className="text-3xl mb-10 ">
-                Just enter your information below and I'll send the complete
-                blog system to your email immediately.
-              </p>
-              <div class="mc-field-group">
-                <label for="mce-FNAME">Email</label>
-                <input
-                  type="email"
-                  name="EMAIL"
-                  id="mce-EMAIL"
-                  required
-                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl text"
-                />
-              </div>
-              <div className="mc-field-group">
-                <label for="mce-EMAIL">
-                  Website <span class="asterisk">*</span>
-                </label>
-                <input
-                  type="url"
-                  name="MMERGE7"
-                  id="mce-MMERGE7"
-                  required
-                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl required email"
-                />
-              </div>
-              <div hidden="">
-                <input type="hidden" name="tags" value="4531410" />
-              </div>
-              <div id="mce-responses" className="clear">
-                <div className="response" id="mce-error-response"></div>
-                <div className="response" id="mce-success-response"></div>
-              </div>
-              <div aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_9709f951450aedeb01b57d0ed_6e4c434319"
-                  tabIndex="-1"
-                  className="hidden"
-                />
-              </div>
-              <div className="clear">
-                <button
-                  type="submit"
-                  id="mc-embedded-subscribe"
-                  disabled={submitting}
-                  className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center button mt-2"
-                >
-                  {submitting ? 'Sending…' : 'Get My Free Content Audit Now'}
-                </button>
-                <p className="text-center mt-4 text-lg">
-                  (and start turning your pool builder blog into a 24/7 sales
-                  machine)
-                </p>
-              </div>
+            <input type="hidden" name="u" value="3" />
+            <input type="hidden" name="f" value="3" />
+            <input type="hidden" name="s" />
+            <input type="hidden" name="c" value="0" />
+            <input type="hidden" name="m" value="0" />
+            <input type="hidden" name="act" value="sub" />
+            <input type="hidden" name="v" value="2" />
+            <input
+              type="hidden"
+              name="or"
+              value="d3c7b7ce-081f-4c5c-b94a-c69dfe540dde"
+            />
+            <input type="hidden" name="redirect" value="" />
+            <div>
+              <h2 className="text-3xl mb-10">
+                Just enter your information below and I'll start your FREE
+                Content Audit today!
+              </h2>
             </div>
+            <div>
+              <label htmlFor="email">
+                Email<span>*</span>
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Type your email"
+                required
+                className="border-2 border-slate-100 w-full mb-4 p-4 rounded-xl text"
+              />
+            </div>
+            <div>
+              <label htmlFor="field[3]">
+                Website<span>*</span>
+              </label>
+              <input
+                type="text"
+                id="field[3]"
+                name="field[3]"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                placeholder="Enter you website"
+                required
+                className="border-2 border-slate-100 w-full mb-4 p-4 rounded-xl text"
+              />
+            </div>
+            <button
+              type="button"
+              disabled={!isFormValid}
+              onClick={handleSubmit}
+              className={`text-2xl text-white font-bold w-full mb-2 p-6 rounded-xl text-center button mt-2 ${
+                isFormValid ? 'bg-green-500' : 'bg-gray-400 cursor-not-allowed'
+              }`}
+            >
+              {submitting ? 'Sending…' : 'Start My Free Content Audit Now'}
+            </button>
           </form>
         </div>
         <p className="text-2xl mb-4 font-bold">

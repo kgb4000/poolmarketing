@@ -10,12 +10,12 @@ const WhyPollBuildersNeedSpecialist = () => {
   const handleClick = () => {
     try {
       event({
-        action: 'ai_marketing_guide_click',
+        action: 'ai_seo_checklist_click',
         category: 'engagement',
         label: 'why_specialist_cta',
         value: 1,
       })
-      window.location.href = '/growth-blueprint'
+      window.location.href = '/ai-seo-checklist'
     } catch (error) {
       console.error('Error in handleClick:', error)
     }
@@ -104,7 +104,7 @@ const WhyPollBuildersNeedSpecialist = () => {
           <Button
             onClick={handleClick}
             align="text-center"
-            buttonText="Get My 7-Day AI Marketing Guide"
+            buttonText="Get My FREE AI SEO Checklist Today"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"

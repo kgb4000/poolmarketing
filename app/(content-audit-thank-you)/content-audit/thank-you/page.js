@@ -1,13 +1,15 @@
 'use client'
 
-export default function BlogContentPlanner() {
+export default function AISEOChecklistThankYou() {
   return (
     <>
       <div className="container max-w-4xl mx-auto px-6 my-10 lg:my-20">
         <section>
           <h1 className="text-4xl lg:text-7xl font-bold text-black mb-10 leading-normal">
-            Your Pool Builder Blog System Template Is on Its Way — Check Your
-            Inbox in the Next 2 Minutes
+            Your FREE Content Audit Is on Its Way{' '}
+            <span className="font-normal text-4xl lg:text-6xl">
+              Check Your Inbox in the Next 2 Minutes
+            </span>
           </h1>
           <p className="text-2xl lg:text-3xl mb-4">
             While You Wait, Here’s How to Make Sure It Actually Works for You…

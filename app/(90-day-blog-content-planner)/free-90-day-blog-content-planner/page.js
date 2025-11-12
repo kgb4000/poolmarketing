@@ -5,26 +5,51 @@ import { CheckCircle, MoveRight } from 'lucide-react'
 
 export default function BlogContentPlanner() {
   const [submitting, setSubmitting] = useState(false)
-  const [success, setSuccess] = useState(false)
+  const [firstName, setFirstName] = useState('')
+  const [email, setEmail] = useState('')
 
-  // Prevent hydration mismatch by only rendering on client
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+  const isEmailValid =
+    email.trim().length > 0 &&
+    emailRegex.test(email.trim()) &&
+    email.includes('.') &&
+    email.split('@')[1]?.includes('.')
+  const isFormValid = firstName.trim().length > 0 && isEmailValid
 
-  // Don't render until mounted on client
+  const handleSubmit = async () => {
+    if (!isFormValid) {
+      return
+    }
 
-  async function handleSubmit(e) {
-    e.preventDefault()
     setSubmitting(true)
 
-    // const fd = new FormData(e.currentTarget)
-    // const name = fd.get('name')
-    // const email = fd.get('email')
+    // Submit to ActiveCampaign
+    const formData = new FormData()
+    formData.append('u', '9')
+    formData.append('f', '9')
+    formData.append('s', '')
+    formData.append('c', '0')
+    formData.append('m', '0')
+    formData.append('act', 'sub')
+    formData.append('v', '2')
+    formData.append('or', 'c02a142f-63b7-4835-9419-b5622beffa6f')
+    formData.append('firstname', firstName)
+    formData.append('email', email)
 
-    console.log('Submitting', { name, email })
+    try {
+      await fetch('https://poolbuildergrowth.activehosted.com/proc.php', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+    } catch (error) {
+      console.log('ActiveCampaign submission error:', error)
+    }
 
+    // Redirect to thank you page
     setTimeout(() => {
-      setSubmitting(false)
-      setSuccess(true)
-    }, 1000)
+      window.location.href = '/free-90-day-blog-content-planner/thank-you'
+    }, 1500)
   }
 
   return (
@@ -306,61 +331,49 @@ export default function BlogContentPlanner() {
       <section>
         <div className="bg-slate-200 rounded-2xl shadow-lg">
           <form
-            form
-            action="https://poolbuildergrowth.us4.list-manage.com/subscribe/post?u=9709f951450aedeb01b57d0ed&amp;id=6e4c434319&amp;f_id=008f95e3f0"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
+            id="content-planner-form"
             className="max-w-2xl py-20 px-6 mx-auto my-14 validate"
-            target="_blank"
+            noValidate
           >
-            <div id="mc_embed_signup_scroll">
+            <div>
               <p className="text-3xl mb-10 ">
                 Just enter your information below and I'll send your FREE 90-Day
                 Blog Content Planner.
               </p>
-              <div className="mc-field-group">
-                <label htmlFor="mce-FNAME">First Name </label>
+              <div>
+                <label htmlFor="firstname">First Name </label>
                 <input
                   type="text"
-                  name="FNAME"
-                  id="mce-FNAME"
-                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl text"
+                  name="firstname"
+                  id="firstname"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className="border-2 border-slate-100 w-full mb-4 p-4 rounded-xl text"
                 />
               </div>
-              <div className="mc-field-group">
-                <label htmlFor="mce-EMAIL">
+              <div>
+                <label htmlFor="email">
                   Email Address <span className="asterisk">*</span>
                 </label>
                 <input
                   type="email"
-                  name="EMAIL"
-                  id="mce-EMAIL"
+                  name="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="border-2 border-slate-100 w-full mb-2 p-4 rounded-xl required email"
+                  className="border-2 border-slate-100 w-full mb-4 p-4 rounded-xl required email"
                 />
               </div>
-              <div hidden="">
-                <input type="hidden" name="tags" value="4531411" />
-              </div>
-              <div id="mce-responses" className="clear">
-                <div className="response" id="mce-error-response"></div>
-                <div className="response" id="mce-success-response"></div>
-              </div>
-              <div aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_9709f951450aedeb01b57d0ed_6e4c434319"
-                  tabIndex="-1"
-                  className="hidden"
-                />
-              </div>
-              <div className="clear">
+              <div>
                 <button
-                  type="submit"
-                  id="mc-embedded-subscribe"
-                  disabled={submitting}
-                  className="text-2xl text-white font-bold bg-green-500 w-full mb-2 p-6 rounded-xl text-center button mt-2"
+                  type="button"
+                  id="content-planner-subscribe"
+                  disabled={!isFormValid}
+                  onClick={handleSubmit}
+                  className={`text-2xl text-white font-bold w-full mb-2 p-6 rounded-xl text-center button mt-2 ${
+                    isFormValid ? 'bg-green-500' : 'bg-gray-400 cursor-not-allowed'
+                  }`}
                 >
                   {submitting
                     ? 'Sending…'

@@ -9,12 +9,12 @@ const Section5 = () => {
   const handleClick = () => {
     try {
       event({
-        action: 'ai_marketing_guide_click',
+        action: 'ai_seo_checklist_click',
         category: 'engagement',
         label: 'section5_cta',
         value: 1,
       })
-      window.location.href = '/7-day-ai-marketing-guide'
+      window.location.href = '/ai-seo-checklist'
     } catch (error) {
       console.error('Error in handleClick:', error)
     }
@@ -85,7 +85,7 @@ const Section5 = () => {
           <Button
             onClick={handleClick}
             align="text-center"
-            buttonText="Get My 7-Day AI Marketing Guide"
+            buttonText="Download My FREE AI SEO Checklist"
             textSize="text-sm lg:text-2xl"
             bgColor="bg-green-500"
             textColor="text-white"

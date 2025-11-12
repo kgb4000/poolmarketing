@@ -1,6 +1,6 @@
 import '../(home)/globals.css'
 import { Poppins } from 'next/font/google'
-import BookCallNav from '@/components/BookCallNav'
+import BookCall from '@/components/DownloadBlogTemplateNav'
 import AdFooter from '../../components/AdFooter'
 import { GoogleTagManager } from '@next/third-parties/google'
 
@@ -12,11 +12,11 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Free Blog System Template | Pool Builder Growth',
+  title: 'AI SEO Audit for Pool Builders – Free Interactive Checklist (2025)',
   description:
-    'Pool builder marketing agency  helping pool builders attract more cleints with expert local SEO, content marketing, email campaigns and web design.',
+    'Free AI SEO audit built for pool builders. Check your website’s SEO, AI visibility, and local ranking score — and learn how to fix what’s holding you back.',
   alternates: {
-    canonical: 'https://poolbuildergrowth.com/blog-system',
+    canonical: 'https://poolbuildergrowth.com/thank-you',
   },
 }
 
@@ -25,7 +25,7 @@ export default function AdLayout({ children }) {
     <html lang="en">
       <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body className={poppins.variable}>
-        <BookCallNav />
+        <BookCall />
         {children}
         <AdFooter />
       </body>

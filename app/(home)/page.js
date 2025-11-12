@@ -20,7 +20,7 @@ export default function Home() {
         label: 'hero_cta',
         value: 1,
       })
-      window.location.href = '/7-day-ai-marketing-guide'
+      window.location.href = '/ai-seo-checklist'
     } catch (error) {
       console.error('Error in handleClick:', error)
     }
@@ -334,7 +334,7 @@ export default function Home() {
                     className="text-sm lg:text-2xl font-bold bg-green-500
                 text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
                   >
-                    Get My 7-Day AI Marketing Guide
+                    Download My FREE AI SEO Checklist
                   </button>
                 </>
               </div>

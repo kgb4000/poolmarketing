@@ -19,7 +19,7 @@ export default function BookCall() {
           <div className="flex lg:hidden">
             <Link href="#form">
               <div className="-m-2.5 inline-flex items-center justify-center rounded-md px-6 py-2 bg-green-500 text-white font-bold">
-                Book My Free Blog Audit Now
+                Book My Free AI SEO Audit Call Now
               </div>
             </Link>
           </div>
@@ -28,7 +28,7 @@ export default function BookCall() {
           <div className="hidden lg:flex lg:gap-x-12">
             <Link href="#form">
               <div className="-m-2.5 inline-flex items-center justify-center rounded-md px-8 py-4 bg-green-500 text-white font-bold">
-                Book My Free Blog Audit Now
+                Book My Free AI SEO Audit Call Now
               </div>
             </Link>
           </div>
