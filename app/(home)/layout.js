@@ -2,7 +2,6 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import Nav from '../../components/Nav'
 import Footer from '../../components/Footer'
-import Script from 'next/script'
 import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
@@ -29,11 +28,6 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
         <Footer />
-        <Script
-          id="mcjs"
-          strategy="afterInteractive"
-          src="https://chimpstatic.com/mcjs-connected/js/users/9709f951450aedeb01b57d0ed/f4500c3bedf954eb89a9ac706.js"
-        />
       </body>
     </html>
   )

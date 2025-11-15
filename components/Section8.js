@@ -8,7 +8,7 @@ const Section8 = () => {
     <>
       <div
         id="#contact"
-        className='bg-slate-500 bg-[url("/images/ready-for-pool-marketing-bg.png")] bg-no-repeat bg-cover bg-center bg-blend-multiply'
+        className='bg-slate-500 bg-[url("/images/ready-for-pool-marketing.jpeg")] bg-no-repeat bg-cover bg-center bg-blend-multiply'
       >
         <div className="container max-w-8xl mx-auto py-10 lg:py-40 lg:grid grid-cols-2 justify-between px-6 lg:px-0">
           <div className="max-w-2xl">
