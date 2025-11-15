@@ -286,7 +286,7 @@ export default function Home() {
         }}
       />
       <main>
-        <div className='bg-slate-400 bg-blend-multiply bg-[url("/images/pool-builder-marketing.jpg")] bg-no-repeat bg-cover bg-center'>
+        <div className='bg-slate-400 bg-blend-multiply bg-[url("/images/pool-builder-marketing.jpeg")] bg-no-repeat bg-cover bg-center'>
           <div className="container max-w-8xl mx-auto px-6">
             <div className="max-w-4xl py-4 md:py-8">
               <div className="my-4 lg:my-10">
