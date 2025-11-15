@@ -1,13 +1,6 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-  ChevronDownIcon,
-} from '@heroicons/react/24/outline'
 
 export default function BookCall() {
   return (
@@ -24,20 +17,20 @@ export default function BookCall() {
           </div>
 
           <div className="flex lg:hidden">
-            <Link href="#form">
+            <a href="https://cal.com/kester-browne-zwivr2/30min">
               <div className="-m-2.5 inline-flex items-center justify-center rounded-md px-6 py-2 bg-green-500 text-white font-bold">
-                Download Blog System Template
+                Book My Call!
               </div>
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:gap-x-12">
-            <Link href="#form">
+            <a href="https://cal.com/kester-browne-zwivr2/30min">
               <div className="-m-2.5 inline-flex items-center justify-center rounded-md px-8 py-4 bg-green-500 text-white font-bold">
-                Download Blog System Template
+                Book My Call!
               </div>
-            </Link>
+            </a>
           </div>
         </nav>
       </header>

@@ -1,6 +1,6 @@
 import '../(home)/globals.css'
 import { Poppins } from 'next/font/google'
-import BookCall from '@/components/DownloadBlogTemplateNav'
+import BookContentAuditCall from '@/components/BookContentAuditCallNav'
 import AdFooter from '../../components/AdFooter'
 import { GoogleTagManager } from '@next/third-parties/google'
 
@@ -25,7 +25,7 @@ export default function AdLayout({ children }) {
     <html lang="en">
       <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body className={poppins.variable}>
-        <BookCall />
+        <BookContentAuditCall />
         {children}
         <AdFooter />
       </body>

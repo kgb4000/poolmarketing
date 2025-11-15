@@ -1,6 +1,6 @@
 import '../(home)/globals.css'
 import { Poppins } from 'next/font/google'
-import BookCall from '@/components/DownloadBlogTemplateNav'
+import BookCall from '@/components/BookACall'
 import AdFooter from '../../components/AdFooter'
 import { GoogleTagManager } from '@next/third-parties/google'
 

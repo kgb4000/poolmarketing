@@ -28,12 +28,17 @@ export default function About() {
                 I help pool builders attract the right homeowners, win more
                 bids, and grow with digital marketing that works.
               </p>
-              <button
-                className="text-sm lg:text-2xl font-bold bg-green-500
-                text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
+              <a
+                href="https://cal.com/kester-browne-zwivr2/30min"
+                target="_blank"
               >
-                Book Your Free Strategy Call
-              </button>
+                <button
+                  className="text-sm lg:text-2xl font-bold bg-green-500
+                text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
+                >
+                  Book Your Free Strategy Call
+                </button>
+              </a>
             </div>
             <img
               src="/images/seo-specialist.jpg"
@@ -580,12 +585,17 @@ export default function About() {
               That's the difference between transactional and transformational.
             </p>
             <div className="text-center mt-10 lg:mt-14">
-              <button
-                className="text-sm lg:text-2xl font-bold bg-green-500
-                text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
+              <a
+                href="https://cal.com/kester-browne-zwivr2/30min"
+                target="_blank"
               >
-                Book Your Free Strategy Call
-              </button>
+                <button
+                  className="text-sm lg:text-2xl font-bold bg-green-500
+                text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
+                >
+                  Book Your Free Strategy Call
+                </button>
+              </a>
             </div>
           </div>
         </div>

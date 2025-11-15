@@ -41,7 +41,7 @@ export default function BlogContentPlanner() {
       await fetch('https://poolbuildergrowth.activehosted.com/proc.php', {
         method: 'POST',
         body: formData,
-        mode: 'no-cors'
+        mode: 'no-cors',
       })
     } catch (error) {
       console.log('ActiveCampaign submission error:', error)
@@ -77,7 +77,6 @@ export default function BlogContentPlanner() {
             ranking, converting, and bringing in homeowner leads week after week
             — without spending a dime on ads.
           </p>
-
           <hr className="border-2 my-10" />
           <p className="text-2xl mb-4 font-light">
             Most pool builders think blogging is about words on a page. That’s
@@ -729,7 +728,9 @@ export default function BlogContentPlanner() {
                   disabled={!isFormValid}
                   onClick={handleSubmit}
                   className={`text-2xl text-white font-bold w-full mb-2 p-6 rounded-xl text-center button mt-2 ${
-                    isFormValid ? 'bg-green-500' : 'bg-gray-400 cursor-not-allowed'
+                    isFormValid
+                      ? 'bg-green-500'
+                      : 'bg-gray-400 cursor-not-allowed'
                   }`}
                 >
                   {submitting

@@ -5,7 +5,6 @@ import { useState } from 'react'
 import Button from './Button'
 import Image from 'next/image'
 import { event } from '../lib/eventHelper'
-import BlueprintModal from './BlueprintModal'
 
 const Section3 = () => {
   const handleClick = () => {
@@ -23,7 +22,7 @@ const Section3 = () => {
   }
   return (
     <>
-      <section className="bg-slate-50 py-10 lg:py-20">
+      <section className="bg-slate-50 py-10 lg:py-20 px-2">
         <div className="container max-w-8xl mx-auto px-6 my-10 lg:my-20">
           <h2 className="text-3xl lg:text-5xl font-bold text-black mb-4 leading-tight text-center max-w-xl lg:max-w-4xl mx-auto">
             There's a Better Way to Grow Your Pool Construction Business
@@ -33,12 +32,14 @@ const Section3 = () => {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
-              <img
+              <Image
                 src="/images/generate-qualified-leads.png"
                 className="rounded-t-3xl"
                 alt="Pool marketing that generates 20+ leads per month."
                 title="Pool marketing that generates 20+ leads per month."
                 loading="lazy"
+                width={1344}
+                height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Generate 20+ qualified leads per month without chasing referrals
@@ -46,12 +47,14 @@ const Section3 = () => {
               </p>
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
-              <img
+              <Image
                 src="/images/pool-marketing-growth.png"
                 className="rounded-t-3xl"
                 alt="A pool proposal system that is automated to save time."
                 title="A pool proposal system that is automated to save time."
                 loading="lazy"
+                width={1344}
+                height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Cut proposal estimation time by 75% with automated proposal
@@ -59,12 +62,14 @@ const Section3 = () => {
               </p>
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
-              <img
+              <Image
                 src="/images/homeowners-looking-to-buy-a-pool.png"
                 className="rounded-t-3xl"
                 alt="Happy couple waiting to get quote on pool service."
                 title="Happy couple waiting to get quote on pool service."
                 loading="lazy"
+                width={1344}
+                height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Attract homeowners who value quality work and craftsmanship over
@@ -72,12 +77,14 @@ const Section3 = () => {
               </p>
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
-              <img
+              <Image
                 src="/images/project-management.png"
                 className="rounded-t-3xl"
                 alt="Pool project management."
                 title="Pool project management."
                 loading="lazy"
+                width={1344}
+                height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Keep every project on track with automated communication that
@@ -85,12 +92,14 @@ const Section3 = () => {
               </p>
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
-              <img
+              <Image
                 src="/images/pool-under-construction.png"
                 className="rounded-t-3xl"
                 alt="New swimming pool being built in a backyard."
                 title="New swimming pooll being built."
                 loading="lazy"
+                width={1344}
+                height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Focus on building pools while we handle your entire online
@@ -98,12 +107,14 @@ const Section3 = () => {
               </p>
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">
-              <img
+              <Image
                 src="/images/we-form-a-partnership.png"
                 className="rounded-t-3xl"
                 alt="We become partners."
                 title="We become partners."
                 loading="lazy"
+                width={1344}
+                height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
                 Work with a partner that handles the digital marketing, while

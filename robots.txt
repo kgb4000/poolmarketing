@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://www.poolbuildergrowth.com/sitemap.xml
+Sitemap: https://poolbuildergrowth.com/sitemap.xml

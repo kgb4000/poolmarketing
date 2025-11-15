@@ -56,9 +56,12 @@ export default function AISEOChecklistThankYou() {
           </p>
           <hr className="border-2 my-10" />
           <div className="text-center my-10">
-            <a href="/">
+            <a
+              href="https://cal.com/kester-browne-zwivr2/30min"
+              target="_blank"
+            >
               <button className="border-2 px-6 py-8 rounded-3xl font-bold bg-green-500 text-white text-2xl">
-                Book My Free Blog System Audit Now →
+                Book My Free Content Audit Call Now →
               </button>
             </a>
           </div>

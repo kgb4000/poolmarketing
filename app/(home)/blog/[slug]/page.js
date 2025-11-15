@@ -43,6 +43,9 @@ async function getPost(slug) {
                     alt
                     }
                     bio
+                    authorBio {
+                    raw
+                    }
                   }
                   audio {
                     url
@@ -230,7 +233,26 @@ export default async function Page({ params }) {
                 width={post.author.photo.width}
                 height={post.author.photo.height}
               />
-              <p className="text-md leading-normal">{post.author.bio}</p>
+              <RichText
+                content={post.author.authorBio.raw}
+                renderers={{
+                  a: ({ children, href, openInNewTab }) => (
+                    <Link
+                      href={href}
+                      className="#a29bfe underline"
+                      target={openInNewTab ? '_blank' : '_self'}
+                      rel="noreferrer"
+                    >
+                      {children}
+                    </Link>
+                  ),
+                  p: ({ children }) => (
+                    <p className="text-base lg:text-lg text-gray-700 font-normal my-4 lg:my-6 leading-relaxed">
+                      {children}
+                    </p>
+                  ),
+                }}
+              />
             </div>
             <div className="text-center mt-10">
               <Link href="/blog" className="md:text-xl">

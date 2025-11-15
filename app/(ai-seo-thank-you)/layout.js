@@ -1,6 +1,6 @@
 import '../(home)/globals.css'
 import { Poppins } from 'next/font/google'
-import BookCall from '@/components/DownloadBlogTemplateNav'
+import BookCall from '@/components/BookACall'
 import AdFooter from '../../components/AdFooter'
 import { GoogleTagManager } from '@next/third-parties/google'
 
@@ -12,11 +12,11 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'AI SEO Audit for Pool Builders – Free Interactive Checklist (2025)',
+  title: 'Content Audit for Pool Builders – Free Interactive Checklist (2025)',
   description:
     'Free AI SEO audit built for pool builders. Check your website’s SEO, AI visibility, and local ranking score — and learn how to fix what’s holding you back.',
   alternates: {
-    canonical: 'https://poolbuildergrowth.com/thank-you',
+    canonical: 'https://poolbuildergrowth.com/content-audit/thank-you',
   },
 }
 
