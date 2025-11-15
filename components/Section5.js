@@ -80,6 +80,16 @@ const Section5 = () => {
               campaigns designed specifically for pool construction marketing.
             </p>
           </div>
+          <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
+            <h3 className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
+              AI Powered Tools for Lead-Gen
+            </h3>
+            <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
+              Generate and qualify more leads with AI-powered tools designed
+              specifically for pool builders. Turn website visitors into
+              sales-ready prospects.
+            </p>
+          </div>
         </div>
         <>
           <Button

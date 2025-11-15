@@ -67,7 +67,7 @@ const Section2 = () => {
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              You're wasting time with tire-kickers
+              You're wasting time with professional researchers
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
               Hours spent on estimates for people who were never serious about

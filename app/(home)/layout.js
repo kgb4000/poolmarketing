@@ -14,7 +14,7 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Pool Builder Marketing Agency | DC, MD & VA | Pool Builder Growth',
   description:
-    'Pool builder marketing agency serving DC, MD & VA. Generate 20+ qualified leads per month with specialized marketing for pool construction companies.',
+    'Pool builder marketing agency serving DC, MD & VA. Marketing strategies for pool builders that take you from $1 million to $10 million. Start Today!',
   alternates: {
     canonical: 'https://poolbuildergrowth.com',
   },

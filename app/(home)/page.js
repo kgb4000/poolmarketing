@@ -291,7 +291,8 @@ export default function Home() {
             <div className="max-w-4xl py-4 md:py-8">
               <div className="my-4 lg:my-10">
                 <h1 className="text-sm md:text-lg text-white mb-2 md:mb-4 leading-tight font-semibold">
-                  Pool Builder Marketing to go from $1 million to $10 million
+                  Pool Builder Marketing Agency | DC, MD & VA | Pool Builder
+                  Growth
                 </h1>
                 <h2 className="text-3xl lg:text-6xl max-w-4xl mx-auto font-extrabold text-white">
                   Don't stay invisible to homeowners ready to build pools.

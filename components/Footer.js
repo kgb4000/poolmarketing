@@ -1,12 +1,10 @@
 'use client'
 
 import React from 'react'
-import { useState } from 'react'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import Link from 'next/link'
 import Button from './Button'
 import { event } from '../lib/eventHelper'
-import BlueprintModal from './BlueprintModal'
 import DynamicYear from './DynamicYear'
 
 const Footer = () => {
@@ -80,7 +78,6 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              <li>Pool Marketing FAQ</li>
               <li>
                 <Link
                   href="/blog"
@@ -122,7 +119,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-black" />
-                <span className="text-black">Pool Marketing FAQ</span>
+                <span className="text-black">Pool Marketing Growth</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-black" />
@@ -133,7 +130,7 @@ const Footer = () => {
                 <span className="text-black">
                   Nationwide Service for
                   <br />
-                  Pool Contractors Across US
+                  Swimming Pool Contractors Across the US
                 </span>
               </div>
             </div>
@@ -145,7 +142,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-black text-sm text-center md:text-left">
-              Pool Builder Marketing. All rights reserved &copy; <DynamicYear />
+              Pool Builder Growth. All rights reserved &copy; <DynamicYear />
             </div>
 
             {/* Legal Links */}
