@@ -23,18 +23,14 @@ const Section4 = () => {
   return (
     <>
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/pool-builder-smiling-in-front-of-pool.jpeg"
-            alt="Happy pool builder standing in front of completed swimming pool"
-            fill
-            className="object-cover"
-            loading="lazy"
-            quality={60}
-            sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1536px) 1536px, 1920px"
-          />
-          <div className="absolute inset-0 bg-slate-500/70 mix-blend-multiply" />
-        </div>
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-top bg-fixed pt-8"
+          style={{
+            backgroundImage:
+              'url("/images/pool-builder-smiling-in-front-of-pool.jpeg")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 to-slate-700/80" />
         <div className="relative z-10 container max-w-7xl mx-auto px-6 py-16 lg:py-40">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight text-center max-w-xl lg:max-w-4xl mx-auto">
             Pool Builder Marketing Services That Transform Your Business
