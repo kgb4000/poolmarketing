@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 import Section2 from '@/components/Section2'
 import Section3 from '@/components/Section3'
 import Section4 from '@/components/Section4'
@@ -12,6 +14,11 @@ import { event } from '@/lib/eventHelper'
 import WhyPollBuildersNeedSpecialist from '@/components/WhyPollBuildersNeedSpecialist'
 
 export default function Home() {
+  const benefits = [
+    'More qualified leads without wasting money on dead ends',
+    'Book more projects with digital marketing designed for pool builders',
+    'Complete marketing and sales system to grow your business',
+  ]
   const handleClick = () => {
     try {
       event({
@@ -258,35 +265,17 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
+          __html: JSON.stringify([
+            faqSchema,
+            organizationSchema,
+            serviceSchema,
+            localBusinessSchema,
+            websiteSchema,
+          ]),
         }}
       />
       <main>
-        <div className='bg-slate-400 bg-blend-multiply bg-[url("/images/pool-builder-marketing.jpeg")] bg-no-repeat bg-cover bg-center'>
+        {/* <div className='bg-slate-400 bg-blend-multiply bg-[url("/images/pool-builder-marketing.jpeg")] bg-no-repeat bg-cover bg-center'>
           <div className="container max-w-8xl mx-auto px-6">
             <div className="max-w-4xl py-4 md:py-8">
               <div className="my-4 lg:my-10">
@@ -329,6 +318,85 @@ export default function Home() {
                     </p>
                   </li>
                 </ul>
+                <>
+                  <button
+                    onClick={handleClick}
+                    className="text-sm lg:text-2xl font-bold bg-green-500
+                text-white hover:bg-green-600 transition-color px-6 py-6 lg:px-8 lg:py-8 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer"
+                  >
+                    Download My FREE AI SEO Checklist
+                  </button>
+                </>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        <div className="relative overflow-hidden">
+          {/* Background Image with Next.js Image for optimization */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/pool-builder-marketing.jpeg"
+              alt="Pool builder marketing agency serving DC, Maryland, and Virginia."
+              fill
+              className="object-cover"
+              priority
+              quality={75}
+              sizes="100vw"
+            />
+            {/* Improved overlay for better text contrast */}
+            <div className="absolute inset-0 bg-slate-900/60" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl py-12 sm:py-16 lg:py-14">
+                {/* Eyebrow text */}
+                <p className="mb-4 text-sm font-semibold tracking-wide text-white sm:text-base lg:mb-6">
+                  Pool Builder Marketing Agency | DC, MD & VA
+                </p>
+
+                {/* Main Headline - proper h1 */}
+                <h1 className="mb-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:mb-6 lg:text-5xl xl:text-6xl">
+                  Don't stay invisible to homeowners ready to build pools.{' '}
+                  <span className="text-blue-300">
+                    Partner with a pool builder marketing specialist
+                  </span>{' '}
+                  who's invested in your success.
+                </h1>
+
+                {/* Subheadline */}
+                <p className="mb-4 text-base leading-relaxed text-gray-100 sm:text-lg lg:mb-6 lg:text-xl">
+                  Stop being invisible and losing jobs to competitors. With the
+                  right pool marketing{' '}
+                  <strong className="font-bold text-white">PARTNER</strong>,
+                  you'll attract serious homeowners who are{' '}
+                  <strong className="font-bold text-white">READY</strong> to
+                  build and grow your business.
+                </p>
+
+                {/* Value Proposition */}
+                <p className="mb-6 text-base leading-relaxed text-gray-100 sm:text-lg lg:mb-8 lg:text-xl">
+                  I partner with you to go from $1 million to $10 million.
+                  Here's what we'll accomplish together:
+                </p>
+
+                {/* Benefits List */}
+                <ul className="mb-8 space-y-4 lg:mb-12" role="list">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-3 sm:gap-4">
+                      <CheckCircle
+                        className="mt-1 h-6 w-6 flex-shrink-0 text-green-400 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
+                        aria-hidden="true"
+                      />
+                      <span className="text-base leading-relaxed text-white sm:text-lg lg:text-xl">
+                        {benefit}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Buttons (add your CTA component here) */}
                 <>
                   <button
                     onClick={handleClick}

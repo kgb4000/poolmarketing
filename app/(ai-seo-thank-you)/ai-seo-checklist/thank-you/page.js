@@ -30,29 +30,29 @@ export default function AISEOChecklistThankYou() {
           </p>
           <p className="text-xl lg:text-2xl mb-4">
             Now, here’s how to turn this into a real advantage: We’re offering a{' '}
-            <span className="font-bold">Free Blog System Audit Call</span> where
-            we’ll personally look at your current website and show you:
+            <span className="font-bold">Free AI SEO Audit Call</span> where I'll
+            personally look at your current website and show you:
           </p>
           <ul className="list-disc my-6 ml-10">
             <li className="text-xl lg:text-2xl mb-4">
-              Where your blog is silently losing leads
+              Where your biggest opportunities exist
             </li>
             <li className="text-xl lg:text-2xl mb-4">
               Which topics could rank in your local market within 30 days
             </li>
             <li className="text-xl lg:text-2xl mb-4">
-              How to build a 4-week blog plan that actually gets homeowner
-              inquiries
+              How to build a plan to beat your competitors and start getting
+              inquiries from homeowners
             </li>
           </ul>
           <p className="text-xl lg:text-2xl mb-4">
             This isn’t a sales pitch — it’s a custom strategy session for
-            serious builders who want to grow through smart content and SEO.
+            serious builders who want to grow through smart AI SEO and content.
           </p>
           <p className="text-xl lg:text-2xl mb-4">
-            You’ll walk away knowing exactly what to write, how to structure it,
-            and how to make Google and AI search tools recommend your business
-            first.
+            You’ll walk away knowing exactly what to do, write, how to structure
+            your website, and how to make Google and AI search tools recommend
+            your business first.
           </p>
           <hr className="border-2 my-10" />
           <div className="text-center my-10">
@@ -67,17 +67,17 @@ export default function AISEOChecklistThankYou() {
           </div>
           <hr className="border-2 my-10" />
           <p className="text-xl lg:text-2xl mb-4">
-            Or just check your email — your template link should arrive in a
-            minute.
+            Or just check your email — your AI SEO Checklist link should arrive
+            in a minute.
           </p>
           <p className="text-xl lg:text-2xl mb-4">
-            But if you’re serious about turning content into clients, the audit
-            is where it starts.
+            But if you’re serious about turning your website into a
+            lead-machine, the audit is where it starts.
           </p>
           <p className="text-xl lg:text-2xl mb-4">
-            <span className="font-bold">P.S.</span> This 15-minute call could be
-            the difference between a blog that disappears and one that
-            dominates.
+            <span className="font-bold">P.S.</span> This 30-minute call could be
+            the difference between a website that disappears in 2026, and one
+            that dominates 2026.
           </p>
           <p className="text-xl lg:text-2xl mb-4">
             It’s free. It’s fast. And it might just change the way you market

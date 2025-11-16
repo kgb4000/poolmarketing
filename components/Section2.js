@@ -26,7 +26,7 @@ const Section2 = () => {
         </h2>
         <p className="text-md lg:text-lg lg:max-w-2xl lg:mx-auto text-center px-6 mb-4 lg:mb-10">
           If you're struggling with any of these issues, you’re not alone. But
-          if you don't start fixing them now, they only get worse
+          if you don't start fixing them now, these problems only get worse
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
@@ -67,11 +67,11 @@ const Section2 = () => {
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">
             <p className="text-3xl lg:text-4xl lg:px-10 lg:pt-10 font-light max-w-md">
-              You're wasting time with professional researchers
+              You're wasting time with price shoppers
             </p>
             <p className="text-[1.3rem] pt-4 lg:px-10 lg:py-10">
-              Hours spent on estimates for people who were never serious about
-              building a pool.
+              Hours spent on site visits and estimates for people who were never
+              serious about building a swimming pool.
             </p>
           </div>
           <div className="lg:border-[1px] border-slate-100 p-6 lg:py-20 rounded-3xl lg:shadow-xl">

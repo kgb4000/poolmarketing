@@ -152,14 +152,16 @@ export default async function Page({ params }) {
             />
             {/* <BlogAudioPlayer audioUrl={post.audio?.url} /> */}
             {post.audio?.url && (
-              <>
-                <p className="text-xl font-bold my-4">Listen here</p>
+              <div className="flex justify-between">
+                <p className="text-xl font-bold my-4">
+                  Listen to the summary here
+                </p>
                 <audio controls>
                   <source src={post.audio?.url} type="audio/ogg" />
                   <source src={post.audio?.url} type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
-              </>
+              </div>
             )}
             <article className="py-4 blog-content">
               <RichText

@@ -23,6 +23,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/pool-builder-marketing.jpeg"
+          type="image/jpeg"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+      </head>
       <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body>
         <Nav />

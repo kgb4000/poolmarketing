@@ -69,7 +69,7 @@ export default async function Posts() {
           </p>
           <div className="text-center my-5">
             <Link href="ai-seo-checklist">
-              <button className="border-2 px-6 py-8 rounded-3xl font-bold bg-green-500 text-white text-2xl mb-6">
+              <button className="border-2 px-4 py-4 md:px-6 md:py-8 rounded-3xl font-bold bg-green-500 text-white text-md md:text-2xl mb-6">
                 Download Your FREE AI SEO Checklist
               </button>
             </Link>

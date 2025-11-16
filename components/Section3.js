@@ -42,8 +42,8 @@ const Section3 = () => {
                 height={896}
               />
               <p className="lg:text-[1.4rem] px-10 lg:px-10 py-6 lg:py-10">
-                Generate 20+ qualified leads per month without chasing referrals
-                or paying for expensive ads.
+                Generate more qualified leads per month without chasing
+                referrals or paying for expensive ads.
               </p>
             </div>
             <div className="border-1 border-slate-300 pb-10 rounded-3xl shadow-md">

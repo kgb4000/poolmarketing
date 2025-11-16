@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, MoveRight } from 'lucide-react'
 
 export default function AISEOChecklist() {
   const [submitting, setSubmitting] = useState(false)
@@ -60,17 +60,17 @@ export default function AISEOChecklist() {
         <h1 className="text-3xl md:text-7xl font-bold text-black mb-10 leading-normal">
           Is Your Pool Company Invisible in Google and AI Searches?
         </h1>
-        {/* <div className="mb-10 grid md:grid-cols-2 items-center">
+        <div className="mb-10 grid md:grid-cols-2 items-center">
           <p className="text-md font-bold mb-4 lg:mb-0 flex self-center">
             Listen Here
             <MoveRight className="ml-4" />
           </p>
           <audio controls>
-            <source src="/7-day-ai-marketing-guide.mp3" type="audio/ogg" />
-            <source src="/7-day-ai-marketing-guide.mp3" type="audio/mpeg" />
+            <source src="/ai-seo-checklist-audio.mp3" type="audio/ogg" />
+            <source src="/ai-seo-checklist-audio.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-        </div> */}
+        </div>
         <p className="text-2xl md:text-3xl mb-4 md:mb-10">
           Here's the uncomfortable truth:
         </p>
@@ -131,23 +131,23 @@ export default function AISEOChecklist() {
         <p className="text-md md:text-2xl mb-4 md:mb-10">
           The pool companies ranking in Google and AI search all have 5 things:
         </p>
-        <ol className="ml-10">
-          <li className="text-md md:text-2xl mb-4 md:mb-10">
+        <ol className="ml-4">
+          <li className="text-md md:text-2xl mb-4 md:mb-10 font-bold">
             1. AI-readable structured data (most pool builders have ZERO schema
             markup)
           </li>
-          <li className="text-md md:text-2xl mb-4 md:mb-10">
+          <li className="text-md md:text-2xl mb-4 md:mb-10 font-bold">
             2. Content clusters that answer real questions (not blog fluff —
             actual answers to what homeowners ask)
           </li>
-          <li className="text-md md:text-2xl mb-4 md:mb-10">
+          <li className="text-md md:text-2xl mb-4 md:mb-10 font-bold">
             3. Core Web Vitals that don't suck (slow sites get buried. Period.)
           </li>
-          <li className="text-md md:text-2xl mb-4 md:mb-10">
+          <li className="text-md md:text-2xl mb-4 md:mb-10 font-bold">
             4. Optimized Google Business Profile (AI engines pull 60%+ of their
             local data from GBP)
           </li>
-          <li className="text-md md:text-2xl mb-4 md:mb-10">
+          <li className="text-md md:text-2xl mb-4 md:mb-10 font-bold">
             5. Natural language content (keyword-stuffed garbage gets ignored by
             AI)
           </li>
@@ -202,7 +202,7 @@ export default function AISEOChecklist() {
         <p className="text-md md:text-2xl mb-4 md:mb-10">
           Here's what you get:
         </p>
-        <ul className="ml-10">
+        <ul className="ml-4">
           <li className="mb-4 flex">
             <CheckCircle className="w-8 h-8 text-green-400 mr-6 shrink-0 relative top-[0px]" />
             <p className="text-md md:text-2xl mb-4 md:mb-10">
