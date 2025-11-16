@@ -340,6 +340,7 @@ export default function Home() {
               fill
               className="object-cover"
               priority
+              fetchPriority="high"
               quality={75}
               sizes="100vw"
             />
