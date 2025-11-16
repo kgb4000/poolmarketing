@@ -1,16 +1,26 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 
 const Section8 = () => {
   return (
     <>
-      <div
-        id="#contact"
-        className='bg-slate-500 bg-[url("/images/ready-for-pool-marketing.jpeg")] bg-no-repeat bg-cover bg-center bg-blend-multiply'
-      >
-        <div className="container max-w-8xl mx-auto py-10 lg:py-40 lg:grid grid-cols-2 justify-between px-6 lg:px-0">
+      <div id="#contact" className="relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/ready-for-pool-marketing.jpeg"
+            alt="Pool builder ready for marketing transformation"
+            fill
+            className="object-cover object-center"
+            loading="lazy"
+            quality={60}
+            sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1536px) 1536px, 1920px"
+          />
+          <div className="absolute inset-0 bg-slate-500/70 mix-blend-multiply" />
+        </div>
+        <div className="relative z-10 container max-w-8xl mx-auto py-10 lg:py-40 lg:grid grid-cols-2 justify-between px-6 lg:px-0">
           <div className="max-w-2xl">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight text-center lg:text-left max-w-4xl mx-auto">
               Ready to Partner With Me To Transform Your Pool Business With

@@ -331,9 +331,9 @@ export default function Home() {
             </div>
           </div>
         </div> */}
-        <div className="relative overflow-hidden">
+        <div className="hero-section">
           {/* Background Image with Next.js Image for optimization */}
-          <div className="absolute inset-0 z-0">
+          <div className="hero-bg">
             <Image
               src="/images/pool-builder-marketing.jpeg"
               alt="Pool builder marketing agency serving DC, Maryland, and Virginia."
@@ -341,15 +341,15 @@ export default function Home() {
               className="object-cover"
               priority
               fetchPriority="high"
-              quality={75}
-              sizes="100vw"
+              quality={60}
+              sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1536px) 1536px, 1920px"
             />
             {/* Improved overlay for better text contrast */}
-            <div className="absolute inset-0 bg-slate-900/60" />
+            <div className="hero-overlay" />
           </div>
 
           {/* Content */}
-          <div className="relative z-10">
+          <div className="hero-content">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl py-12 sm:py-16 lg:py-14">
                 {/* Eyebrow text */}

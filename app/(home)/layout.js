@@ -39,6 +39,22 @@ export default function RootLayout({ children }) {
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        <link
+          rel="dns-prefetch"
+          href="https://www.googletagmanager.com"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://www.google-analytics.com"
+        />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .hero-section{position:relative;overflow:hidden}
+            .hero-bg{position:absolute;inset:0;z-index:0}
+            .hero-content{position:relative;z-index:10}
+            .hero-overlay{position:absolute;inset:0;background:rgba(15,23,42,0.6)}
+          `
+        }} />
       </head>
       <GoogleTagManager gtmId="GTM-MJPH8V54" />
       <body>
